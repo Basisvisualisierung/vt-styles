@@ -1,2 +1,2 @@
-# vt-styles
+# VT Styles
 Vector tile styles
