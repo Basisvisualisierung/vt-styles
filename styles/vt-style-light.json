@@ -1035,6 +1035,25 @@
             ],
                 "layout":{
                 "text-field":"{name}",
+                "text-variable-anchor": [
+                    "bottom",
+                    "top",
+                    "bottom-left",
+                    "bottom-right",
+                    "top-left",
+                    "top-right"
+                  ],
+                  "text-radial-offset": [
+                    "interpolate",
+                    ["exponential", 1],
+                    ["zoom"],
+                    12,
+                    1,
+                    14,
+                    2,
+                    22,
+                    5
+                  ],
                 "text-size":[
                     "interpolate",
                     ["linear"],
