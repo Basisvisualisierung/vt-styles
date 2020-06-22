@@ -1019,6 +1019,37 @@
             "paint":{"text-color":"#82abbf"}
         },
         {
+            "id":"Schrift Wald",
+            "type":"symbol",
+            "metadata":{
+                "map-editor:group":"Vegetation",
+                "map-editor:layer":"Wald",
+                "map-editor:layer-element":"Beschriftung"
+            },		  
+            "source":"smarttiles_de",
+            "source-layer":"Name",
+            "minzoom":12,
+            "filter":[
+                "all",
+                ["==", "klasse", "Wald"]
+            ],
+                "layout":{
+                "text-field":"{name}",
+                "text-size":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    12,
+                    6,
+                    14,
+                    10
+                ],
+                "text-font": ["Cantarell Regular"],
+                "text-letter-spacing": 0.1
+            },
+            "paint":{"text-color": "#76846c"}
+        },
+        {
             "id":"Schrift Nebenstraße",
             "type":"symbol",
             "metadata":{
