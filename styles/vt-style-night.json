@@ -1031,7 +1031,7 @@
                 "text-font": ["Cantarell Regular"],
                 "text-letter-spacing": 0.1
             },
-            "paint":{"text-color": "#3ca432"}
+            "paint":{"text-color": "#c3cabf"}
         }, 
         {
             "id":"Schrift Nebenstraße",
