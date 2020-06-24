@@ -45,8 +45,9 @@
             "minzoom":10,
             "filter":[
                 "all",
-                ["==", "klasse", "Siedlung"]
-              ],
+                ["in", "objektart", "Siedlungsflaeche", "FlaecheGemischterNutzung", 
+                    "FlaecheBesondererFunktionalerPraegung", "IndustrieUndGewerbeflaeche"]
+                  ],
             "layout":{},
             "paint":{"fill-color":"#f2eded"}
         },
