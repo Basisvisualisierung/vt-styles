@@ -45,9 +45,8 @@
             "minzoom":10,
             "filter":[
                 "all",
-                ["in", "objektart", "Siedlungsflaeche", "FlaecheGemischterNutzung", 
-                    "FlaecheBesondererFunktionalerPraegung"]
-                  ],
+                ["==", "klasse", "Siedlung"]
+              ],
             "layout":{},
             "paint":{"fill-color": "#f5baba"}
         },
@@ -432,6 +431,30 @@
             }
         },
         {
+            "id":"L0 Gemeindestraße",
+            "type":"line",
+            "metadata":{
+                "map-editor:group":"Verkehr", 
+                "map-editor:detail-level":3,
+                "map-editor:layer":"Gemeindestraße",
+                "map-editor:layer-element":"Kontur"
+            },		  
+            "source":"smarttiles_de",
+            "source-layer":"Verkehrslinie",
+            "minzoom":11,
+            "maxzoom":12,
+            "filter":[
+                "all",
+                ["in", "bauwerk", "Tunnel, Unterführung"],
+                ["in", "klasse", "Gemeindestraße"]
+            ],
+            "layout":{"line-join":"round"},
+            "paint":{
+                "line-width":0.75,
+                "line-color":"#969696"
+            }
+        },
+        {
             "id":"L0 Gemeindestraße K",
             "type":"line",
             "metadata":{
@@ -442,7 +465,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":5,
+			"minzoom":12,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -454,10 +477,6 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2,
                     12,
                     2.5,
                     14,
@@ -684,7 +703,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":5,
+			"minzoom":12,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -696,10 +715,6 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    1.5,
                     12,
                     1.7,
                     14,
@@ -939,6 +954,29 @@
             }
         },
         {
+            "id":"L1 Gemeindestraße",
+            "type":"line",
+            "metadata":{
+                "map-editor:group":"Verkehr", 
+                "map-editor:detail-level":3,
+                "map-editor:layer":"Gemeindestraße",
+                "map-editor:layer-element":"Kontur"
+            },		  
+            "source":"smarttiles_de",
+            "source-layer":"Verkehrslinie",
+            "minzoom":11,
+            "maxzoom":12,
+            "filter":[
+                "all",
+                ["in", "klasse", "Gemeindestraße"]
+            ],
+            "layout":{"line-cap":"round","line-join":"round"},
+            "paint":{
+                "line-width":0.75,
+                "line-color":"#969696"
+            }
+        },
+        {
             "id":"L1 Gemeindestraße K",
             "type":"line",
             "metadata":{
@@ -949,7 +987,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":5,
+			"minzoom":12,
             "filter":[
                 "all",
                 ["in", "klasse", "Gemeindestraße"]
@@ -1181,7 +1219,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":5,
+			"minzoom":12,
             "filter":[
                 "all",
                 ["in", "klasse", "Gemeindestraße"]
@@ -1427,6 +1465,30 @@
             }
         },
         {
+            "id":"L2 Gemeindestraße",
+            "type":"line",
+            "metadata":{
+                "map-editor:group":"Verkehr", 
+                "map-editor:detail-level":3,
+                "map-editor:layer":"Gemeindestraße",
+                "map-editor:layer-element":"Kontur"
+            },		  
+            "source":"smarttiles_de",
+            "source-layer":"Verkehrslinie",
+            "minzoom":11,
+            "maxzoom":12,
+            "filter":[
+                "all",
+                ["in", "klasse", "Gemeindestraße"],
+                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+            ],
+            "layout":{"line-join":"round"},
+            "paint":{
+                "line-width":0.75,
+                "line-color":"#969696"
+            }
+        },
+        {
             "id":"L2 Gemeindestraße K",
             "type":"line",
             "metadata":{
@@ -1437,7 +1499,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":5,
+			"minzoom":12,
             "filter":[
                 "all",
                 ["in", "klasse", "Gemeindestraße"],
@@ -1449,10 +1511,6 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2,
                     12,
                     2.5,
                     14,
@@ -1679,7 +1737,7 @@
             },	  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":5,
+			"minzoom":12,
             "filter":[
                 "all",
                 ["in", "klasse", "Gemeindestraße"],
@@ -1691,10 +1749,6 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    1.5,
                     12,
                     1.7,
                     14,
