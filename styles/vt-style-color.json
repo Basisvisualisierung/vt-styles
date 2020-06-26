@@ -7,7 +7,7 @@
             "type":"vector"
         }
     },
-    "glyphs":"http://localhost:4200/assets/fonts/{fontstack}/{range}.pbf",
+    "glyphs":"/fonts/{fontstack}/{range}.pbf",
     "layers":[
         {
             "id":"Hintergrund",
