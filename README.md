@@ -1,13 +1,19 @@
 # VT Styles
 This repository contains style files for vector tiles based on the [Mapbox style specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/). As data source the styles use vector tiles from the working group [Smart Mapping](https://adv-smart.de).
 
-## Getting started
+## Fonts / Glyphs
+The styles are using the font families _Liberation Sans_ and _Cantarell_ for labeling, both licensed under the [SIL Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). The font files must be converted to glyphsets in *.pbf format. A useful script for the conversion can be found in the [OpenMapTiles fonts](https://github.com/openmaptiles/fonts) repository. You can alternatively get the glyphsets from the Docker image _basisvisualisierung/vt-styles_ (see below).
 
-### Docker
+## Docker
 
 Run a container with an image from Docker Hub:
 ```
-docker run -p 80:80 basisvisualisierung/vt-styles
+docker run -p 80:80 --name vt-styles basisvisualisierung/vt-styles
+```
+
+Copy glyphs from running container to current directory:
+```
+docker cp vt-styles:/usr/share/nginx/html/fonts ./fonts
 ```
 
 Build a local image:
