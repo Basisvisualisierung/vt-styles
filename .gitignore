@@ -1,6 +1,9 @@
 # Binary files
-/fonts
-/sprites
+/fonts/*
+!/fonts/README.md
+/sprites/*
+!/sprites/README.md
+
 
 # System Files
 .DS_Store
