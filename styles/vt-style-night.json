@@ -159,6 +159,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Gewaesserlinie",
+            "minzoom":14,
             "filter":[
                 "all",
                 ["!=", "bauwerk", "Durchlass"]
