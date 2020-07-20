@@ -489,7 +489,7 @@
             "type":"line",
             "metadata":{
                 "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
+                "map-editor:detail-level":2,
                 "map-editor:layer":"Kreisstraße",
                 "map-editor:layer-element":"Kontur"
             },
@@ -535,7 +535,6 @@
                             "#8f8f8f"
                         ]
                     ]
-                    
                 }
             }
         },
