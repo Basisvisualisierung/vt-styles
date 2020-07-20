@@ -445,7 +445,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -457,6 +457,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    11,
+                    0.75,
                     12,
                     2.5,
                     14,
@@ -468,7 +470,18 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
+                "line-color":{
+                    "stops":[
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -482,7 +495,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":10,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -494,6 +507,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    10,
+                    1.0,
                     12,
                     2.5,
                     14,
@@ -505,7 +520,23 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#969696"
+                        ],
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                    
+                }
             }
         },
         {
@@ -519,7 +550,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -741,7 +772,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":8,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -753,6 +784,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.4,
+                    10,
+                    1.6,
                     12,
                     1.7,
                     14,
@@ -764,7 +799,18 @@
                     18,
                     44
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffec7a"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]  
+                }
             }
         },
         {
@@ -778,7 +824,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":7,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -790,6 +836,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
                     12,
                     2,
                     14,
@@ -801,7 +851,18 @@
                     18,
                     46
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -815,7 +876,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":5,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -827,6 +888,12 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    10,
+                    2.2,
                     12,
                     2.75,
                     14,
@@ -838,7 +905,18 @@
                     18,
                     48
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ff954d"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -861,7 +939,15 @@
             ],
             "layout": {"line-join":"round"},
             "paint":{
-                "line-width":0.7,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#4d4d4d"
             }
         },
@@ -1051,7 +1137,7 @@
             },			  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesstraße"]
@@ -1087,7 +1173,7 @@
             },  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesautobahn"]
@@ -1243,9 +1329,9 @@
                     ["linear"],
                     ["zoom"],
                     8,
-                    2.5,
+                    1.4,
                     10,
-                    2,
+                    1.6,
                     12,
                     1.7,
                     14,
@@ -1260,23 +1346,14 @@
                 "line-color":{
                     "stops":[
                         [
-                            8,
-                            "#fff2a3"
-                        ],
-                        [
-                            9,
-                            "#fff2a3"
-                        ],
-                        [
                             10,
-                            "#fff2a3"
+                            "#ffec7a"
                         ],
                         [
                             11,
                             "#ffffff"
                         ]
-                    ]
-                    
+                    ] 
                 }
             }
         },
@@ -1291,7 +1368,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":7,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesstraße"]
@@ -1302,6 +1379,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
                     12,
                     2,
                     14,
@@ -1313,7 +1394,18 @@
                     18,
                     46
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1327,7 +1419,7 @@
             },	  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":5,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesautobahn"]
@@ -1338,6 +1430,12 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    10,
+                    2.2,
                     12,
                     2.75,
                     14,
@@ -1349,7 +1447,18 @@
                     18,
                     48
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ff954d"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1371,7 +1480,15 @@
             ],
             "layout": {"line-join":"round"},
             "paint":{
-                "line-width":0.7,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#4d4d4d"
             }
         },
@@ -1423,7 +1540,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Gemeindestraße"],
@@ -1435,6 +1552,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    11,
+                    0.75,
                     12,
                     2.5,
                     14,
@@ -1446,7 +1565,18 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
+                "line-color":{
+                    "stops":[
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
         }, 
         {
@@ -1460,7 +1590,7 @@
             },	  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":10,
             "filter":[
                 "all",
                 ["in", "klasse", "Kreisstraße"],
@@ -1472,6 +1602,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    10,
+                    1.0,
                     12,
                     2.5,
                     14,
@@ -1483,7 +1615,22 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#969696"
+                        ],
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1497,7 +1644,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Landesstraße, Staatsstraße"],
@@ -1719,7 +1866,7 @@
             }, 
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":8,
             "filter":[
                 "all",
                 ["in", "klasse", "Landesstraße, Staatsstraße"],
@@ -1731,6 +1878,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.4,
+                    10,
+                    1.6,
                     12,
                     1.7,
                     14,
@@ -1742,7 +1893,18 @@
                     18,
                     44
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffec7a"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1756,7 +1918,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":7,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesstraße"],
@@ -1768,6 +1930,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
                     12,
                     2,
                     14,
@@ -1779,7 +1945,18 @@
                     18,
                     46
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1793,7 +1970,7 @@
             }, 
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":5,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesautobahn"],
@@ -1805,6 +1982,12 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    10,
+                    2.2,
                     12,
                     2.75,
                     14,
@@ -1816,7 +1999,18 @@
                     18,
                     48
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ff954d"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1839,7 +2033,15 @@
             ],
             "layout":{"line-join":"round"},
             "paint":{
-                "line-width":0.7,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#4d4d4d"
             }
         },
