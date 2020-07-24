@@ -324,16 +324,17 @@
             }
         },
         {
-            "id":"Wohngebäude",
+            "id":"Wohngebäude 2D",
             "type":"fill-extrusion",
             "metadata":{
                 "map-editor:group":"Gebäude",
-                "map-editor:layer":"Wohngebäude",
+                "map-editor:layer":"Wohngebäude 2D",
                 "map-editor:layer-element":"Füllung"
             },
             "source":"smarttiles_de",
             "source-layer":"Gebaeude",
             "minzoom":15,
+            "maxzoom":16,
             "layout":{
                 "visibility":"visible"
             },
@@ -343,16 +344,17 @@
             }
         },
         {
-            "id":"Öffentliches Gebäude",
+            "id":"Öffentliches Gebäude 2D",
             "type":"fill-extrusion",
             "metadata":{
                 "map-editor:group":"Gebäude",
-                "map-editor:layer":"Öffentliches Gebäude",
+                "map-editor:layer":"Öffentliches Gebäude 2D",
                 "map-editor:layer-element":"Füllung"
             },
             "source":"smarttiles_de",
             "source-layer":"Gebaeude",
             "minzoom":15,
+            "maxzoom":16,
             "filter":[
                 "all",
                 [
@@ -2456,6 +2458,89 @@
                 "text-color":"#000000"
             }
         },
+        {
+            "id": "Wohngebäude 3D",
+            "type": "fill-extrusion",
+            "metadata":{
+                "map-editor:group":"Gebäude",
+                "map-editor:layer":"Wohngebäude 3D",
+                "map-editor:layer-element":"Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeude",
+            "minzoom": 16,
+            "filter": ["all"],
+            "layout": {"visibility": "visible"},
+            "paint": {
+              "fill-extrusion-color": "#a5a4a4",
+              "fill-extrusion-height": [
+                "case",
+                ["has", "hoehe"],
+                ["get", "hoehe"],
+                0
+              ],
+              "fill-extrusion-opacity": 0.8
+            }
+          },
+          {
+            "id": "Öffentliches Gebäude 3D",
+            "type": "fill-extrusion",
+            "metadata":{
+                "map-editor:group":"Gebäude",
+                "map-editor:layer":"Öffentliches Gebäude 3D",
+                "map-editor:layer-element":"Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeude",
+            "minzoom": 16,
+            "filter": [
+              "all",
+              [
+                "in",
+                "funktion",
+                "31001_2092",
+                "31001_3010",
+                "31001_3011",
+                "31001_3012",
+                "31001_3015",
+                "31001_3017",
+                "31001_3018",
+                "31001_3021",
+                "31001_3022",
+                "31001_3023",
+                "31001_3024",
+                "31001_3031",
+                "31001_3032",
+                "31001_3033",
+                "31001_3034",
+                "31001_3035",
+                "31001_3038",
+                "31001_3041",
+                "31001_3042",
+                "31001_3043",
+                "31001_3045",
+                "31001_3046",
+                "31001_3047",
+                "31001_3051",
+                "31001_3071",
+                "31001_3072",
+                "31001_3211",
+                "31001_3221",
+                "31001_3242"
+              ]
+            ],
+            "layout": {"visibility": "visible"},
+            "paint": {
+              "fill-extrusion-color": "#cc6868",
+              "fill-extrusion-height": [
+                "case",
+                ["has", "hoehe"],
+                ["get", "hoehe"],
+                0
+              ],
+              "fill-extrusion-opacity": 0.7
+            }
+          },
         {
             "id":"Schrift Wohnplatz, Stadtteil",
             "type":"symbol",
