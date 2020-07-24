@@ -435,30 +435,6 @@
             }
         },
         {
-            "id":"L0 Gemeindestraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Kontur 2"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Gemeindestraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":0.75,
-                "line-color":"#969696"
-            }
-        },
-        {
             "id":"L0 Gemeindestraße K",
             "type":"line",
             "metadata":{
@@ -469,7 +445,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -481,6 +457,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    11,
+                    0.75,
                     12,
                     2.5,
                     14,
@@ -492,37 +470,18 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L0 Kreisstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":10,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Kreisstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    1.3
-                ],
-                "line-color":"#969696"
+                "line-color":{
+                    "stops":[
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -530,13 +489,13 @@
             "type":"line",
             "metadata":{
                 "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
+                "map-editor:detail-level":2,
                 "map-editor:layer":"Kreisstraße",
                 "map-editor:layer-element":"Kontur"
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":10,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -548,6 +507,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    10,
+                    1.0,
                     12,
                     2.5,
                     14,
@@ -559,39 +520,22 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L0 Landesstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Landesstraße, Staatsstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2
-                ],
-                "line-color": "#fff2a3"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#969696"
+                        ],
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -605,7 +549,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -629,38 +573,6 @@
                     50
                 ],
                 "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L0 Bundesstraße",
-            "type":"line",
-			"metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Bundesstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2.25
-                ],
-                "line-color":"#fff2a3"
             }
         },
         {
@@ -698,38 +610,6 @@
                     53
                 ],
                 "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L0 Autobahn",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Kontur 2"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Bundesautobahn"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2.25
-                ],
-                "line-color":"#ffcd61"
             }
         },
         {
@@ -891,7 +771,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":8,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -903,6 +783,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.4,
+                    10,
+                    1.6,
                     12,
                     1.7,
                     14,
@@ -914,7 +798,18 @@
                     18,
                     44
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffec7a"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]  
+                }
             }
         },
         {
@@ -928,7 +823,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":7,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -940,6 +835,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
                     12,
                     2,
                     14,
@@ -951,7 +850,18 @@
                     18,
                     46
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -965,7 +875,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":5,
             "filter":[
                 "all",
                 ["in", "bauwerk", "Tunnel, Unterführung"],
@@ -977,6 +887,12 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    10,
+                    2.2,
                     12,
                     2.75,
                     14,
@@ -988,7 +904,18 @@
                     18,
                     48
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ff954d"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1011,7 +938,15 @@
             ],
             "layout": {"line-join":"round"},
             "paint":{
-                "line-width":0.7,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#4d4d4d"
             }
         },
@@ -1052,29 +987,6 @@
             }
         },
         {
-            "id":"L1 Gemeindestraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Kontur 2"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Gemeindestraße"]
-            ],
-            "layout":{"line-cap":"round","line-join":"round"},
-            "paint":{
-                "line-width":0.75,
-                "line-color":"#969696"
-            }
-        },
-        {
             "id":"L1 Gemeindestraße K",
             "type":"line",
             "metadata":{
@@ -1085,7 +997,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Gemeindestraße"]
@@ -1096,6 +1008,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    11,
+                    0.75,
                     12,
                     2.5,
                     14,
@@ -1107,36 +1021,18 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L1 Kreisstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":10,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Kreisstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    1.3
-                ],
-                "line-color":"#969696"
+                "line-color":{
+                    "stops":[
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1150,7 +1046,7 @@
             },			  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":10,
             "filter":[
                 "all",
                 ["in", "klasse", "Kreisstraße"]
@@ -1161,6 +1057,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    10,
+                    1.0,
                     12,
                     2.5,
                     14,
@@ -1172,38 +1070,23 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L1 Landesstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Landesstraße, Staatsstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2
-                ],
-                "line-color":"#fff2a3"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#969696"
+                        ],
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                    
+                }
             }
         },
         {
@@ -1217,7 +1100,7 @@
             },			  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Landesstraße, Staatsstraße"]
@@ -1239,38 +1122,7 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L1 Bundesstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2.25
-                ],
-                "line-color":"#fff2a3"
+                "line-color": "#8f8f8f"
             }
         },
         {
@@ -1284,7 +1136,7 @@
             },			  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesstraße"]
@@ -1310,37 +1162,6 @@
             }
         },
         {
-            "id":"L1 Autobahn",
-            "type":"line",
-			"metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Kontur 2"
-            },  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesautobahn"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2.25
-                ],
-                "line-color":"#ffcd61"
-            }
-        },
-        {
             "id":"L1 Autobahn K",
             "type":"line",
 			"metadata":{
@@ -1351,7 +1172,7 @@
             },  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesautobahn"]
@@ -1495,7 +1316,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":8,
             "filter":[
                 "all",
                 ["in", "klasse", "Landesstraße, Staatsstraße"]
@@ -1506,6 +1327,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.4,
+                    10,
+                    1.6,
                     12,
                     1.7,
                     14,
@@ -1517,7 +1342,18 @@
                     18,
                     44
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffec7a"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ] 
+                }
             }
         },
         {
@@ -1531,7 +1367,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":7,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesstraße"]
@@ -1542,6 +1378,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
                     12,
                     2,
                     14,
@@ -1553,7 +1393,18 @@
                     18,
                     46
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1567,7 +1418,7 @@
             },	  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":5,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesautobahn"]
@@ -1578,6 +1429,12 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    10,
+                    2.2,
                     12,
                     2.75,
                     14,
@@ -1589,7 +1446,18 @@
                     18,
                     48
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ff954d"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1611,7 +1479,15 @@
             ],
             "layout": {"line-join":"round"},
             "paint":{
-                "line-width":0.7,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#4d4d4d"
             }
         },
@@ -1653,30 +1529,6 @@
             }
         },
         {
-            "id":"L2 Gemeindestraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Kontur 2"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Gemeindestraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":0.75,
-                "line-color":"#969696"
-            }
-        },
-        {
             "id":"L2 Gemeindestraße K",
             "type":"line",
             "metadata":{
@@ -1687,7 +1539,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Gemeindestraße"],
@@ -1699,6 +1551,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    11,
+                    0.75,
                     12,
                     2.5,
                     14,
@@ -1710,39 +1564,20 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
+                "line-color":{
+                    "stops":[
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
-        },
-        {
-            "id":"L2 Kreisstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":10,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Kreisstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    1.3
-                ],
-                "line-color":"#969696"
-            }
-        },   
+        }, 
         {
             "id":"L2 Kreisstraße K",
             "type":"line",
@@ -1754,7 +1589,7 @@
             },	  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":10,
             "filter":[
                 "all",
                 ["in", "klasse", "Kreisstraße"],
@@ -1766,6 +1601,8 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    10,
+                    1.0,
                     12,
                     2.5,
                     14,
@@ -1777,39 +1614,22 @@
                     18,
                     50
                 ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L2 Landesstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Landesstraße, Staatsstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2
-                ],
-                "line-color":"#fff2a3"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#969696"
+                        ],
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -1823,7 +1643,7 @@
             },
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":11,
             "filter":[
                 "all",
                 ["in", "klasse", "Landesstraße, Staatsstraße"],
@@ -1847,38 +1667,6 @@
                     50
                 ],
                 "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L2 Bundesstraße",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Kontur 2"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2.25
-                ],
-                "line-color":"#fff2a3"
             }
         },
         {
@@ -1916,38 +1704,6 @@
                     53
                 ],
                 "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L2 Autobahn",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Kontur 2"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "maxzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesautobahn"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    5,
-                    0.35,
-                    10,
-                    2.25
-                ],
-                "line-color":"#ffcd61"
             }
         },
         {
@@ -2109,7 +1865,7 @@
             }, 
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-			"minzoom":12,
+			"minzoom":8,
             "filter":[
                 "all",
                 ["in", "klasse", "Landesstraße, Staatsstraße"],
@@ -2121,6 +1877,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.4,
+                    10,
+                    1.6,
                     12,
                     1.7,
                     14,
@@ -2132,7 +1892,18 @@
                     18,
                     44
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffec7a"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -2146,7 +1917,7 @@
             },		  
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":7,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesstraße"],
@@ -2158,6 +1929,10 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
                     12,
                     2,
                     14,
@@ -2169,7 +1944,18 @@
                     18,
                     46
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -2183,7 +1969,7 @@
             }, 
             "source":"smarttiles_de",
             "source-layer":"Verkehrslinie",
-            "minzoom":12,
+            "minzoom":5,
             "filter":[
                 "all",
                 ["in", "klasse", "Bundesautobahn"],
@@ -2195,6 +1981,12 @@
                     "interpolate",
                     ["linear"],
                     ["zoom"],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    10,
+                    2.2,
                     12,
                     2.75,
                     14,
@@ -2206,7 +1998,18 @@
                     18,
                     48
                 ],
-                "line-color":"#ffffff"
+                "line-color":{
+                    "stops":[
+                        [
+                            10,
+                            "#ff954d"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
             }
         },
         {
@@ -2229,7 +2032,15 @@
             ],
             "layout":{"line-join":"round"},
             "paint":{
-                "line-width":0.7,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#4d4d4d"
             }
         },

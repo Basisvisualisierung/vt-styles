@@ -4,7 +4,8 @@
     "sources":{
         "smarttiles_de":{
             "url":"https://adv-smart.de/tiles/smarttiles_de_public/smarttiles_de_public.json",
-            "type":"vector"
+            "type":"vector",
+            "attribution":"Daten: <a href=\"https://adv-smart.de\">AdV Smart Mapping</a>, &copy; GeoBasis-DE"
         }
     },
     "glyphs":"/fonts/{fontstack}/{range}.pbf",
@@ -371,7 +372,15 @@
             ],
             "layout":{"line-join":"round"},
             "paint":{
-                "line-width":1,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#8f9695"
             }
         },
@@ -626,7 +635,15 @@
             ],
             "layout":{"line-join":"round"},
             "paint":{
-                "line-width":1,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#8f9695"
             }
         },
@@ -892,7 +909,15 @@
             ],
             "layout":{"line-join":"round"},
             "paint":{
-                "line-width":1,
+                "line-width":[
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
                 "line-color":"#8f9695"
             }
         },
