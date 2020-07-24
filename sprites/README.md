@@ -1,1 +1,0 @@
-Place sprite files in this folder, which are used by the styles.
