@@ -1,260 +1,354 @@
 {
-    "version":8,
-    "name":"vt-style-color",
-    "sources":{
-        "smarttiles_de":{
-            "url":"https://adv-smart.de/tiles/smarttiles_de_public/smarttiles_de_public.json",
-            "type":"vector",
-            "attribution":"Daten: <a href=\"https://adv-smart.de\">AdV Smart Mapping</a>, &copy; GeoBasis-DE"
+    "version": 8,
+    "name": "vt-style-color",
+    "sources": {
+        "smarttiles_de": {
+            "url": "https://adv-smart.de/tiles/smarttiles_de_public/smarttiles_de_public.json",
+            "type": "vector",
+            "attribution": "Daten: <a href=\"https://adv-smart.de\">AdV Smart Mapping</a>, &copy; GeoBasis-DE"
         }
     },
-    "glyphs":"/fonts/{fontstack}/{range}.pbf",
-    "metadata":{
-        "vt-style-version":"1.0.0 beta"
+    "glyphs": "/fonts/{fontstack}/{range}.pbf",
+    "metadata": {
+        "vt-style-version": "1.0.0 beta"
     },
-    "layers":[
+    "layers": [
         {
-            "id":"Hintergrund",
-            "type":"background",
-            "paint":{"background-color":"#fafaf3"}
+            "id": "Hintergrund",
+            "type": "background",
+            "paint": {
+                "background-color": "#fafaf3"
+            }
         },
         {
-            "id":"Meer",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Gewässer",
-                "map-editor:layer":"Meer",
-                "map-editor:layer-element":"Füllung"
+            "id": "Meer",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Meer",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Gewaesserflaeche",
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "filter": [
                 "all",
-                ["==", "klasse", "Meer"]
+                [
+                    "==",
+                    "klasse",
+                    "Meer"
+                ]
             ],
-            "layout":{},
-            "paint":{"fill-color":"#b9e0f4"}
+            "layout": {},
+            "paint": {
+                "fill-color": "#b9e0f4"
+            }
         },
         {
-            "id":"Siedlung",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Siedlung",
-                "map-editor:layer-element":"Füllung"
+            "id": "Siedlung",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Siedlungsflaeche",
-            "minzoom":10,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Siedlungsflaeche",
+            "minzoom": 10,
+            "filter": [
                 "all",
-                ["==", "klasse", "Siedlung"]
-              ],
-            "layout":{},
-            "paint":{"fill-color": "#f5baba"}
-        },
-        {
-            "id":"Industrie und Gewerbe",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Industrie und Gewerbe",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Siedlungsflaeche",
-            "minzoom":10,
-            "filter":[
-                "all",
-                ["in", "objektart", "IndustrieUndGewerbeflaeche", "Bergbaubetrieb", "TagebauGrubeSteinbruch", "Halde"]
-              ],
-            "layout":{},
-            "paint":{"fill-color":"#cccccc"}
-        },
-        {
-            "id":"Flughafen",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Flughafen",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrsflaeche",
-            "minzoom":10,
-            "filter":[
-                "all",
-                ["in", "objektart", "Flugverkehr"]
+                [
+                    "==",
+                    "klasse",
+                    "Siedlung"
+                ]
             ],
-            "layout":{},
-            "paint":{"fill-color": "#ebf5e5"}
+            "layout": {},
+            "paint": {
+                "fill-color": "#f5baba"
+            }
         },
         {
-            "id":"Start- und Landebahn",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Start- und Landebahn",
-                "map-editor:layer-element":"Füllung"
+            "id": "Industrie und Gewerbe",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Industrie und Gewerbe",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrsflaeche",
-            "minzoom":10,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Siedlungsflaeche",
+            "minzoom": 10,
+            "filter": [
                 "all",
-                ["match", ["get", "objektart"], ["Flugverkehrsanlage"], true, false],
-                ["match", ["get", "klasse"], ["Startbahn, Landebahn", "Zurollbahn, Taxiway", "Vorfeld"], true, false]
+                [
+                    "in",
+                    "objektart",
+                    "IndustrieUndGewerbeflaeche",
+                    "Bergbaubetrieb",
+                    "TagebauGrubeSteinbruch",
+                    "Halde"
+                ]
             ],
-            "layout":{},
-            "paint":{"fill-color": "#ffffff"}
+            "layout": {},
+            "paint": {
+                "fill-color": "#cccccc"
+            }
         },
         {
-            "id":"Bahnverkehr",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Bahnhof",
-                "map-editor:layer-element":"Füllung"
+            "id": "Flughafen",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Flughafen",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrsflaeche",
-            "minzoom":10,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrsflaeche",
+            "minzoom": 10,
+            "filter": [
                 "all",
-                ["in", "klasse", "Bahnverkehr"]
-              ],
-            "layout":{},
-            "paint":{"fill-color": "#cccccc"}
+                [
+                    "in",
+                    "objektart",
+                    "Flugverkehr"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#ebf5e5"
+            }
         },
         {
-            "id":"Öffentliche Grün- und Freizeitanlage",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:layer":"Grün- und Freizeitanlage",
-                "map-editor:layer-element":"Füllung"
+            "id": "Start- und Landebahn",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Start- und Landebahn",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Siedlungsflaeche",
-            "minzoom":12,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrsflaeche",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "objektart"
+                    ],
+                    [
+                        "Flugverkehrsanlage"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "klasse"
+                    ],
+                    [
+                        "Startbahn, Landebahn",
+                        "Zurollbahn, Taxiway",
+                        "Vorfeld"
+                    ],
+                    true,
+                    false
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#ffffff"
+            }
+        },
+        {
+            "id": "Bahnverkehr",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Bahnhof",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrsflaeche",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bahnverkehr"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#cccccc"
+            }
+        },
+        {
+            "id": "Öffentliche Grün- und Freizeitanlage",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:layer": "Grün- und Freizeitanlage",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Siedlungsflaeche",
+            "minzoom": 12,
+            "filter": [
                 "any",
-                ["==", "objektart", "SportFreizeitUndErholungsflaeche"]
+                [
+                    "==",
+                    "objektart",
+                    "SportFreizeitUndErholungsflaeche"
+                ]
             ],
-            "layout":{},
-            "paint":{
-                "fill-color":"#ebf5e5",
-                "fill-opacity":0.6,
-                "fill-antialias":false
+            "layout": {},
+            "paint": {
+                "fill-color": "#ebf5e5",
+                "fill-opacity": 0.6,
+                "fill-antialias": false
             }
         },
         {
-            "id":"Friedhof",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:layer":"Friedhof",
-                "map-editor:layer-element":"Füllung"
+            "id": "Friedhof",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:layer": "Friedhof",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Siedlungsflaeche",
-            "minzoom":12,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Siedlungsflaeche",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["==", "klasse", "Friedhof"]
+                [
+                    "==",
+                    "klasse",
+                    "Friedhof"
+                ]
             ],
-            "layout":{},
-            "paint":{
-                "fill-color":"#e6ffcc",
-                "fill-opacity":0.6,
-                "fill-antialias":false
+            "layout": {},
+            "paint": {
+                "fill-color": "#e6ffcc",
+                "fill-opacity": 0.6,
+                "fill-antialias": false
             }
         },
         {
-            "id":"Wiese",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Vegetation",
-                "map-editor:layer":"Wiese",
-                "map-editor:layer-element":"Füllung"
+            "id": "Wiese",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:layer": "Wiese",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Vegetationsflaeche",
-            "minzoom":12,
-            "layout":{},
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Vegetationsflaeche",
+            "minzoom": 12,
+            "layout": {},
+            "filter": [
                 "all",
-                ["==", "klasse", "Grünland"]
-              ],
-            "paint":{
-                "fill-color":"#ebf5e5",
-                "fill-opacity":[
+                [
+                    "==",
+                    "klasse",
+                    "Grünland"
+                ]
+            ],
+            "paint": {
+                "fill-color": "#ebf5e5",
+                "fill-opacity": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     13,
                     0.6,
                     14,
                     1
                 ],
-                "fill-antialias":false
+                "fill-antialias": false
             }
         },
         {
-            "id":"Moor, Heide",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Vegetation",
-                "map-editor:layer":"Moor, Heide",
-                "map-editor:layer-element":"Füllung"
+            "id": "Moor, Heide",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:layer": "Moor, Heide",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Vegetationsflaeche",
-            "layout":{},
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Vegetationsflaeche",
+            "layout": {},
+            "filter": [
                 "all",
-                ["in", "klasse", "Moor", "Heide"]
-              ],
-            "paint":{
-                "fill-color":"#f2f2cc",
-                "fill-opacity":[
+                [
+                    "in",
+                    "klasse",
+                    "Moor",
+                    "Heide"
+                ]
+            ],
+            "paint": {
+                "fill-color": "#f2f2cc",
+                "fill-opacity": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     13,
                     0.6,
                     14,
                     1
                 ],
-                "fill-antialias":false
+                "fill-antialias": false
             }
         },
         {
-            "id":"Wald",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Vegetation",
-                "map-editor:layer":"Wald",
-                "map-editor:layer-element":"Füllung"
+            "id": "Wald",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:layer": "Wald",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Vegetationsflaeche",
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Vegetationsflaeche",
+            "filter": [
                 "all",
-                ["==", "objektart","Wald"]
+                [
+                    "==",
+                    "objektart",
+                    "Wald"
+                ]
             ],
-            "layout":{},
-            "paint":{
-                "fill-color":"#d1f0ce",
-                "fill-opacity":[
+            "layout": {},
+            "paint": {
+                "fill-color": "#d1f0ce",
+                "fill-opacity": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     13,
                     0.6,
                     14,
@@ -263,99 +357,123 @@
             }
         },
         {
-            "id":"Gewässer",
-            "type":"fill",
-            "metadata":{
-                "map-editor:group":"Gewässer",
-                "map-editor:layer":"Gewässer",
-                "map-editor:layer-element":"Füllung"
+            "id": "Gewässer",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Gewaesserflaeche",
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "filter": [
                 "all",
-                ["in", "klasse","See", "Fliessgewässer", "Hafenbecken", "Kanal"]
+                [
+                    "in",
+                    "klasse",
+                    "See",
+                    "Fliessgewässer",
+                    "Hafenbecken",
+                    "Kanal"
+                ]
             ],
-            "layout":{},
-            "paint":{"fill-color": "#b9e0f4"}
+            "layout": {},
+            "paint": {
+                "fill-color": "#b9e0f4"
+            }
         },
         {
-            "id":"Bach, Graben",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Gewässer",
-                "map-editor:layer":"Bach, Graben",
-                "map-editor:layer-element":"Kontur"
+            "id": "Bach, Graben",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Bach, Graben",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Gewaesserlinie",
-            "minzoom":14,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserlinie",
+            "minzoom": 14,
+            "filter": [
                 "all",
-                ["!=", "bauwerk", "Durchlass"]
+                [
+                    "!=",
+                    "bauwerk",
+                    "Durchlass"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-color":"#b9e0f4",
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#b9e0f4",
                 "line-width": 1
             }
         },
         {
-            "id":"Fuß- und Radweg",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Fuß- und Radweg",
-                "map-editor:layer-element":"Kontur"
+            "id": "Fuß- und Radweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Fuß- und Radweg",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":14,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
                 "all",
-                ["==", "objektart", "WegPfadSteig"],
-                ["!has", "bauwerk"]
+                [
+                    "==",
+                    "objektart",
+                    "WegPfadSteig"
+                ],
+                [
+                    "!has",
+                    "bauwerk"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":0.5,
-                "line-color":"#8f8f8f"
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": 0.5,
+                "line-color": "#8f8f8f"
             }
         },
         {
-            "id":"Wohngebäude 2D",
-            "type":"fill-extrusion",
-            "metadata":{
-                "map-editor:group":"Gebäude",
-                "map-editor:layer":"Wohngebäude 2D",
-                "map-editor:layer-element":"Füllung"
+            "id": "Wohngebäude 2D",
+            "type": "fill-extrusion",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Wohngebäude 2D",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Gebaeude",
-            "minzoom":15,
-            "maxzoom":16,
-            "layout":{
-                "visibility":"visible"
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeude",
+            "minzoom": 15,
+            "maxzoom": 16,
+            "layout": {
+                "visibility": "visible"
             },
-            "paint":{
-                "fill-extrusion-height":0,
-                "fill-extrusion-color":"#918d8d"
+            "paint": {
+                "fill-extrusion-height": 0,
+                "fill-extrusion-color": "#918d8d"
             }
         },
         {
-            "id":"Öffentliches Gebäude 2D",
-            "type":"fill-extrusion",
-            "metadata":{
-                "map-editor:group":"Gebäude",
-                "map-editor:layer":"Öffentliches Gebäude 2D",
-                "map-editor:layer-element":"Füllung"
+            "id": "Öffentliches Gebäude 2D",
+            "type": "fill-extrusion",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Öffentliches Gebäude 2D",
+                "map-editor:layer-element": "Füllung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Gebaeude",
-            "minzoom":15,
-            "maxzoom":16,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeude",
+            "minzoom": 15,
+            "maxzoom": 16,
+            "filter": [
                 "all",
                 [
                     "in",
@@ -391,37 +509,52 @@
                     "31001_3242"
                 ]
             ],
-            "layout":{
-                "visibility":"visible"
+            "layout": {
+                "visibility": "visible"
             },
-            "paint":{
-                "fill-extrusion-height":0,
-                "fill-extrusion-color":"#cc6868"
+            "paint": {
+                "fill-extrusion-height": 0,
+                "fill-extrusion-color": "#cc6868"
             }
         },
         {
-            "id":"L0 Nebenstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Nebenstraße",
-                "map-editor:layer-element":"Kontur"
+            "id": "L0 Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":14,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
                 "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Attribut trifft nicht zu", "Sonstiges"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     1.8,
                     14,
@@ -433,32 +566,46 @@
                     18,
                     40
                 ],
-                "line-color":"#8f8f8f"
+                "line-color": "#8f8f8f"
             }
         },
         {
-            "id":"L0 Gemeindestraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Kontur"
+            "id": "L0 Gemeindestraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":11,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
                 "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Gemeindestraße"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     11,
                     0.75,
                     12,
@@ -472,8 +619,8 @@
                     18,
                     50
                 ],
-                "line-color":{
-                    "stops":[
+                "line-color": {
+                    "stops": [
                         [
                             11,
                             "#969696"
@@ -487,28 +634,42 @@
             }
         },
         {
-            "id":"L0 Kreisstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Kontur"
+            "id": "L0 Kreisstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":10,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 10,
+            "filter": [
                 "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Kreisstraße"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     10,
                     1.0,
                     12,
@@ -522,8 +683,8 @@
                     18,
                     50
                 ],
-                "line-color":{
-                    "stops":[
+                "line-color": {
+                    "stops": [
                         [
                             10,
                             "#969696"
@@ -541,578 +702,42 @@
             }
         },
         {
-            "id":"L0 Landesstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Kontur"
+            "id": "L0 Landesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":11,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
                 "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Landesstraße, Staatsstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    2.5,
-                    14,
-                    4.75,
-                    15,
-                    8,
-                    16,
-                    19,
-                    18,
-                    50
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
                 ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L0 Bundesstraße K",
-            "type":"line",
-			"metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Kontur"
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Bundesstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    2.75,
-                    14,
-                    5.5,
-                    15,
-                    9.5,
-                    16,
-                    20,
-                    18,
-                    53
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L0 Autobahn K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Kontur"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Bundesautobahn"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    2.75,
-                    14,
-                    5.5,
-                    15,
-                    9.5,
-                    16,
-                    20,
-                    18,
-                    53
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L0 Nebenstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Nebenstraße",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":14,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Attribut trifft nicht zu", "Sonstiges"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.4,
-                    14,
-                    3.5,
-                    15,
-                    5,
-                    16,
-                    12,
-                    18,
-                    35
-                ],
-                "line-color":"#ffffff"
-            }
-        },
-        {
-            "id":"L0 Gemeindestraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Gemeindestraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.7,
-                    14,
-                    3.5,
-                    15,
-                    6.5,
-                    16,
-                    15,
-                    18,
-                    44
-                ],
-                "line-color":"#ffffff"
-            }
-        },
-        {
-            "id":"L0 Kreisstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Füllung"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":12,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Kreisstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.7,
-                    14,
-                    3.5,
-                    15,
-                    6.5,
-                    16,
-                    15,
-                    18,
-                    44
-                ],
-                "line-color":"#ffffff"
-            }
-        },
-        {
-            "id":"L0 Landesstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":8,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Landesstraße, Staatsstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    8,
-                    1.4,
-                    10,
-                    1.6,
-                    12,
-                    1.7,
-                    14,
-                    3.5,
-                    15,
-                    6.5,
-                    16,
-                    15,
-                    18,
-                    44
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#ffec7a"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ]  
-                }
-            }
-        },
-        {
-            "id":"L0 Bundesstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":7,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Bundesstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    8,
-                    1.6,
-                    10,
-                    1.8,
-                    12,
-                    2,
-                    14,
-                    4,
-                    15,
-                    7.5,
-                    16,
-                    16,
-                    18,
-                    46
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#ffcc73"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ]
-                }
-            }
-        },
-        {
-            "id":"L0 Autobahn F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Bundesautobahn"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    6,
-                    1.6,
-                    8,
-                    2,
-                    10,
-                    2.2,
-                    12,
-                    2.75,
-                    14,
-                    4.5,
-                    15,
-                    8,
-                    16,
-                    17,
-                    18,
-                    48
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#ff954d"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ]
-                }
-            }
-        },
-        {
-            "id":"L0 Bahnstrecke",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bahnstrecke",
-                "map-editor:layer-element":"Kontur"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "filter":[
-                "all",
-                ["in", "bauwerk", "Tunnel, Unterführung"],
-                ["in", "klasse", "Eisenbahn"],
-                ["==", "objektart", "Bahnstrecke"]
-            ],
-            "layout": {"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    11,
-                    0.5,
-                    12,
-                    0.7
-                ],
-                "line-color":"#4d4d4d"
-            }
-        },
-        {
-            "id":"L1 Nebenstraße K",
-            "type":"line",
-			"metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Nebenstraße",
-                "map-editor:layer-element":"Kontur"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":14,
-            "filter":[
-                "all",
-                ["in", "klasse", "Attribut trifft nicht zu", "Sonstiges"]
-            ],
-            "layout":{"line-cap":"round","line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.8,
-                    14,
-                    4.5,
-                    15,
-                    6,
-                    16,
-                    14,
-                    18,
-                    40
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L1 Gemeindestraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Kontur"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":11,
-            "filter":[
-                "all",
-                ["in", "klasse", "Gemeindestraße"]
-            ],
-            "layout":{"line-cap":"round","line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    11,
-                    0.75,
-                    12,
-                    2.5,
-                    14,
-                    4.75,
-                    15,
-                    8,
-                    16,
-                    19,
-                    18,
-                    50
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            11,
-                            "#969696"
-                        ],
-                        [
-                            12,
-                            "#8f8f8f"
-                        ]
-                    ]
-                }
-            }
-        },
-        {
-            "id":"L1 Kreisstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Kontur"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":10,
-            "filter":[
-                "all",
-                ["in", "klasse", "Kreisstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    1.0,
-                    12,
-                    2.5,
-                    14,
-                    4.75,
-                    15,
-                    8,
-                    16,
-                    19,
-                    18,
-                    50
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#969696"
-                        ],
-                        [
-                            11,
-                            "#969696"
-                        ],
-                        [
-                            12,
-                            "#8f8f8f"
-                        ]
-                    ]
-                    
-                }
-            }
-        },
-        {
-            "id":"L1 Landesstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Kontur"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":11,
-            "filter":[
-                "all",
-                ["in", "klasse", "Landesstraße, Staatsstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     2.5,
                     14,
@@ -1128,603 +753,42 @@
             }
         },
         {
-            "id":"L1 Bundesstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Kontur"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    2.75,
-                    14,
-                    5.5,
-                    15,
-                    9.5,
-                    16,
-                    20,
-                    18,
-                    53
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L1 Autobahn K",
-            "type":"line",
-			"metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Kontur"
-            },  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesautobahn"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    3.5,
-                    14,
-                    5.5,
-                    16,
-                    20,
-                    18,
-                    53
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L1 Nebenstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Nebenstraße",
-                "map-editor:layer-element":"Füllung"
-            },			  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":14,
-            "filter":[
-                "all",
-                ["in", "klasse", "Attribut trifft nicht zu", "Sonstiges"]
-            ],
-            "layout":{"line-cap":"round","line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.4,
-                    14,
-                    3.5,
-                    15,
-                    5,
-                    16,
-                    12,
-                    18,
-                    35
-                ],
-                "line-color":"#ffffff"
-            }
-        },
-        {
-            "id":"L1 Gemeindestraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Füllung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Gemeindestraße"]
-            ],
-            "layout":{"line-cap":"round","line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.7,
-                    14,
-                    3.5,
-                    15,
-                    6.5,
-                    16,
-                    15,
-                    18,
-                    44
-                ],
-                "line-color":"#ffffff"
-            }
-        },
-        {
-            "id":"L1 Kreisstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Füllung"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Kreisstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.7,
-                    14,
-                    3.5,
-                    15,
-                    6.5,
-                    16,
-                    15,
-                    18,
-                    44
-                ],
-                "line-color":"#ffffff"
-            }
-        },
-        {
-            "id":"L1 Landesstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Füllung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":8,
-            "filter":[
-                "all",
-                ["in", "klasse", "Landesstraße, Staatsstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    8,
-                    1.4,
-                    10,
-                    1.6,
-                    12,
-                    1.7,
-                    14,
-                    3.5,
-                    15,
-                    6.5,
-                    16,
-                    15,
-                    18,
-                    44
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#ffec7a"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ] 
-                }
-            }
-        },
-        {
-            "id":"L1 Bundesstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Füllung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":7,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesstraße"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    8,
-                    1.6,
-                    10,
-                    1.8,
-                    12,
-                    2,
-                    14,
-                    4,
-                    15,
-                    7.5,
-                    16,
-                    16,
-                    18,
-                    46
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#ffcc73"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ]
-                }
-            }
-        },
-        {
-            "id":"L1 Autobahn F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Füllung"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesautobahn"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    6,
-                    1.6,
-                    8,
-                    2,
-                    12,
-                    2.5,
-                    14,
-                    4.5,
-                    16,
-                    17,
-                    18,
-                    48
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#cccccc"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ]
-                }
-            }
-        },
-        {
-            "id":"L1 Bahnstrecke",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bahnstrecke",
-                "map-editor:layer-element":"Kontur"
+            "id": "L0 Bundesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["in", "klasse", "Eisenbahn"],
-                ["==", "objektart", "Bahnstrecke"]
-            ],
-            "layout": {"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    11,
-                    0.5,
-                    12,
-                    0.7
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
                 ],
-                "line-color":"#4d4d4d"
-            }
-        },
-        {
-            "id":"L2 Nebenstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Nebenstraße",
-                "map-editor:layer-element":"Kontur"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":14,
-            "filter":[
-                "all",
-                ["in", "klasse", "Attribut trifft nicht zu", "Sonstiges"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    1.8,
-                    14,
-                    4.5,
-                    15,
-                    6,
-                    16,
-                    14,
-                    18,
-                    40
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L2 Gemeindestraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Kontur"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":11,
-            "filter":[
-                "all",
-                ["in", "klasse", "Gemeindestraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    11,
-                    0.75,
-                    12,
-                    2.5,
-                    14,
-                    4.75,
-                    15,
-                    8,
-                    16,
-                    19,
-                    18,
-                    50
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            11,
-                            "#969696"
-                        ],
-                        [
-                            12,
-                            "#8f8f8f"
-                        ]
-                    ]
-                }
-            }
-        }, 
-        {
-            "id":"L2 Kreisstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Kontur"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":10,
-            "filter":[
-                "all",
-                ["in", "klasse", "Kreisstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    1.0,
-                    12,
-                    2.5,
-                    14,
-                    4.75,
-                    15,
-                    8,
-                    16,
-                    19,
-                    18,
-                    50
-                ],
-                "line-color":{
-                    "stops":[
-                        [
-                            10,
-                            "#969696"
-                        ],
-                        [
-                            11,
-                            "#969696"
-                        ],
-                        [
-                            12,
-                            "#8f8f8f"
-                        ]
-                    ]
-                }
-            }
-        },
-        {
-            "id":"L2 Landesstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Kontur"
+            "layout": {
+                "line-join": "round"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":11,
-            "filter":[
-                "all",
-                ["in", "klasse", "Landesstraße, Staatsstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    2.5,
-                    14,
-                    4.75,
-                    15,
-                    8,
-                    16,
-                    19,
-                    18,
-                    50
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L2 Bundesstraße K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Kontur"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    12,
-                    2.75,
-                    14,
-                    5.5,
-                    15,
-                    9.5,
-                    16,
-                    20,
-                    18,
-                    53
-                ],
-                "line-color":"#8f8f8f"
-            }
-        },
-        {
-            "id":"L2 Autobahn K",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Kontur"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":12,
-            "filter":[
-                "all",
-                ["in", "klasse", "Bundesautobahn"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
-            ],
-            "layout":{"line-join":"round"},
-            "paint":{
+            "paint": {
                 "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     2.75,
                     14,
@@ -1736,32 +800,98 @@
                     18,
                     53
                 ],
-                "line-color":"#8f8f8f"
+                "line-color": "#8f8f8f"
             }
         },
         {
-            "id":"L2 Nebenstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Nebenstraße",
-                "map-editor:layer-element":"Füllung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":14,
-            "filter":[
+            "id": "L0 Autobahn K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["in", "klasse", "Attribut trifft nicht zu", "Sonstiges"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.75,
+                    14,
+                    5.5,
+                    15,
+                    9.5,
+                    16,
+                    20,
+                    18,
+                    53
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L0 Nebenstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     1.4,
                     14,
@@ -1773,32 +903,46 @@
                     18,
                     35
                 ],
-                "line-color":"#ffffff"
+                "line-color": "#ffffff"
             }
         },
         {
-            "id":"L2 Gemeindestraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Füllung"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":12,
-            "filter":[
+            "id": "L0 Gemeindestraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["in", "klasse", "Gemeindestraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     1.7,
                     14,
@@ -1810,32 +954,46 @@
                     18,
                     44
                 ],
-                "line-color":"#ffffff"
+                "line-color": "#ffffff"
             }
         },
         {
-            "id":"L2 Kreisstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Füllung"
-            },  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":12,
-            "filter":[
+            "id": "L0 Kreisstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["in", "klasse", "Kreisstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     1.7,
                     14,
@@ -1847,32 +1005,46 @@
                     18,
                     44
                 ],
-                "line-color":"#ffffff"
+                "line-color": "#ffffff"
             }
         },
         {
-            "id":"L2 Landesstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Füllung"
-            }, 
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-			"minzoom":8,
-            "filter":[
+            "id": "L0 Landesstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 8,
+            "filter": [
                 "all",
-                ["in", "klasse", "Landesstraße, Staatsstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     8,
                     1.4,
                     10,
@@ -1888,8 +1060,8 @@
                     18,
                     44
                 ],
-                "line-color":{
-                    "stops":[
+                "line-color": {
+                    "stops": [
                         [
                             10,
                             "#ffec7a"
@@ -1903,28 +1075,42 @@
             }
         },
         {
-            "id":"L2 Bundesstraße F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
+            "id": "L0 Bundesstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Füllung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":7,
-            "filter":[
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 7,
+            "filter": [
                 "all",
-                ["in", "klasse", "Bundesstraße"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     8,
                     1.6,
                     10,
@@ -1940,8 +1126,8 @@
                     18,
                     46
                 ],
-                "line-color":{
-                    "stops":[
+                "line-color": {
+                    "stops": [
                         [
                             10,
                             "#ffcc73"
@@ -1955,28 +1141,42 @@
             }
         },
         {
-            "id":"L2 Autobahn F",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr", 
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Füllung"
-            }, 
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":5,
-            "filter":[
+            "id": "L0 Autobahn F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 5,
+            "filter": [
                 "all",
-                ["in", "klasse", "Bundesautobahn"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     6,
                     1.6,
                     8,
@@ -1994,8 +1194,8 @@
                     18,
                     48
                 ],
-                "line-color":{
-                    "stops":[
+                "line-color": {
+                    "stops": [
                         [
                             10,
                             "#ff954d"
@@ -2009,82 +1209,1637 @@
             }
         },
         {
-            "id":"L2 Bahnstrecke",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bahnstrecke",
-                "map-editor:layer-element":"Kontur"
+            "id": "L0 Bahnstrecke",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bahnstrecke",
+                "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":11,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
                 "all",
-                ["in", "klasse", "Eisenbahn"],
-                ["==", "objektart", "Bahnstrecke"],
-                ["in", "bauwerk", "Brücke", "Drehbrücke", "Hebehrücke", "Bogenbrücke", "Hochbahn, Hochstraße", "Hängebrücke", "Mehrstöckige Brücke", "Pontonbrücke", "Zugbrücke"]
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Eisenbahn"
+                ],
+                [
+                    "==",
+                    "objektart",
+                    "Bahnstrecke"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-width":[
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     11,
                     0.5,
                     12,
                     0.7
                 ],
-                "line-color":"#4d4d4d"
+                "line-color": "#4d4d4d"
             }
         },
         {
-            "id":"Leitung",
-            "type":"line",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Leitung",
-                "map-editor:layer-element":"Kontur"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Versorgungslinie",
-            "minzoom":14,
-            "filter":[
+            "id": "L1 Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
                 "all",
-                ["==", "klasse", "Freileitung"]
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ]
             ],
-            "layout":{"line-join":"round"},
-            "paint":{
-                "line-dasharray": [14,5],
-                "line-color":"#968181"
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.8,
+                    14,
+                    4.5,
+                    15,
+                    6,
+                    16,
+                    14,
+                    18,
+                    40
+                ],
+                "line-color": "#8f8f8f"
             }
         },
         {
-            "id":"Schrift Fluss",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Gewässer",
-                "map-editor:layer":"Gewässer",
-                "map-editor:layer-element":"Beschriftung"
-            },  
-            "source":"smarttiles_de",
-            "source-layer":"Gewaesserflaeche",
-            "minzoom":12,
-            "filter":[
+            "id": "L1 Gemeindestraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
                 "all",
-                ["in", "klasse", "Fliessgewässer", "Kanal"]
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.75,
+                    12,
+                    2.5,
+                    14,
+                    4.75,
+                    15,
+                    8,
+                    16,
+                    19,
+                    18,
+                    50
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L1 Kreisstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1.0,
+                    12,
+                    2.5,
+                    14,
+                    4.75,
+                    15,
+                    8,
+                    16,
+                    19,
+                    18,
+                    50
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#969696"
+                        ],
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L1 Landesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.5,
+                    14,
+                    4.75,
+                    15,
+                    8,
+                    16,
+                    19,
+                    18,
+                    50
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L1 Bundesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.75,
+                    14,
+                    5.5,
+                    15,
+                    9.5,
+                    16,
+                    20,
+                    18,
+                    53
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L1 Autobahn K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    3.5,
+                    14,
+                    5.5,
+                    16,
+                    20,
+                    18,
+                    53
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L1 Nebenstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.4,
+                    14,
+                    3.5,
+                    15,
+                    5,
+                    16,
+                    12,
+                    18,
+                    35
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L1 Gemeindestraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.7,
+                    14,
+                    3.5,
+                    15,
+                    6.5,
+                    16,
+                    15,
+                    18,
+                    44
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L1 Kreisstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.7,
+                    14,
+                    3.5,
+                    15,
+                    6.5,
+                    16,
+                    15,
+                    18,
+                    44
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L1 Landesstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    1.4,
+                    10,
+                    1.6,
+                    12,
+                    1.7,
+                    14,
+                    3.5,
+                    15,
+                    6.5,
+                    16,
+                    15,
+                    18,
+                    44
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#ffec7a"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L1 Bundesstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 7,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
+                    12,
+                    2,
+                    14,
+                    4,
+                    15,
+                    7.5,
+                    16,
+                    16,
+                    18,
+                    46
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L1 Autobahn F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    12,
+                    2.5,
+                    14,
+                    4.5,
+                    16,
+                    17,
+                    18,
+                    48
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#cccccc"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L1 Bahnstrecke",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bahnstrecke",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Eisenbahn"
+                ],
+                [
+                    "==",
+                    "objektart",
+                    "Bahnstrecke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
+                "line-color": "#4d4d4d"
+            }
+        },
+        {
+            "id": "L2 Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.8,
+                    14,
+                    4.5,
+                    15,
+                    6,
+                    16,
+                    14,
+                    18,
+                    40
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L2 Gemeindestraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.75,
+                    12,
+                    2.5,
+                    14,
+                    4.75,
+                    15,
+                    8,
+                    16,
+                    19,
+                    18,
+                    50
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L2 Kreisstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1.0,
+                    12,
+                    2.5,
+                    14,
+                    4.75,
+                    15,
+                    8,
+                    16,
+                    19,
+                    18,
+                    50
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#969696"
+                        ],
+                        [
+                            11,
+                            "#969696"
+                        ],
+                        [
+                            12,
+                            "#8f8f8f"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L2 Landesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.5,
+                    14,
+                    4.75,
+                    15,
+                    8,
+                    16,
+                    19,
+                    18,
+                    50
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L2 Bundesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.75,
+                    14,
+                    5.5,
+                    15,
+                    9.5,
+                    16,
+                    20,
+                    18,
+                    53
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L2 Autobahn K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.75,
+                    14,
+                    5.5,
+                    15,
+                    9.5,
+                    16,
+                    20,
+                    18,
+                    53
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
+            "id": "L2 Nebenstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.4,
+                    14,
+                    3.5,
+                    15,
+                    5,
+                    16,
+                    12,
+                    18,
+                    35
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L2 Gemeindestraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.7,
+                    14,
+                    3.5,
+                    15,
+                    6.5,
+                    16,
+                    15,
+                    18,
+                    44
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L2 Kreisstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1.7,
+                    14,
+                    3.5,
+                    15,
+                    6.5,
+                    16,
+                    15,
+                    18,
+                    44
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L2 Landesstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    1.4,
+                    10,
+                    1.6,
+                    12,
+                    1.7,
+                    14,
+                    3.5,
+                    15,
+                    6.5,
+                    16,
+                    15,
+                    18,
+                    44
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#ffec7a"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L2 Bundesstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 7,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    1.6,
+                    10,
+                    1.8,
+                    12,
+                    2,
+                    14,
+                    4,
+                    15,
+                    7.5,
+                    16,
+                    16,
+                    18,
+                    46
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#ffcc73"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L2 Autobahn F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 5,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    6,
+                    1.6,
+                    8,
+                    2,
+                    10,
+                    2.2,
+                    12,
+                    2.75,
+                    14,
+                    4.5,
+                    15,
+                    8,
+                    16,
+                    17,
+                    18,
+                    48
+                ],
+                "line-color": {
+                    "stops": [
+                        [
+                            10,
+                            "#ff954d"
+                        ],
+                        [
+                            11,
+                            "#ffffff"
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "L2 Bahnstrecke",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bahnstrecke",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Eisenbahn"
+                ],
+                [
+                    "==",
+                    "objektart",
+                    "Bahnstrecke"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.5,
+                    12,
+                    0.7
+                ],
+                "line-color": "#4d4d4d"
+            }
+        },
+        {
+            "id": "Leitung",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Leitung",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Versorgungslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "klasse",
+                    "Freileitung"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-dasharray": [
+                    14,
+                    5
+                ],
+                "line-color": "#968181"
+            }
+        },
+        {
+            "id": "Schrift Fluss",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Fliessgewässer",
+                    "Kanal"
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
                 "symbol-placement": "line",
                 "symbol-avoid-edges": true,
-                "text-size":[
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     9,
                     14,
@@ -2096,31 +2851,43 @@
                 "text-rotation-alignment": "map",
                 "text-max-angle": 30,
                 "text-letter-spacing": 0.3,
-                "text-font": ["Cantarell Oblique"]
+                "text-font": [
+                    "Cantarell Oblique"
+                ]
             },
-            "paint":{"text-color":"#186991"}
+            "paint": {
+                "text-color": "#186991"
+            }
         },
         {
-            "id":"Schrift See",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Gewässer",
-                "map-editor:layer":"Gewässer",
-                "map-editor:layer-element":"Beschriftung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Gewaesserflaeche",
-            "minzoom":12,
-            "filter":[
+            "id": "Schrift See",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["==", "klasse", "See"]
+                [
+                    "==",
+                    "klasse",
+                    "See"
+                ]
             ],
-                "layout":{
-                "text-field":"{name}",
-                "text-size":[
+            "layout": {
+                "text-field": "{name}",
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     7,
                     14,
@@ -2128,28 +2895,36 @@
                     18,
                     16
                 ],
-                "text-font": ["Cantarell Regular"],
+                "text-font": [
+                    "Cantarell Regular"
+                ],
                 "text-letter-spacing": 0.1
             },
-            "paint":{"text-color": "#186991"}
+            "paint": {
+                "text-color": "#186991"
+            }
         },
         {
-            "id":"Schrift Wald",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Vegetation",
-                "map-editor:layer":"Wald",
-                "map-editor:layer-element":"Beschriftung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Name",
-            "minzoom":12,
-            "filter":[
+            "id": "Schrift Wald",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:layer": "Wald",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["==", "klasse", "Wald"]
+                [
+                    "==",
+                    "klasse",
+                    "Wald"
+                ]
             ],
-                "layout":{
-                "text-field":"{name}",
+            "layout": {
+                "text-field": "{name}",
                 "text-variable-anchor": [
                     "bottom",
                     "top",
@@ -2157,281 +2932,365 @@
                     "bottom-right",
                     "top-left",
                     "top-right"
-                  ],
-                  "text-radial-offset": [
+                ],
+                "text-radial-offset": [
                     "interpolate",
-                    ["exponential", 1],
-                    ["zoom"],
+                    [
+                        "exponential",
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     1,
                     14,
                     2,
                     22,
                     5
-                  ],
-                "text-size":[
+                ],
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     6,
                     14,
                     10
                 ],
-                "text-font": ["Cantarell Regular"],
+                "text-font": [
+                    "Cantarell Regular"
+                ],
                 "text-letter-spacing": 0.1
             },
-            "paint":{"text-color": "#3ca432"}
-        },
-        {
-            "id":"Schrift Nebenstraße",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Nebenstraße",
-                "map-editor:layer-element":"Beschriftung"
-            },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":16,
-            "filter":[
-                "all",
-                ["in", "klasse", "Attribut trifft nicht zu", "Sonstiges"],
-                ["==", "objektart", "Strassenachse"]
-            ],
-            "layout":{
-                "text-field":"{name}",
-                "symbol-placement":"line",
-                "text-max-angle":20,
-                "text-anchor":"center",
-                "text-offset":[
-                    0,
-                    0
-                ],
-                "text-size":12,
-                "text-font":["Cantarell Regular"],
-                "text-letter-spacing":0.1,
-                "text-padding": 20,
-                "symbol-spacing": 1
-            },
-            "paint":{
-                "text-halo-color":"#ffffff",
-                "text-halo-width":2,
-                "text-color":"#000000"
+            "paint": {
+                "text-color": "#3ca432"
             }
         },
         {
-            "id":"Schrift Gemeindestraße",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Gemeindestraße",
-                "map-editor:layer-element":"Beschriftung"
+            "id": "Schrift Nebenstraße",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Beschriftung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":14,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 16,
+            "filter": [
                 "all",
-                ["in", "klasse", "Gemeindestraße"],
-                ["==", "objektart", "Strassenachse"]
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ],
+                [
+                    "==",
+                    "objektart",
+                    "Strassenachse"
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "symbol-placement":"line",
-                "text-max-angle":20,
-                "text-anchor":"center",
-                "text-offset":[
+            "layout": {
+                "text-field": "{name}",
+                "symbol-placement": "line",
+                "text-max-angle": 20,
+                "text-anchor": "center",
+                "text-offset": [
                     0,
                     0
                 ],
-                "text-size":[
+                "text-size": 12,
+                "text-font": [
+                    "Cantarell Regular"
+                ],
+                "text-letter-spacing": 0.1,
+                "text-padding": 20,
+                "symbol-spacing": 1
+            },
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2,
+                "text-color": "#000000"
+            }
+        },
+        {
+            "id": "Schrift Gemeindestraße",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ],
+                [
+                    "==",
+                    "objektart",
+                    "Strassenachse"
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "symbol-placement": "line",
+                "text-max-angle": 20,
+                "text-anchor": "center",
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     14,
                     10,
                     16,
                     14
                 ],
-                "text-font":["Cantarell Regular"],
-                "text-letter-spacing":0.1,
-                "text-padding":20,
-                "symbol-spacing":1
+                "text-font": [
+                    "Cantarell Regular"
+                ],
+                "text-letter-spacing": 0.1,
+                "text-padding": 20,
+                "symbol-spacing": 1
             },
-            "paint":{
-                "text-halo-color":"#ffffff",
-                "text-halo-width":2,
-                "text-color":"#000000"
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2,
+                "text-color": "#000000"
             }
         },
         {
-            "id":"Schrift Kreisstraße",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Kreisstraße",
-                "map-editor:layer-element":"Beschriftung"
+            "id": "Schrift Kreisstraße",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Beschriftung"
             },
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":12,
-            "filter":[
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["in", "klasse", "Kreisstraße"],
-                ["==", "objektart", "Strassenachse"]
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ],
+                [
+                    "==",
+                    "objektart",
+                    "Strassenachse"
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "symbol-placement":"line",
-                "text-max-angle":20,
-                "text-anchor":"center",
-                "text-offset":[
+            "layout": {
+                "text-field": "{name}",
+                "symbol-placement": "line",
+                "text-max-angle": 20,
+                "text-anchor": "center",
+                "text-offset": [
                     0,
                     0
                 ],
-                "text-size":[
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     10,
                     14,
                     12
                 ],
-                "text-font":["Cantarell Regular"],
-                "text-letter-spacing":0.1,
-                "text-padding":30,
-                "symbol-spacing":1
+                "text-font": [
+                    "Cantarell Regular"
+                ],
+                "text-letter-spacing": 0.1,
+                "text-padding": 30,
+                "symbol-spacing": 1
             },
-            "paint":{
-                "text-halo-color":"#ffffff",
-                "text-halo-width":1,
-                "text-color":"#000000",
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1,
+                "text-color": "#000000",
                 "text-translate-anchor": "map"
             }
         },
         {
-            "id":"Schrift Landesstraße",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Landesstraße",
-                "map-editor:layer-element":"Beschriftung"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":12,
-            "filter":[
+            "id": "Schrift Landesstraße",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["in", "klasse", "Landesstraße, Staatsstraße"],
-                ["==", "objektart", "Strassenachse"]
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ],
+                [
+                    "==",
+                    "objektart",
+                    "Strassenachse"
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "symbol-placement":"line",
-                "text-max-angle":20,
-                "text-anchor":"center",
-                "text-offset":[
+            "layout": {
+                "text-field": "{name}",
+                "symbol-placement": "line",
+                "text-max-angle": 20,
+                "text-anchor": "center",
+                "text-offset": [
                     0,
                     0
                 ],
-                "text-size":[
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     12,
                     11,
                     14,
                     13
                 ],
-                "text-font":["Cantarell Regular"],
-                "text-letter-spacing":0.1,
-                "text-padding":30,
-                "symbol-spacing":1
+                "text-font": [
+                    "Cantarell Regular"
+                ],
+                "text-letter-spacing": 0.1,
+                "text-padding": 30,
+                "symbol-spacing": 1
             },
-            "paint":{
-                "text-halo-color":"#ffffff",
-                "text-halo-width":1,
-                "text-color":"#000000",
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1,
+                "text-color": "#000000",
                 "text-translate-anchor": "map"
             }
         },
         {
-            "id":"Schrift Bundesstraße",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Bundesstraße",
-                "map-editor:layer-element":"Beschriftung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":12,
-            "filter":[
+            "id": "Schrift Bundesstraße",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
                 "all",
-                ["in", "klasse", "Bundesstraße"]
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "symbol-placement":"line",
-                "text-max-angle":20,
-                "text-anchor":"center",
-                "text-offset":[
+            "layout": {
+                "text-field": "{name}",
+                "symbol-placement": "line",
+                "text-max-angle": 20,
+                "text-anchor": "center",
+                "text-offset": [
                     0,
                     0
                 ],
-                "text-size":[
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     13,
                     12,
                     14,
                     13
                 ],
-                "text-font":["Cantarell Regular"],
-                "text-letter-spacing":0.1,
-                "text-padding":50,
-                "symbol-spacing":1
+                "text-font": [
+                    "Cantarell Regular"
+                ],
+                "text-letter-spacing": 0.1,
+                "text-padding": 50,
+                "symbol-spacing": 1
             },
             "paint": {
-                "text-halo-color":"#ffffff",
-                "text-halo-width":1.25,
-                "text-halo-blur":0.5,
-                "text-color":"#000000",
-                "text-translate-anchor":"map"
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1.25,
+                "text-halo-blur": 0.5,
+                "text-color": "#000000",
+                "text-translate-anchor": "map"
             }
         },
         {
-            "id":"Schrift Autobahn",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Verkehr",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Autobahn",
-                "map-editor:layer-element":"Beschriftung"
-            }, 
-            "source":"smarttiles_de",
-            "source-layer":"Verkehrslinie",
-            "minzoom":10,
-            "filter":[
+            "id": "Schrift Autobahn",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 10,
+            "filter": [
                 "all",
-                ["in", "klasse", "Bundesautobahn"]
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ]
             ],
-            "layout":{
-                "text-field":"{nummer}",
-                "symbol-placement":"line",
-                "text-max-angle":45,
-                "text-size":[
+            "layout": {
+                "text-field": "{nummer}",
+                "symbol-placement": "line",
+                "text-max-angle": 45,
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     10,
                     9,
                     15,
@@ -2439,163 +3298,206 @@
                     16,
                     16
                 ],
-                "text-font":["Cantarell Regular"],
-                "text-padding":50,
-                "text-letter-spacing":0.1,
-                "symbol-spacing":1,
-                "symbol-avoid-edges":true
+                "text-font": [
+                    "Cantarell Regular"
+                ],
+                "text-padding": 50,
+                "text-letter-spacing": 0.1,
+                "symbol-spacing": 1,
+                "symbol-avoid-edges": true
             },
-            "paint":{
-                "text-halo-color":"#ffffff",
-                "text-halo-width":1.25,
-                "text-halo-blur":0,
-                "text-color":"#000000"
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1.25,
+                "text-halo-blur": 0,
+                "text-color": "#000000"
             }
         },
         {
             "id": "Wohngebäude 3D",
             "type": "fill-extrusion",
-            "metadata":{
-                "map-editor:group":"Gebäude",
-                "map-editor:layer":"Wohngebäude 3D",
-                "map-editor:layer-element":"Füllung"
-            },
-            "source": "smarttiles_de",
-            "source-layer": "Gebaeude",
-            "minzoom": 16,
-            "filter": ["all"],
-            "layout": {"visibility": "visible"},
-            "paint": {
-              "fill-extrusion-color": "#a5a4a4",
-              "fill-extrusion-height": [
-                "case",
-                ["has", "hoehe"],
-                ["get", "hoehe"],
-                0
-              ],
-              "fill-extrusion-opacity": 0.8
-            }
-          },
-          {
-            "id": "Öffentliches Gebäude 3D",
-            "type": "fill-extrusion",
-            "metadata":{
-                "map-editor:group":"Gebäude",
-                "map-editor:layer":"Öffentliches Gebäude 3D",
-                "map-editor:layer-element":"Füllung"
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Wohngebäude 3D",
+                "map-editor:layer-element": "Füllung"
             },
             "source": "smarttiles_de",
             "source-layer": "Gebaeude",
             "minzoom": 16,
             "filter": [
-              "all",
-              [
-                "in",
-                "funktion",
-                "31001_2092",
-                "31001_3010",
-                "31001_3011",
-                "31001_3012",
-                "31001_3015",
-                "31001_3017",
-                "31001_3018",
-                "31001_3021",
-                "31001_3022",
-                "31001_3023",
-                "31001_3024",
-                "31001_3031",
-                "31001_3032",
-                "31001_3033",
-                "31001_3034",
-                "31001_3035",
-                "31001_3038",
-                "31001_3041",
-                "31001_3042",
-                "31001_3043",
-                "31001_3045",
-                "31001_3046",
-                "31001_3047",
-                "31001_3051",
-                "31001_3071",
-                "31001_3072",
-                "31001_3211",
-                "31001_3221",
-                "31001_3242"
-              ]
+                "all"
             ],
-            "layout": {"visibility": "visible"},
+            "layout": {
+                "visibility": "visible"
+            },
             "paint": {
-              "fill-extrusion-color": "#cc6868",
-              "fill-extrusion-height": [
-                "case",
-                ["has", "hoehe"],
-                ["get", "hoehe"],
-                0
-              ],
-              "fill-extrusion-opacity": 0.7
+                "fill-extrusion-color": "#a5a4a4",
+                "fill-extrusion-height": [
+                    "case",
+                    [
+                        "has",
+                        "hoehe"
+                    ],
+                    [
+                        "get",
+                        "hoehe"
+                    ],
+                    0
+                ],
+                "fill-extrusion-opacity": 0.8
             }
-          },
+        },
         {
-            "id":"Schrift Wohnplatz, Stadtteil",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":3,
-                "map-editor:layer":"Siedlung",
-                "map-editor:layer-element":"Beschriftung"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Name",
-            "minzoom":12,
-            "maxzoom":22,
-            "filter":[
+            "id": "Öffentliches Gebäude 3D",
+            "type": "fill-extrusion",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Öffentliches Gebäude 3D",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeude",
+            "minzoom": 16,
+            "filter": [
                 "all",
-                ["in","klasse","Ortslage"]
+                [
+                    "in",
+                    "funktion",
+                    "31001_2092",
+                    "31001_3010",
+                    "31001_3011",
+                    "31001_3012",
+                    "31001_3015",
+                    "31001_3017",
+                    "31001_3018",
+                    "31001_3021",
+                    "31001_3022",
+                    "31001_3023",
+                    "31001_3024",
+                    "31001_3031",
+                    "31001_3032",
+                    "31001_3033",
+                    "31001_3034",
+                    "31001_3035",
+                    "31001_3038",
+                    "31001_3041",
+                    "31001_3042",
+                    "31001_3043",
+                    "31001_3045",
+                    "31001_3046",
+                    "31001_3047",
+                    "31001_3051",
+                    "31001_3071",
+                    "31001_3072",
+                    "31001_3211",
+                    "31001_3221",
+                    "31001_3242"
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "text-size":[
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-extrusion-color": "#cc6868",
+                "fill-extrusion-height": [
+                    "case",
+                    [
+                        "has",
+                        "hoehe"
+                    ],
+                    [
+                        "get",
+                        "hoehe"
+                    ],
+                    0
+                ],
+                "fill-extrusion-opacity": 0.7
+            }
+        },
+        {
+            "id": "Schrift Wohnplatz, Stadtteil",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 12,
+            "maxzoom": 22,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ortslage"
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     10,
                     12,
                     16,
                     14
                 ],
-                "text-font":["Liberation Sans Regular"]
+                "text-font": [
+                    "Liberation Sans Regular"
+                ]
             },
-            "paint":{
-                "text-color":"#000000",
-                "text-halo-blur":0.5,
-                "text-halo-color":"#ffffff",
-                "text-halo-width":2,
-                "text-translate-anchor":"map"
+            "paint": {
+                "text-color": "#000000",
+                "text-halo-blur": 0.5,
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2,
+                "text-translate-anchor": "map"
             }
         },
         {
-            "id":"Schrift Gemeinde",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Siedlung",
-                "map-editor:layer-element":"Beschriftung"
-            },		  
-            "source":"smarttiles_de",
-            "source-layer":"Name",
-            "minzoom":6,
-            "filter":[
+            "id": "Schrift Gemeinde",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "filter": [
                 "all",
-                ["in","klasse","Gemeinde"],
-                ["in","gemeindeart","Gemeinde", "Gemeindefreies Gebiet"]
+                [
+                    "in",
+                    "klasse",
+                    "Gemeinde"
+                ],
+                [
+                    "in",
+                    "gemeindeart",
+                    "Gemeinde",
+                    "Gemeindefreies Gebiet"
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "text-size":[
+            "layout": {
+                "text-field": "{name}",
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     9,
                     10,
                     12,
@@ -2603,39 +3505,57 @@
                     16,
                     16
                 ],
-                "text-font":["Liberation Sans Regular"]
+                "text-font": [
+                    "Liberation Sans Regular"
+                ]
             },
-            "paint":{
-                "text-color":"#000000",
-                "text-halo-color":"#ffffff",
-                "text-halo-width":2
+            "paint": {
+                "text-color": "#000000",
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2
             }
         },
         {
-            "id":"Schrift Stadt <100.000",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":2,
-                "map-editor:layer":"Siedlung",
-                "map-editor:layer-element":"Beschriftung"
-            },	  
-            "source":"smarttiles_de",
-            "source-layer":"Name",
-            "minzoom":6,
-            "maxzoom":16,
-            "filter":[
+            "id": "Schrift Stadt <100.000",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "maxzoom": 16,
+            "filter": [
                 "all",
-                ["in","klasse","Gemeinde"],
-                ["in","gemeindeart","Stadt"],
-                ["<","einwohnerzahl",100000]
+                [
+                    "in",
+                    "klasse",
+                    "Gemeinde"
+                ],
+                [
+                    "in",
+                    "gemeindeart",
+                    "Stadt"
+                ],
+                [
+                    "<",
+                    "einwohnerzahl",
+                    100000
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "text-size":[
+            "layout": {
+                "text-field": "{name}",
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     7,
                     12,
                     9,
@@ -2645,39 +3565,61 @@
                     16,
                     22
                 ],
-                "text-font":["Liberation Sans Regular"]
+                "text-font": [
+                    "Liberation Sans Regular"
+                ]
             },
-            "paint":{
-                "text-color":"#000000",
-                "text-halo-color":"#ffffff",
-                "text-halo-width":1
+            "paint": {
+                "text-color": "#000000",
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1
             }
         },
         {
-            "id":"Schrift Stadt 100.000 - <500.000",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Siedlung",
-                "map-editor:layer-element":"Beschriftung"
-            },  
-            "source":"smarttiles_de",
-            "source-layer":"Name",
-            "minzoom":6,
-            "filter":[
+            "id": "Schrift Stadt 100.000 - <500.000",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "filter": [
                 "all",
-                ["in","klasse","Gemeinde"],
-                ["in","gemeindeart","Stadt"],
-                [">=","einwohnerzahl",100000],
-                ["<","einwohnerzahl",500000]
+                [
+                    "in",
+                    "klasse",
+                    "Gemeinde"
+                ],
+                [
+                    "in",
+                    "gemeindeart",
+                    "Stadt"
+                ],
+                [
+                    ">=",
+                    "einwohnerzahl",
+                    100000
+                ],
+                [
+                    "<",
+                    "einwohnerzahl",
+                    500000
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "text-size":[
+            "layout": {
+                "text-field": "{name}",
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     7,
                     16,
                     9,
@@ -2685,52 +3627,72 @@
                     11,
                     20
                 ],
-                "text-font":["Liberation Sans Regular"]
+                "text-font": [
+                    "Liberation Sans Regular"
+                ]
             },
-            "paint":{
-                "text-color":"#000000",
-                "text-halo-color":"#ffffff",
-                "text-halo-width":2
+            "paint": {
+                "text-color": "#000000",
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2
             }
         },
         {
-            "id":"Schrift Stadt >= 500.000",
-            "type":"symbol",
-            "metadata":{
-                "map-editor:group":"Landnutzung",
-                "map-editor:detail-level":1,
-                "map-editor:layer":"Siedlung",
-                "map-editor:layer-element":"Beschriftung"
-            }, 
-            "source":"smarttiles_de",
-            "source-layer":"Name",
-            "minzoom":6,
-            "filter":[
+            "id": "Schrift Stadt >= 500.000",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "filter": [
                 "all",
-                ["in","klasse","Gemeinde"],
-                ["in","gemeindeart","Stadt"],
-                [">=","einwohnerzahl",500000]
+                [
+                    "in",
+                    "klasse",
+                    "Gemeinde"
+                ],
+                [
+                    "in",
+                    "gemeindeart",
+                    "Stadt"
+                ],
+                [
+                    ">=",
+                    "einwohnerzahl",
+                    500000
+                ]
             ],
-            "layout":{
-                "text-field":"{name}",
-                "text-size":[
+            "layout": {
+                "text-field": "{name}",
+                "text-size": [
                     "interpolate",
-                    ["linear"],
-                    ["zoom"],
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
                     6,
                     18,
                     10,
                     24
                 ],
-                "text-font":["Liberation Sans Bold"]
+                "text-font": [
+                    "Liberation Sans Bold"
+                ]
             },
-            "paint":{
-                "text-color":"#000000",
-                "text-halo-color":"#ffffff",
-                "text-halo-width":2
+            "paint": {
+                "text-color": "#000000",
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2
             }
         }
     ],
-    "visibility":"public",
-    "draft":false
+    "visibility": "public",
+    "draft": false
 }
