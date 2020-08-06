@@ -1186,11 +1186,9 @@
                     ["linear"],
                     ["zoom"],
                     12,
-                    2.75,
+                    3.5,
                     14,
                     5.5,
-                    15,
-                    9.5,
                     16,
                     20,
                     18,
@@ -1435,14 +1433,10 @@
                     1.6,
                     8,
                     2,
-                    10,
-                    2.2,
                     12,
-                    2.75,
+                    2.5,
                     14,
                     4.5,
-                    15,
-                    8,
                     16,
                     17,
                     18,
@@ -1452,7 +1446,7 @@
                     "stops":[
                         [
                             10,
-                            "#ff954d"
+                            "#cccccc"
                         ],
                         [
                             11,
@@ -2057,7 +2051,7 @@
             },	  
             "source":"smarttiles_de",
             "source-layer":"Versorgungslinie",
-            "minzoom":12,
+            "minzoom":14,
             "filter":[
                 "all",
                 ["==", "klasse", "Freileitung"]
