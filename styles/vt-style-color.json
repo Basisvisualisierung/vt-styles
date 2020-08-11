@@ -40,7 +40,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#b9e0f4"
+                "fill-color": "#d7edf9"
             }
         },
         {
@@ -93,7 +93,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#d4d4d4"
+                "fill-color": "#e0e0e0"
             }
         },
         {
@@ -189,7 +189,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#c7c7c7"
+                "fill-color": "#e0e0e0"
             }
         },
         {
@@ -379,7 +379,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#b9e0f4"
+                "fill-color": "#d7edf9"
             }
         },
         {
@@ -405,7 +405,7 @@
                 "line-join": "round"
             },
             "paint": {
-                "line-color": "#b9e0f4",
+                "line-color": "#cae8f7",
                 "line-width": 1
             }
         },
@@ -438,7 +438,7 @@
             },
             "paint": {
                 "line-width": 0.5,
-                "line-color": "#8f8f8f"
+                "line-color": "#d7edf9"
             }
         },
         {
@@ -1933,7 +1933,7 @@
                     18,
                     40
                 ],
-                "line-color": "##969696"
+                "line-color": "#969696"
             }
         },
         {
