@@ -65,7 +65,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#f4d6b3"
+                "fill-color": "#cfcec9"
             }
         },
         {
@@ -737,7 +737,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -763,18 +763,20 @@
                     [
                         "zoom"
                     ],
+                    8,
+                    2,
+                    10,
+                    3.25,
                     12,
-                    2.75,
+                    4.25,
                     14,
-                    5.5,
-                    15,
-                    9.5,
+                    7.25,
                     16,
-                    20,
+                    31.25,
                     18,
-                    53
+                    61.25
                 ],
-                "line-color": "#8f8f8f"
+                "line-color": "#f9a825"
             }
         },
         {
@@ -788,7 +790,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 6,
             "filter": [
                 "all",
                 [
@@ -814,6 +816,10 @@
                     [
                         "zoom"
                     ],
+                    6,
+                    2,
+                    10,
+                    3.25,
                     12,
                     4.25,
                     14,
@@ -823,7 +829,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#7391a5"
+                "line-color": "#c25f00"
             }
         },
         {
@@ -1057,7 +1063,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 7,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -1084,32 +1090,19 @@
                         "zoom"
                     ],
                     8,
-                    1.6,
+                    1.25,
                     10,
-                    1.8,
+                    1.25,
                     12,
-                    2,
+                    2.25,
                     14,
-                    4,
-                    15,
-                    7.5,
+                    5.25,
                     16,
-                    16,
+                    28.25,
                     18,
-                    46
+                    58.25
                 ],
-                "line-color": {
-                    "stops": [
-                        [
-                            10,
-                            "#ffcc73"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ]
-                }
+                "line-color": "#ffe98a"
             }
         },
         {
@@ -1150,11 +1143,9 @@
                         "zoom"
                     ],
                     6,
-                    1.2,
-                    8,
-                    1.4,
-                    11,
-                    1.6,
+                    1.25,
+                    10,
+                    1.25,
                     12,
                     2.25,
                     14,
@@ -1164,18 +1155,7 @@
                     18,
                     58.25
                 ],
-                "line-color": {
-                    "stops": [
-                        [
-                            11,
-                            "#7391a5"
-                        ],
-                        [
-                            12,
-                            "#ffffff"
-                        ]
-                    ]
-                }
+                "line-color": "#ffe98a"
             }
         },
         {
@@ -1406,15 +1386,15 @@
                         "zoom"
                     ],
                     12,
-                    3.5,
+                    5.25,
                     14,
-                    6.25,
+                    7.25,
                     16,
-                    31.25,
+                    28.25,
                     18,
-                    61.25
+                    58.25
                 ],
-                "line-color": "#8f8f8f"
+                "line-color": "#b0b0b0"
             }
         },
         {
@@ -1428,7 +1408,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -1449,6 +1429,10 @@
                     [
                         "zoom"
                     ],
+                    8,
+                    2,
+                    10,
+                    3.25,
                     12,
                     4.25,
                     14,
@@ -1472,7 +1456,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 6,
             "filter": [
                 "all",
                 [
@@ -1493,6 +1477,10 @@
                     [
                         "zoom"
                     ],
+                    6,
+                    2,
+                    10,
+                    3.25,
                     12,
                     4.25,
                     14,
@@ -1502,7 +1490,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#5e5a5c"
+                "line-color": "#c25f00"
             }
         },
         {
@@ -1679,28 +1667,19 @@
                         "zoom"
                     ],
                     8,
-                    1.2,
+                    1,
+                    10,
+                    2.25,
                     12,
-                    1.25,
+                    3.25,
                     14,
-                    4.25,
+                    5.25,
                     16,
-                    27.25,
+                    26.25,
                     18,
-                    57.25
+                    54.25
                 ],
-                "line-color": {
-                    "stops": [
-                        [
-                            10,
-                            "#ffd622"
-                        ],
-                        [
-                            11,
-                            "#f9edb4"
-                        ]
-                    ]
-                }
+                "line-color": "#ffe98a"
             }
         },
         {
@@ -1714,7 +1693,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 7,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -1735,12 +1714,10 @@
                     [
                         "zoom"
                     ],
-                    7,
-                    1.2,
                     8,
-                    1.4,
-                    11,
-                    1.6,
+                    1.25,
+                    10,
+                    1.25,
                     12,
                     2.25,
                     14,
@@ -1750,18 +1727,7 @@
                     18,
                     58.25
                 ],
-                "line-color": {
-                    "stops": [
-                        [
-                            11,
-                            "#f9a825"
-                        ],
-                        [
-                            12,
-                            "#ffe98a"
-                        ]
-                    ]
-                }
+                "line-color": "#ffe98a"
             }
         },
         {
@@ -1797,11 +1763,9 @@
                         "zoom"
                     ],
                     6,
-                    1.2,
-                    8,
-                    1.4,
-                    11,
-                    1.6,
+                    1.25,
+                    10,
+                    1.25,
                     12,
                     2.25,
                     14,
@@ -1811,18 +1775,7 @@
                     18,
                     58.25
                 ],
-                "line-color": {
-                    "stops": [
-                        [
-                            11,
-                            "#7391a5"
-                        ],
-                        [
-                            12,
-                            "#99afbd"
-                        ]
-                    ]
-                }
+                "line-color": "#ffe98a"
             }
         },
         {
@@ -2122,7 +2075,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -2156,18 +2109,20 @@
                     [
                         "zoom"
                     ],
+                    8,
+                    2,
+                    10,
+                    3.25,
                     12,
-                    2.75,
+                    4.25,
                     14,
-                    5.5,
-                    15,
-                    9.5,
+                    7.25,
                     16,
-                    20,
+                    31.25,
                     18,
-                    53
+                    61.25
                 ],
-                "line-color": "#8f8f8f"
+                "line-color": "#f9a825"
             }
         },
         {
@@ -2181,7 +2136,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 6,
             "filter": [
                 "all",
                 [
@@ -2215,6 +2170,10 @@
                     [
                         "zoom"
                     ],
+                    6,
+                    2,
+                    10,
+                    3.25,
                     12,
                     4.25,
                     14,
@@ -2224,7 +2183,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#8f8f8f"
+                "line-color": "#c25f00"
             }
         },
         {
@@ -2490,7 +2449,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 7,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -2525,32 +2484,19 @@
                         "zoom"
                     ],
                     8,
-                    1.6,
+                    1.25,
                     10,
-                    1.8,
+                    1.25,
                     12,
-                    2,
+                    2.25,
                     14,
-                    4,
-                    15,
-                    7.5,
+                    5.25,
                     16,
-                    16,
+                    28.25,
                     18,
-                    46
+                    58.25
                 ],
-                "line-color": {
-                    "stops": [
-                        [
-                            10,
-                            "#ffcc73"
-                        ],
-                        [
-                            11,
-                            "#ffffff"
-                        ]
-                    ]
-                }
+                "line-color": "#ffe98a"
             }
         },
         {
@@ -2599,11 +2545,9 @@
                         "zoom"
                     ],
                     6,
-                    1.2,
-                    8,
-                    1.4,
-                    11,
-                    1.6,
+                    1.25,
+                    10,
+                    1.25,
                     12,
                     2.25,
                     14,
@@ -2613,18 +2557,7 @@
                     18,
                     58.25
                 ],
-                "line-color": {
-                    "stops": [
-                        [
-                            11,
-                            "#7391a5"
-                        ],
-                        [
-                            12,
-                            "#ffffff"
-                        ]
-                    ]
-                }
+                "line-color": "#ffe98a"
             }
         },
         {
