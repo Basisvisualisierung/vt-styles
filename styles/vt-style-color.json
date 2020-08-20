@@ -800,7 +800,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1111,7 +1110,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1444,7 +1442,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1725,7 +1722,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -2131,7 +2127,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -2489,7 +2484,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
