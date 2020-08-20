@@ -443,7 +443,7 @@
         },
         {
             "id": "Wohngebäude 2D",
-            "type": "fill-extrusion",
+            "type": "fill",
             "metadata": {
                 "map-editor:group": "Gebäude",
                 "map-editor:layer": "Wohngebäude 2D",
@@ -457,13 +457,12 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-extrusion-height": 0,
-                "fill-extrusion-color": "#b4966f"
+                "fill-color": "#b4966f"
             }
         },
         {
             "id": "Öffentliches Gebäude 2D",
-            "type": "fill-extrusion",
+            "type": "fill",
             "metadata": {
                 "map-editor:group": "Gebäude",
                 "map-editor:layer": "Öffentliches Gebäude 2D",
@@ -513,8 +512,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-extrusion-height": 0,
-                "fill-extrusion-color": "#cc6868"
+                "fill-color": "#cc6868"
             }
         },
         {
@@ -3145,7 +3143,7 @@
                     ],
                     0
                 ],
-                "fill-extrusion-opacity": 0.8
+                "fill-extrusion-opacity": 0.6
             }
         },
         {
@@ -3212,7 +3210,7 @@
                     ],
                     0
                 ],
-                "fill-extrusion-opacity": 0.7
+                "fill-extrusion-opacity": 0.6
             }
         },
         {
