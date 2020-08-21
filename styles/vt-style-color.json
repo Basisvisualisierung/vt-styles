@@ -1183,7 +1183,7 @@
                     12,
                     0.7
                 ],
-                "line-color": "#4d4d4d"
+                "line-color": "#575757"
             }
         },
         {
@@ -1782,7 +1782,7 @@
                     12,
                     0.7
                 ],
-                "line-color": "#4d4d4d"
+                "line-color": "#575757"
             }
         },
         {
@@ -2550,7 +2550,7 @@
                     12,
                     0.7
                 ],
-                "line-color": "#4d4d4d"
+                "line-color": "#575757"
             }
         },
         {
@@ -2626,7 +2626,7 @@
                 "text-pitch-alignment": "map",
                 "text-rotation-alignment": "map",
                 "text-max-angle": 30,
-                "text-letter-spacing": 0.3,
+                "text-letter-spacing": 0.2,
                 "text-font": [
                     "Cantarell Oblique"
                 ]
