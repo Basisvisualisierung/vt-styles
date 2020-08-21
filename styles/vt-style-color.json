@@ -444,8 +444,8 @@
                 "line-join": "round"
             },
             "paint": {
-                "line-width": 0.5,
-                "line-color": "#d7edf9"
+                "line-width": 0.75,
+                "line-color": "#969696"
             }
         },
         {
