@@ -2791,9 +2791,9 @@
                 "symbol-spacing": 1
             },
             "paint": {
+                "text-color": "#737373",
                 "text-halo-color": "#ffffff",
-                "text-halo-width": 2,
-                "text-color": "#000000"
+                "text-halo-width": 2
             }
         },
         {
@@ -2851,9 +2851,9 @@
                 "symbol-spacing": 1
             },
             "paint": {
+                "text-color": "#737373",
                 "text-halo-color": "#ffffff",
-                "text-halo-width": 2,
-                "text-color": "#000000"
+                "text-halo-width": 2
             }
         },
         {
@@ -2911,9 +2911,9 @@
                 "symbol-spacing": 1
             },
             "paint": {
+                "text-color": "#737373",
                 "text-halo-color": "#ffffff",
                 "text-halo-width": 1,
-                "text-color": "#000000",
                 "text-translate-anchor": "map"
             }
         },
@@ -2960,8 +2960,10 @@
                         "zoom"
                     ],
                     12,
-                    11,
+                    10,
                     14,
+                    11,
+                    16,
                     13
                 ],
                 "text-font": [
@@ -2972,9 +2974,9 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-halo-color": "#ffffff",
+                "text-color": "#383838",
+                "text-halo-color": "#ffe98a",
                 "text-halo-width": 1,
-                "text-color": "#000000",
                 "text-translate-anchor": "map"
             }
         },
@@ -3015,10 +3017,12 @@
                     [
                         "zoom"
                     ],
-                    13,
+                    12,
                     12,
                     14,
-                    13
+                    13,
+                    16,
+                    15
                 ],
                 "text-font": [
                     "Cantarell Regular"
@@ -3028,10 +3032,10 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-halo-color": "#ffffff",
+                "text-color": "#b37005",
+                "text-halo-color": "#ffe98a",
                 "text-halo-width": 1.25,
                 "text-halo-blur": 0.5,
-                "text-color": "#000000",
                 "text-translate-anchor": "map"
             }
         },
@@ -3068,11 +3072,13 @@
                         "zoom"
                     ],
                     10,
-                    9,
-                    15,
+                    10,
                     12,
+                    13,
+                    14,
+                    14,
                     16,
-                    16
+                    17
                 ],
                 "text-font": [
                     "Cantarell Regular"
@@ -3083,10 +3089,10 @@
                 "symbol-avoid-edges": true
             },
             "paint": {
-                "text-halo-color": "#ffffff",
+                "text-color": "#803f00",
+                "text-halo-color": "#ffe98a",
                 "text-halo-width": 1.25,
-                "text-halo-blur": 0,
-                "text-color": "#000000"
+                "text-halo-blur": 0
             }
         },
         {
