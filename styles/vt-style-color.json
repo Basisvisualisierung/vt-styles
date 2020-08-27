@@ -3456,6 +3456,66 @@
             }
         },
         {
+            "id": "Schrift Wohnplatz >1.000",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ortslage"
+                ],
+                [
+                    ">",
+                    "einwohnerzahl",
+                    1000
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "symbol-sort-key": [
+                    "-",
+                    0,
+                    [
+                        "get",
+                        "einwohnerzahl"
+                    ]
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    12,
+                    16,
+                    14
+                ],
+                "text-font": [
+                    "Liberation Sans Regular"
+                ]
+            },
+            "paint": {
+                "text-color": "#000000",
+                "text-halo-blur": 0.5,
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2,
+                "text-translate-anchor": "map"
+            }
+        },
+        {
             "id": "Schrift Gemeinde <500",
             "type": "symbol",
             "metadata": {
@@ -3624,6 +3684,72 @@
                 ],
                 [
                     "<=",
+                    "einwohnerzahl",
+                    5000
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "symbol-sort-key": [
+                    "-",
+                    0,
+                    [
+                        "get",
+                        "einwohnerzahl"
+                    ]
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    10,
+                    12,
+                    12,
+                    16,
+                    16
+                ],
+                "text-font": [
+                    "Liberation Sans Regular"
+                ]
+            },
+            "paint": {
+                "text-color": "#000000",
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 2
+            }
+        },
+        {
+            "id": "Schrift Gemeinde >5.000",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeinde"
+                ],
+                [
+                    "in",
+                    "gemeindeart",
+                    "Gemeinde",
+                    "Gemeindefreies Gebiet"
+                ],
+                [
+                    ">",
                     "einwohnerzahl",
                     5000
                 ]
