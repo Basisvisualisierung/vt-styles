@@ -221,6 +221,314 @@
             }
         },
         {
+            "id": "L0 Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ]
+            ],
+            "layout": {
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    14,
+                    4,
+                    16,
+                    14,
+                    18,
+                    16
+                ],
+                "line-color": "#c4c4c4"
+            }
+        },
+        {
+            "id": "L0 Gemeindestraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.65,
+                    12,
+                    3.5,
+                    14,
+                    5.5,
+                    16,
+                    16,
+                    18,
+                    20
+                ],
+                "line-color":"#c4c4c4"
+            }
+        },
+        {
+            "id": "L0 Kreisstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1.25,
+                    11,
+                    2,
+                    12,
+                    4.5,
+                    14,
+                    6.25,
+                    16,
+                    14.25,
+                    18,
+                    18.25
+                ],
+                "line-color": "#929090"
+            }
+        },
+        {
+            "id": "L0 Landesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    5.25,
+                    14,
+                    7.25,
+                    16,
+                    28.25,
+                    18,
+                    58.25
+                ],
+                "line-color": "#b8b7b7"
+            }
+        },
+        {
+            "id": "L0 Bundesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    2,
+                    10,
+                    3.25,
+                    12,
+                    4.25,
+                    14,
+                    7.25,
+                    16,
+                    31.25,
+                    18,
+                    61.25
+                ],
+                "line-color": "#767474"
+            }
+        },
+        {
+            "id": "L0 Autobahn K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 6,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    6,
+                    2,
+                    10,
+                    3.25,
+                    12,
+                    4.25,
+                    14,
+                    7.25,
+                    16,
+                    31.25,
+                    18,
+                    61.25
+                ],
+                "line-color": "#6a6868"
+            }
+        },
+        {
             "id": "L0 Nebenstraße F",
             "type": "line",
             "metadata": {
@@ -247,6 +555,7 @@
                 ]
             ],
             "layout": {
+                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -258,16 +567,12 @@
                     [
                         "zoom"
                     ],
-                    12,
-                    1.4,
                     14,
                     3.5,
-                    15,
-                    5,
                     16,
-                    12,
+                    13,
                     18,
-                    35
+                    15
                 ],
                 "line-color": "#fefefe"
             }
@@ -283,7 +588,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -309,20 +614,63 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.35,
-                    10,
-                    1.5,
                     12,
-                    1.7,
+                    2.5,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    4.5,
                     16,
                     15,
                     18,
-                    44
+                    19
+                ],
+                "line-color": "#fefefe"
+            }
+        },
+        {
+            "id": "L0 Kreisstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.25,
+                    14,
+                    4.25,
+                    16,
+                    12.25,
+                    18,
+                    16.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -338,7 +686,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -364,22 +712,20 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.35,
+                    8,
+                    1,
                     10,
-                    1.5,
+                    2.25,
                     12,
-                    1.7,
+                    3.25,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    5.25,
                     16,
-                    15,
+                    26.25,
                     18,
-                    44
+                    54.25
                 ],
-                "line-color": "#fefefe"
+                "line-color": "#dcdbdb"
             }
         },
         {
@@ -393,7 +739,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -419,20 +765,18 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.5,
+                    8,
+                    1.25,
                     10,
-                    1.75,
+                    1.25,
                     12,
-                    2,
+                    2.25,
                     14,
-                    4,
-                    15,
-                    7.5,
+                    5.25,
                     16,
-                    16,
+                    28.25,
                     18,
-                    46
+                    58.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -448,7 +792,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 6,
             "filter": [
                 "all",
                 [
@@ -474,20 +818,18 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.75,
+                    6,
+                    1.25,
                     10,
-                    2,
+                    1.25,
                     12,
-                    2.75,
+                    2.25,
                     14,
-                    4.5,
-                    15,
-                    8,
+                    5.25,
                     16,
-                    17,
+                    28.25,
                     18,
-                    48
+                    58.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -543,6 +885,284 @@
             }
         },
         {
+            "id": "L1 Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ]
+            ],
+            "layout": {
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    14,
+                    4,
+                    16,
+                    14,
+                    18,
+                    16
+                ],
+                "line-color": "#c4c4c4"
+            }
+        },
+        {
+            "id": "L1 Gemeindestraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.65,
+                    12,
+                    3.5,
+                    14,
+                    5.5,
+                    16,
+                    16,
+                    18,
+                    20
+                ],
+                "line-color": "#c4c4c4"
+            }
+        },
+        {
+            "id": "L1 Kreisstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1.25,
+                    11,
+                    2,
+                    12,
+                    4.25,
+                    14,
+                    6.25,
+                    16,
+                    14.25,
+                    18,
+                    18.25
+                ],
+                "line-color": "#929090"
+            }
+        },
+        {
+            "id": "L1 Landesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    4.25,
+                    14,
+                    6.25,
+                    16,
+                    28.25,
+                    18,
+                    58.25
+                ],
+                "line-color": "#b8b7b7"
+            }
+        },
+        {
+            "id": "L1 Bundesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    2,
+                    10,
+                    3.25,
+                    12,
+                    4.25,
+                    14,
+                    7.25,
+                    16,
+                    31.25,
+                    18,
+                    61.25
+                ],
+                "line-color": "#767474"
+            }
+        },
+        {
+            "id": "L1 Autobahn K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 6,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    6,
+                    2,
+                    10,
+                    3.25,
+                    12,
+                    4.25,
+                    14,
+                    7.25,
+                    16,
+                    31.25,
+                    18,
+                    61.25
+                ],
+                "line-color": "#6a6868"
+            }
+        },
+        {
             "id": "L1 Nebenstraße F",
             "type": "line",
             "metadata": {
@@ -564,7 +1184,7 @@
                 ]
             ],
             "layout": {
-                "line-cap": "round",
+                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -576,16 +1196,12 @@
                     [
                         "zoom"
                     ],
-                    12,
-                    1.4,
                     14,
                     3.5,
-                    15,
-                    5,
                     16,
-                    12,
+                    13,
                     18,
-                    35
+                    15
                 ],
                 "line-color": "#fefefe"
             }
@@ -601,7 +1217,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -611,7 +1227,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "round",
                 "line-join": "round"
             },
             "paint": {
@@ -624,15 +1239,13 @@
                         "zoom"
                     ],
                     12,
-                    1.7,
+                    2.5,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    4.5,
                     16,
                     15,
                     18,
-                    44
+                    19
                 ],
                 "line-color": "#fefefe"
             }
@@ -648,7 +1261,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -669,20 +1282,14 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.35,
-                    10,
-                    1.5,
                     12,
-                    1.7,
+                    2.25,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    4.25,
                     16,
-                    15,
+                    12.25,
                     18,
-                    44
+                    16.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -698,7 +1305,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -719,22 +1326,20 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.35,
+                    8,
+                    1,
                     10,
-                    1.5,
+                    2.25,
                     12,
-                    1.7,
+                    2.25,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    4.25,
                     16,
-                    15,
+                    26.25,
                     18,
-                    44
+                    54.25
                 ],
-                "line-color": "#fefefe"
+                "line-color": "#dcdbdb"
             }
         },
         {
@@ -748,7 +1353,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -769,20 +1374,18 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.5,
+                    8,
+                    1.25,
                     10,
-                    1.75,
+                    1.25,
                     12,
-                    2,
+                    2.25,
                     14,
-                    4,
-                    15,
-                    7.5,
+                    5.25,
                     16,
-                    16,
+                    28.25,
                     18,
-                    46
+                    58.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -798,7 +1401,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 6,
             "filter": [
                 "all",
                 [
@@ -819,20 +1422,18 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.75,
+                    6,
+                    1.25,
                     10,
-                    2,
+                    1.25,
                     12,
-                    2.75,
+                    2.25,
                     14,
-                    4.5,
-                    15,
-                    8,
+                    5.25,
                     16,
-                    17,
+                    28.25,
                     18,
-                    48
+                    58.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -883,6 +1484,360 @@
             }
         },
         {
+            "id": "L2 Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    14,
+                    4,
+                    16,
+                    14,
+                    18,
+                    16
+                ],
+                "line-color": "#c4c4c4"
+            }
+        },
+        {
+            "id": "L2 Gemeindestraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeindestraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    3.5,
+                    14,
+                    5.5,
+                    16,
+                    16,
+                    18,
+                    20
+                ],
+                "line-color": "#c4c4c4"
+            }
+        },
+        {
+            "id": "L2 Kreisstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1.25,
+                    11,
+                    2,
+                    12,
+                    4.5,
+                    14,
+                    6.25,
+                    16,
+                    14.25,
+                    18,
+                    18.25
+                ],
+                "line-color": "#929090"
+            }
+        },
+        {
+            "id": "L2 Landesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Landesstraße, Staatsstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    5.25,
+                    14,
+                    7.25,
+                    16,
+                    28.25,
+                    18,
+                    58.25
+                ],
+                "line-color": "#b8b7b7"
+            }
+        },
+        {
+            "id": "L2 Bundesstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesstraße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    2,
+                    10,
+                    3.25,
+                    12,
+                    4.25,
+                    14,
+                    7.25,
+                    16,
+                    31.25,
+                    18,
+                    61.25
+                ],
+                "line-color": "#767474"
+            }
+        },
+        {
+            "id": "L2 Autobahn K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 6,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bundesautobahn"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebehrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    6,
+                    2,
+                    10,
+                    3.25,
+                    12,
+                    4.25,
+                    14,
+                    7.25,
+                    16,
+                    31.25,
+                    18,
+                    61.25
+                ],
+                "line-color": "#6a6868"
+            }
+        },
+        {
             "id": "L2 Nebenstraße F",
             "type": "line",
             "metadata": {
@@ -917,6 +1872,7 @@
                 ]
             ],
             "layout": {
+                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -928,16 +1884,12 @@
                     [
                         "zoom"
                     ],
-                    12,
-                    1.4,
                     14,
                     3.5,
-                    15,
-                    5,
                     16,
-                    12,
+                    13,
                     18,
-                    35
+                    15
                 ],
                 "line-color": "#fefefe"
             }
@@ -953,7 +1905,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 11,
             "filter": [
                 "all",
                 [
@@ -987,20 +1939,16 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.35,
-                    10,
-                    1.5,
+                    11,
+                    0.75,
                     12,
-                    1.7,
+                    2.5,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    4.5,
                     16,
                     15,
                     18,
-                    44
+                    19
                 ],
                 "line-color": "#fefefe"
             }
@@ -1016,7 +1964,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -1050,20 +1998,14 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.35,
-                    10,
-                    1.5,
                     12,
-                    1.7,
+                    2.25,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    4.25,
                     16,
-                    15,
+                    12.25,
                     18,
-                    44
+                    16.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -1079,7 +2021,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -1113,22 +2055,20 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.35,
+                    8,
+                    1,
                     10,
-                    1.5,
+                    2.25,
                     12,
-                    1.7,
+                    3.25,
                     14,
-                    3.5,
-                    15,
-                    6.5,
+                    5.25,
                     16,
-                    15,
+                    26.25,
                     18,
-                    44
+                    54.25
                 ],
-                "line-color": "#fefefe"
+                "line-color": "#dcdbdb"
             }
         },
         {
@@ -1142,7 +2082,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 8,
             "filter": [
                 "all",
                 [
@@ -1176,20 +2116,18 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.5,
+                    8,
+                    1.25,
                     10,
-                    1.75,
+                    1.25,
                     12,
-                    2,
+                    2.25,
                     14,
-                    4,
-                    15,
-                    7.5,
+                    5.25,
                     16,
-                    16,
+                    28.25,
                     18,
-                    46
+                    58.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -1205,7 +2143,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 6,
             "filter": [
                 "all",
                 [
@@ -1239,20 +2177,18 @@
                     [
                         "zoom"
                     ],
-                    5,
-                    0.75,
+                    6,
+                    1.25,
                     10,
-                    2,
+                    1.25,
                     12,
-                    2.75,
+                    2.25,
                     14,
-                    4.5,
-                    15,
-                    8,
+                    5.25,
                     16,
-                    17,
+                    28.25,
                     18,
-                    48
+                    58.25
                 ],
                 "line-color": "#fefefe"
             }
@@ -1357,7 +2293,7 @@
                 "text-pitch-alignment": "map",
                 "text-rotation-alignment": "map",
                 "text-max-angle": 30,
-                "text-letter-spacing": 0.3,
+                "text-letter-spacing": 0.2,
                 "text-font": [
                     "Cantarell Oblique"
                 ]
@@ -1691,8 +2627,10 @@
                         "zoom"
                     ],
                     12,
-                    11,
+                    10,
                     14,
+                    11,
+                    16,
                     13
                 ],
                 "text-font": [
@@ -1746,10 +2684,12 @@
                     [
                         "zoom"
                     ],
-                    13,
+                    12,
                     12,
                     14,
-                    13
+                    13,
+                    16,
+                    15
                 ],
                 "text-font": [
                     "Cantarell Regular"
@@ -1799,11 +2739,13 @@
                         "zoom"
                     ],
                     10,
-                    9,
-                    15,
+                    10,
                     12,
+                    13,
+                    14,
+                    14,
                     16,
-                    16
+                    17
                 ],
                 "text-font": [
                     "Cantarell Regular"
