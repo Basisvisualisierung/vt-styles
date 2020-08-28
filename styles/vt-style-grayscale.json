@@ -217,7 +217,39 @@
             },
             "paint": {
                 "line-color": "#d1d1d1",
-                "line-width": 1
+                "line-width": 1.5
+            }
+        },
+        {
+            "id": "Fuß- und Radweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Fuß- und Radweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "objektart",
+                    "WegPfadSteig"
+                ],
+                [
+                    "!has",
+                    "bauwerk"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": 0.75,
+                "line-color": "#969696"
             }
         },
         {
