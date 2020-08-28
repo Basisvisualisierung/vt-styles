@@ -1901,7 +1901,7 @@
             }
         },
         {
-            "id": "Schrift Wohnplatz 20 - <200",
+            "id": "Schrift Wohnplatz < 200",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -1911,8 +1911,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Name",
-            "minzoom": 12,
-            "maxzoom":22,
+            "minzoom": 13,
             "filter": [
                 "all",
                 [
@@ -1921,7 +1920,7 @@
                     "Ortslage"
                 ],
                 [
-                    "<=",
+                    "<",
                     "einwohnerzahl",
                     200
                 ]
@@ -1960,7 +1959,7 @@
             }
         },
         {
-            "id": "Schrift Wohnplatz 200 - <1.000",
+            "id": "Schrift Wohnplatz 200 - < 1.000",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -1971,7 +1970,6 @@
             "source": "smarttiles_de",
             "source-layer": "Name",
             "minzoom": 12,
-            "maxzoom": 22,
             "filter": [
                 "all",
                 [
@@ -1980,12 +1978,12 @@
                     "Ortslage"
                 ],
                 [
-                    ">",
+                    ">=",
                     "einwohnerzahl",
                     200
                 ],
                 [
-                    "<=",
+                    "<",
                     "einwohnerzahl",
                     1000
                 ]
@@ -2024,7 +2022,7 @@
             }
         },
         {
-            "id": "Schrift Wohnplatz >1.000",
+            "id": "Schrift Wohnplatz >= 1.000",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -2034,8 +2032,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Name",
-            "minzoom": 12,
-            "maxzoom": 22,
+            "minzoom": 11,
             "filter": [
                 "all",
                 [
@@ -2044,7 +2041,7 @@
                     "Ortslage"
                 ],
                 [
-                    ">",
+                    ">=",
                     "einwohnerzahl",
                     1000
                 ]
@@ -2083,7 +2080,7 @@
             }
         },
         {
-            "id": "Schrift Gemeinde <500",
+            "id": "Schrift Gemeinde < 5.000",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -2110,7 +2107,7 @@
                 [
                     "<",
                     "einwohnerzahl",
-                    500
+                    5000
                 ]
             ],
             "layout": {
@@ -2149,78 +2146,7 @@
             }
         },
         {
-            "id": "Schrift Gemeinde 500 - <1.000",
-            "type": "symbol",
-            "metadata": {
-                "map-editor:group": "Landnutzung",
-                "map-editor:detail-level": 2,
-                "map-editor:layer": "Siedlung",
-                "map-editor:layer-element": "Beschriftung"
-            },
-            "source": "smarttiles_de",
-            "source-layer": "Name",
-            "minzoom": 11,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Gemeinde"
-                ],
-                [
-                    "in",
-                    "gemeindeart",
-                    "Gemeinde",
-                    "Gemeindefreies Gebiet"
-                ],
-                [
-                    ">",
-                    "einwohnerzahl",
-                    500
-                ],
-                [
-                    "<=",
-                    "einwohnerzahl",
-                    1000
-                ]
-            ],
-            "layout": {
-                "text-field": "{name}",
-                "symbol-sort-key": [
-                    "-",
-                    0,
-                    [
-                        "get",
-                        "einwohnerzahl"
-                    ]
-                ],
-                "text-size": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    10,
-                    12,
-                    12,
-                    16,
-                    16
-                ],
-                "text-font": [
-                    "Liberation Sans Regular"
-                ]
-            },
-            "paint": {
-                "text-color": "#808080",
-                "text-halo-color": "#ffffff",
-                "text-halo-width": 2
-            }
-        },
-        {
-            "id": "Schrift Gemeinde 1.000 - <5.000",
+            "id": "Schrift Gemeinde >= 5.000",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -2245,12 +2171,7 @@
                     "Gemeindefreies Gebiet"
                 ],
                 [
-                    ">",
-                    "einwohnerzahl",
-                    1000
-                ],
-                [
-                    "<=",
+                    ">=",
                     "einwohnerzahl",
                     5000
                 ]
@@ -2291,73 +2212,7 @@
             }
         },
         {
-            "id": "Schrift Gemeinde >5.000",
-            "type": "symbol",
-            "metadata": {
-                "map-editor:group": "Landnutzung",
-                "map-editor:detail-level": 2,
-                "map-editor:layer": "Siedlung",
-                "map-editor:layer-element": "Beschriftung"
-            },
-            "source": "smarttiles_de",
-            "source-layer": "Name",
-            "minzoom": 10,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Gemeinde"
-                ],
-                [
-                    "in",
-                    "gemeindeart",
-                    "Gemeinde",
-                    "Gemeindefreies Gebiet"
-                ],
-                [
-                    ">",
-                    "einwohnerzahl",
-                    5000
-                ]
-            ],
-            "layout": {
-                "text-field": "{name}",
-                "symbol-sort-key": [
-                    "-",
-                    0,
-                    [
-                        "get",
-                        "einwohnerzahl"
-                    ]
-                ],
-                "text-size": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    10,
-                    12,
-                    12,
-                    16,
-                    16
-                ],
-                "text-font": [
-                    "Liberation Sans Regular"
-                ]
-            },
-            "paint": {
-                "text-color": "#808080",
-                "text-halo-color": "#ffffff",
-                "text-halo-width": 2
-            }
-        },
-        {
-            "id": "Schrift Stadt 5.000 - <20.000",
+            "id": "Schrift Stadt 5.000 - < 20.000",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -2368,7 +2223,7 @@
             "source": "smarttiles_de",
             "source-layer": "Name",
             "minzoom": 9,
-            "maxzoom": 16,
+            "maxzoom": 15,
             "filter": [
                 "all",
                 [
@@ -2382,12 +2237,12 @@
                     "Stadt"
                 ],
                 [
-                    ">",
+                    ">=",
                     "einwohnerzahl",
                     5000
                 ],
                 [
-                    "<=",
+                    "<",
                     "einwohnerzahl",
                     20000
                 ]
@@ -2430,7 +2285,7 @@
             }
         },
         {
-            "id": "Schrift Stadt 20.000 - <100.000",
+            "id": "Schrift Stadt 20.000 - < 100.000",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -2441,7 +2296,7 @@
             "source": "smarttiles_de",
             "source-layer": "Name",
             "minzoom": 8,
-            "maxzoom": 16,
+            "maxzoom": 15,
             "filter": [
                 "all",
                 [
@@ -2455,12 +2310,12 @@
                     "Stadt"
                 ],
                 [
-                    ">",
+                    ">=",
                     "einwohnerzahl",
                     20000
                 ],
                 [
-                    "<=",
+                    "<",
                     "einwohnerzahl",
                     100000
                 ]
@@ -2503,7 +2358,7 @@
             }
         },
         {
-            "id": "Schrift Stadt 100.000 - <500.000",
+            "id": "Schrift Stadt 100.000 - < 500.000",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -2514,6 +2369,7 @@
             "source": "smarttiles_de",
             "source-layer": "Name",
             "minzoom": 7,
+            "maxzoom": 15,
             "filter": [
                 "all",
                 [
@@ -2584,6 +2440,7 @@
             "source": "smarttiles_de",
             "source-layer": "Name",
             "minzoom": 6,
+            "maxzoom": 15,
             "filter": [
                 "all",
                 [
