@@ -314,13 +314,13 @@
                         "zoom"
                     ],
                     14,
-                    4,
+                    3.5,
                     16,
-                    14,
+                    13.4,
                     18,
-                    16
+                    15.5
                 ],
-                "line-color": "#969696"
+                "line-color": "#869498"
             }
         },
         {
@@ -363,15 +363,15 @@
                     11,
                     0.65,
                     12,
-                    3.5,
+                    3,
                     14,
-                    5.5,
+                    5,
                     16,
-                    16,
+                    15.5,
                     18,
-                    20
+                    19.5
                 ],
-                "line-color":"#969696"
+                "line-color":"#869498"
             }
         },
         {
@@ -420,7 +420,7 @@
                     18,
                     16.25
                 ],
-                "line-color": "#969696"
+                "line-color": "#869498"
             }
         },
         {
@@ -618,13 +618,13 @@
                         "zoom"
                     ],
                     14,
-                    3.5,
+                    3,
                     16,
-                    13,
+                    12.5,
                     18,
-                    15
+                    14.5
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#535e61"
             }
         },
         {
@@ -665,15 +665,64 @@
                         "zoom"
                     ],
                     12,
-                    2.5,
+                    2,
                     14,
-                    4.5,
+                    4,
                     16,
-                    15,
+                    14.5,
                     18,
-                    19
+                    18.5
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#535e61"
+            }
+        },
+        {
+            "id": "L0 Kreisstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Kreisstraße"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    2.25,
+                    14,
+                    4.25,
+                    16,
+                    12.25,
+                    18,
+                    16.25
+                ],
+                "line-color": "#535e61"
             }
         },
         {
@@ -726,7 +775,7 @@
                     18,
                     54.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -779,7 +828,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -832,7 +881,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -920,13 +969,13 @@
                         "zoom"
                     ],
                     14,
-                    4,
+                    3.5,
                     16,
-                    14,
+                    13.4,
                     18,
-                    16
+                    15.5
                 ],
-                "line-color": "#969696"
+                "line-color": "#869498"
             }
         },
         {
@@ -964,15 +1013,15 @@
                     11,
                     0.65,
                     12,
-                    3.5,
+                    3,
                     14,
-                    5.5,
+                    5,
                     16,
-                    16,
+                    15.5,
                     18,
-                    20
+                    19.5
                 ],
-                "line-color": "#acb6b9"
+                "line-color": "#869498"
             }
         },
         {
@@ -1020,7 +1069,7 @@
                     18,
                     18.25
                 ],
-                "line-color": "#969696"
+                "line-color": "#869498"
             }
         },
         {
@@ -1112,7 +1161,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#f5d6b3"
+                "line-color": "#f9a825"
             }
         },
         {
@@ -1160,7 +1209,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#dab28b"
+                "line-color": "#c25f00"
             }
         },
         {
@@ -1198,13 +1247,13 @@
                         "zoom"
                     ],
                     14,
-                    3.5,
+                    3,
                     16,
-                    13,
+                    12.5,
                     18,
-                    15
+                    14.5
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#535e61"
             }
         },
         {
@@ -1241,13 +1290,13 @@
                         "zoom"
                     ],
                     12,
-                    2.5,
+                    2,
                     14,
-                    4.5,
+                    4,
                     16,
-                    15,
+                    14.5,
                     18,
-                    19
+                    18.5
                 ],
                 "line-color": "#535e61"
             }
@@ -1293,7 +1342,7 @@
                     18,
                     16.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#535e61"
             }
         },
         {
@@ -1341,7 +1390,7 @@
                     18,
                     54.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -1389,7 +1438,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -1437,7 +1486,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -1533,13 +1582,13 @@
                         "zoom"
                     ],
                     14,
-                    4,
+                    3.5,
                     16,
-                    14,
+                    13.4,
                     18,
-                    16
+                    15.5
                 ],
-                "line-color": "#969696"
+                "line-color": "#869498"
             }
         },
         {
@@ -1590,15 +1639,15 @@
                     11,
                     0.65,
                     12,
-                    3.5,
+                    3,
                     14,
-                    5.5,
+                    5,
                     16,
-                    16,
+                    15.5,
                     18,
-                    20
+                    19.5
                 ],
-                "line-color": "#969696"
+                "line-color": "#869498"
             }
         },
         {
@@ -1659,7 +1708,7 @@
                     18,
                     18.25
                 ],
-                "line-color": "#969696"
+                "line-color": "#869498"
             }
         },
         {
@@ -1889,13 +1938,13 @@
                         "zoom"
                     ],
                     14,
-                    3.5,
+                    3,
                     16,
-                    13,
+                    12.5,
                     18,
-                    15
+                    14.5
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#535e61"
             }
         },
         {
@@ -1944,15 +1993,15 @@
                         "zoom"
                     ],
                     12,
-                    2.5,
+                    2,
                     14,
-                    4.5,
+                    4,
                     16,
-                    15,
+                    14.5,
                     18,
-                    19
+                    18.5
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#535e61"
             }
         },
         {
@@ -2009,7 +2058,7 @@
                     18,
                     16.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#535e61"
             }
         },
         {
@@ -2070,7 +2119,7 @@
                     18,
                     54.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -2131,7 +2180,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -2192,7 +2241,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#9f9f4b"
+                "line-color": "#e4ca5e"
             }
         },
         {
@@ -2295,7 +2344,7 @@
                 "text-pitch-alignment": "map",
                 "text-rotation-alignment": "map",
                 "text-max-angle": 30,
-                "text-letter-spacing": 0.3,
+                "text-letter-spacing": 0.2,
                 "text-font": [
                     "Cantarell Oblique"
                 ]
@@ -2460,8 +2509,7 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-color": "#ffffff",
-                "text-halo-color": "#9f9f4b",
+                "text-color": "#e0e0e0",
                 "text-halo-width": 1
             }
         },
@@ -2520,8 +2568,7 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-color": "#ffffff",
-                "text-halo-color": "#9f9f4b",
+                "text-color": "#e0e0e0",
                 "text-halo-width": 1
             }
         },
@@ -2580,8 +2627,7 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-color": "#ffffff",
-                "text-halo-color": "#9f9f4b",
+                "text-color": "#e0e0e0",
                 "text-halo-width": 1,
                 "text-translate-anchor": "map"
             }
@@ -2629,8 +2675,10 @@
                         "zoom"
                     ],
                     12,
-                    11,
+                    10,
                     14,
+                    11,
+                    16,
                     13
                 ],
                 "text-font": [
@@ -2641,8 +2689,8 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-color": "#ffffff",
-                "text-halo-color": "#9f9f4b",
+                "text-color": "#262626",
+                "text-halo-color": "#e4ca5e",
                 "text-halo-width": 1,
                 "text-translate-anchor": "map"
             }
@@ -2684,10 +2732,12 @@
                     [
                         "zoom"
                     ],
-                    13,
+                    12,
                     12,
                     14,
-                    13
+                    13,
+                    16,
+                    15
                 ],
                 "text-font": [
                     "Cantarell Regular"
@@ -2697,9 +2747,9 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-color": "#ffffff",
-                "text-halo-color": "#9f9f4b",
-                "text-halo-width": 1,
+                "text-color": "#561802",
+                "text-halo-color": "#e4ca5e",
+                "text-halo-width": 1.2,
                 "text-halo-blur": 0.5,
                 "text-translate-anchor": "map"
             }
@@ -2737,11 +2787,13 @@
                         "zoom"
                     ],
                     10,
-                    9,
-                    15,
+                    10,
                     12,
+                    13,
+                    14,
+                    14,
                     16,
-                    16
+                    17
                 ],
                 "text-font": [
                     "Cantarell Regular"
@@ -2752,8 +2804,8 @@
                 "symbol-avoid-edges": true
             },
             "paint": {
-                "text-color": "#ffffff",
-                "text-halo-color": "#9f9f4b",
+                "text-color": "#803f00",
+                "text-halo-color": "#e4ca5e",
                 "text-halo-width": 1,
                 "text-halo-blur": 0
             }
