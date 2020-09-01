@@ -617,6 +617,7 @@
                 ]
             ],
             "layout": {
+                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1936,6 +1937,7 @@
                 ]
             ],
             "layout": {
+                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1968,7 +1970,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 5,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
