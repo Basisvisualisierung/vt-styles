@@ -1,0 +1,1 @@
+Place glyph sets, which are used by the styles, in this folder.
