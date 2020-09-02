@@ -1183,6 +1183,56 @@
             }
         },
         {
+            "id": "Hauptwirtschaftsweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "objektart",
+                    "Fahrwegachse"
+                ],
+                [
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
+                    "klasse",
+                    "Hauptwirtschaftsweg"
+                ]
+            ],
+            "layout": {
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    14,
+                    2,
+                    16,
+                    6
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
             "id": "L1 Nebenstraße K",
             "type": "line",
             "metadata": {
