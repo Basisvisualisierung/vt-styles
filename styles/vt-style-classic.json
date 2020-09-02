@@ -460,9 +460,7 @@
             "source-layer": "Gebaeude",
             "minzoom": 15,
             "maxzoom": 16,
-            "layout": {
-                "visibility": "visible"
-            },
+            "layout": {},
             "paint": {
                 "fill-color": "#918d8d"
             }
@@ -515,9 +513,7 @@
                     "31001_3242"
                 ]
             ],
-            "layout": {
-                "visibility": "visible"
-            },
+            "layout": {},
             "paint": {
                 "fill-color": "#cc6868"
             }
@@ -3111,9 +3107,7 @@
             "filter": [
                 "all"
             ],
-            "layout": {
-                "visibility": "visible"
-            },
+            "layout": {},
             "paint": {
                 "fill-extrusion-color": "#918d8d",
                 "fill-extrusion-height": [
@@ -3178,9 +3172,7 @@
                     "31001_3242"
                 ]
             ],
-            "layout": {
-                "visibility": "visible"
-            },
+            "layout": {},
             "paint": {
                 "fill-extrusion-color": "#cc6868",
                 "fill-extrusion-height": [
