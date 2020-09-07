@@ -10,7 +10,7 @@
     },
     "glyphs": "/fonts/{fontstack}/{range}.pbf",
     "metadata": {
-        "vt-style-version": "1.0.0 beta"
+        "vt-style-version": "1.0.0"
     },
     "layers": [
         {
