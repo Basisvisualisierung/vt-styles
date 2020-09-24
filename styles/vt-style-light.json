@@ -25,7 +25,7 @@
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Meer",
+                "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "smarttiles_de",
@@ -102,8 +102,8 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 1,
-                "map-editor:layer": "Start- und Landebahn",
-                "map-editor:layer-element": "Füllung"
+                "map-editor:layer": "Flughafen",
+                "map-editor:layer-element": "Start- und Landebahn"
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrsflaeche",
@@ -228,8 +228,8 @@
             "type": "line",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Bach, Graben",
-                "map-editor:layer-element": "Kontur"
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
             },
             "source": "smarttiles_de",
             "source-layer": "Gewaesserlinie",
