@@ -1,7 +1,9 @@
-# Binary files
-/sprites/*
-!/sprites/README.md
-
+# Font files
+/fonts/*
+!/fonts/Cantarell Oblique
+!/fonts/Cantarell Regular
+!/fonts/Liberation Sans Bold
+!/fonts/Liberation Sans Regular
 
 # System Files
 .DS_Store
