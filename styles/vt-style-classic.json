@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "vt-style-classic_test",
+    "name": "vt-style-classic",
     "sources": {
         "smarttiles_de": {
             "url": "https://adv-smart.de/tiles/smarttiles_de_public/smarttiles_de_public.json",
@@ -3243,9 +3243,15 @@
         {
             "id": "Siedlungspunkt_Stadt",
             "type": "circle",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
             "source": "smarttiles_de",
             "source-layer": "Name",
-            "minzoom": 6,
+            "minzoom": 5,
             "maxzoom": 10,
             "filter": [
                 "all",
@@ -3292,7 +3298,7 @@
                                 "get",
                                 "einwohnerzahl"
                             ],
-                            1000000
+                            100000
                         ],
                         0,
                         0
@@ -3311,20 +3317,6 @@
                         1,
                         0
                     ],
-                    6,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            100000
-                        ],
-                        1,
-                        0
-                    ],
                     7,
                     [
                         "case",
@@ -3334,7 +3326,7 @@
                                 "get",
                                 "einwohnerzahl"
                             ],
-                            50000
+                            100000
                         ],
                         1,
                         0
@@ -3354,6 +3346,20 @@
                         0
                     ],
                     9,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            5000
+                        ],
+                        1,
+                        0
+                    ],
+                    10,
                     1
                 ]
             }
