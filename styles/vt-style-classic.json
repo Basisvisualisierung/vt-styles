@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "vt-style-color",
+    "name": "vt-style-classic",
     "sources": {
         "smarttiles_de": {
             "url": "https://adv-smart.de/tiles/smarttiles_de_public/smarttiles_de_public.json",
@@ -615,7 +615,7 @@
                     18,
                     20
                 ],
-                "line-color":"#8f8f8f"
+                "line-color": "#8f8f8f"
             }
         },
         {
@@ -3241,6 +3241,124 @@
             }
         },
         {
+            "id": "Siedlungspunkt_Stadt",
+            "type": "circle",
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Gemeinde"
+                ],
+                [
+                    "in",
+                    "gemeindeart",
+                    "Stadt",
+                    "Hauptstadt",
+                    "Landeshauptstadt"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#f5baba",
+                "circle-radius": {
+                    "stops": [
+                        [
+                            5,
+                            3
+                        ],
+                        [
+                            11,
+                            5
+                        ]
+                    ]
+                },
+                "circle-opacity": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            1000000
+                        ],
+                        0,
+                        0
+                    ],
+                    5,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            500000
+                        ],
+                        1,
+                        0
+                    ],
+                    6,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            100000
+                        ],
+                        1,
+                        0
+                    ],
+                    7,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            50000
+                        ],
+                        1,
+                        0
+                    ],
+                    8,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            20000
+                        ],
+                        1,
+                        0
+                    ],
+                    9,
+                    1
+                ]
+            }
+        },
+        {
             "id": "Schrift Wohnplatz < 200",
             "type": "symbol",
             "metadata": {
@@ -3595,6 +3713,29 @@
             ],
             "layout": {
                 "text-field": "{name}",
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "top-left",
+                    "top",
+                    "bottom",
+                    "bottom-right",
+                    "top-right"
+                ],
+                "text-radial-offset": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    5,
+                    0,
+                    11,
+                    0.5,
+                    14,
+                    2
+                ],
                 "symbol-sort-key": [
                     "-",
                     0,
@@ -3668,6 +3809,29 @@
             ],
             "layout": {
                 "text-field": "{name}",
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "top-left",
+                    "top",
+                    "bottom",
+                    "bottom-right",
+                    "top-right"
+                ],
+                "text-radial-offset": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    5,
+                    0,
+                    11,
+                    0.5,
+                    14,
+                    2
+                ],
                 "symbol-sort-key": [
                     "-",
                     0,
@@ -3741,6 +3905,29 @@
             ],
             "layout": {
                 "text-field": "{name}",
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "top-left",
+                    "top",
+                    "bottom",
+                    "bottom-right",
+                    "top-right"
+                ],
+                "text-radial-offset": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    5,
+                    0,
+                    11,
+                    0.5,
+                    14,
+                    2
+                ],
                 "symbol-sort-key": [
                     "-",
                     0,
@@ -3807,6 +3994,29 @@
             ],
             "layout": {
                 "text-field": "{name}",
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "top-left",
+                    "top",
+                    "bottom",
+                    "bottom-right",
+                    "top-right"
+                ],
+                "text-radial-offset": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    5,
+                    0,
+                    11,
+                    0.5,
+                    14,
+                    2
+                ],
                 "symbol-sort-key": [
                     "-",
                     0,
