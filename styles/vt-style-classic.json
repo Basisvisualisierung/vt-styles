@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "vt-style-classic",
+    "name": "vt-style-classic_test",
     "sources": {
         "smarttiles_de": {
             "url": "https://adv-smart.de/tiles/smarttiles_de_public/smarttiles_de_public.json",
