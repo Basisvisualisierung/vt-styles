@@ -1,6 +1,7 @@
-## v1.0.3 (2020-11-23)
+## v1.0.3 (2020-12-04)
 ### Improvements and Changes
 * Changed interpolation properties from city labels in all styles
+* Changed relative glyphs URL to absolute URL
 
 ## v1.0.2 (2020-10-07)
 ### Improvements and Changes

@@ -8,9 +8,9 @@
             "attribution": "Daten: <a href=\"https://adv-smart.de\">AdV Smart Mapping</a>, &copy; GeoBasis-DE"
         }
     },
-    "glyphs": "/fonts/{fontstack}/{range}.pbf",
+    "glyphs": "https://basisvisualisierung.niedersachsen.dev/fonts/{fontstack}/{range}.pbf",
     "metadata": {
-        "vt-style-version": "1.0.1"
+        "vt-style-version": "1.0.3"
     },
     "layers": [
         {
