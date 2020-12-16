@@ -3,7 +3,7 @@
     "name": "vt-style-color",
     "sources": {
         "smarttiles_de": {
-            "url": "https://adv-smart.de/tiles/smarttiles_de_public/smarttiles_de_public.json",
+            "url": "https://adv-smart.de/tiles/smarttiles_de_public_v1/smarttiles_de_public_v1.json",
             "type": "vector",
             "attribution": "Daten: <a href=\"https://adv-smart.de\">AdV Smart Mapping</a>, &copy; GeoBasis-DE"
         }
