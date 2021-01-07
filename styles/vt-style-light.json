@@ -63,7 +63,6 @@
                     "Siedlung",
                     "FlaecheGemischterNutzung",
                     "FlaecheBesondererFunktionalerPraegung",
-                    "Industrie- und Gewerbefläche",
                     "Sport- Freizeit- und Erholungsfläche",
                     "Friedhof"
                 ]
@@ -71,6 +70,34 @@
             "layout": {},
             "paint": {
                 "fill-color": "#f2eded"
+            }
+        },
+        {
+            "id": "Industrie und Gewerbe",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Industrie und Gewerbe",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Siedlungsflaeche",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Industrie- und Gewerbefläche",
+                    "Bergbau",
+                    "TagebauGrubeSteinbruch",
+                    "Halde"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#e0e0e0"
             }
         },
         {
