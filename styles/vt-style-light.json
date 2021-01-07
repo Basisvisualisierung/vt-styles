@@ -59,11 +59,13 @@
                 "all",
                 [
                     "in",
-                    "objektart",
-                    "Siedlungsflaeche",
+                    "klasse",
+                    "Siedlung",
                     "FlaecheGemischterNutzung",
                     "FlaecheBesondererFunktionalerPraegung",
-                    "IndustrieUndGewerbeflaeche"
+                    "Industrie- und Gewerbefläche",
+                    "Sport- Freizeit- und Erholungsfläche",
+                    "Friedhof"
                 ]
             ],
             "layout": {},
@@ -87,8 +89,9 @@
                 "all",
                 [
                     "in",
-                    "objektart",
-                    "Flugverkehr"
+                    "klasse",
+                    "Flugverkehr",
+                    "Flughafen"
                 ]
             ],
             "layout": {},
@@ -109,37 +112,43 @@
             "source-layer": "Verkehrsflaeche",
             "minzoom": 10,
             "filter": [
-                "all",
+                "any",
                 [
-                    "match",
-                    [
-                        "get",
-                        "objektart"
-                    ],
-                    [
-                        "Flugverkehrsanlage"
-                    ],
-                    true,
-                    false
-                ],
-                [
-                    "match",
-                    [
-                        "get",
-                        "klasse"
-                    ],
-                    [
-                        "Startbahn, Landebahn",
-                        "Zurollbahn, Taxiway",
-                        "Vorfeld"
-                    ],
-                    true,
-                    false
+                    "in",
+                    "klasse",
+                    "Startbahn, Landebahn",
+                    "Vorfeld",
+                    "Zurollbahn, Taxiway"
                 ]
             ],
             "layout": {},
             "paint": {
                 "fill-color": "#ffffff"
+            }
+        },
+        {
+            "id": "Bahnverkehr",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Bahnhof",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrsflaeche",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Bahnverkehr"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#cccccc"
             }
         },
         {
@@ -156,17 +165,26 @@
             "filter": [
                 "all",
                 [
-                    "match",
-                    [
-                        "get",
-                        "objektart"
-                    ],
-                    [
-                        "SportFreizeitUndErholungsflaeche",
-                        "Friedhof"
-                    ],
-                    true,
-                    false
+                    "in",
+                    "klasse",
+                    "Autokino, Freilichtkino",
+                    "Botanischer Garten",
+                    "Campingplatz",
+                    "Freilichtmuseum",
+                    "Freilichttheater",
+                    "Freizeitanlage",
+                    "Freizeitpark",
+                    "Golfplatz",
+                    "Grünanlage",
+                    "Kleingarten",
+                    "Modellflugplatz",
+                    "Park",
+                    "Safaripark, Wildpark",
+                    "Schwimmbad, Freibad",
+                    "Sportanlage",
+                    "Sport- Freizeit- und Erholungsfläche",
+                    "Wochenend- und Ferienhausfläche",
+                    "Zoo"
                 ]
             ],
             "layout": {},
@@ -187,8 +205,11 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "objektart",
+                    "in",
+                    "klasse",
+                    "Laubholz",
+                    "Laub- und Nadelholz",
+                    "Nadelholz",
                     "Wald"
                 ]
             ],
@@ -265,9 +286,12 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "objektart",
-                    "WegPfadSteig"
+                    "in",
+                    "klasse",
+                    "Weg, Pfad, Steig",
+                    "Fußweg",
+                    "Rad- und Fußweg",
+                    "Radweg"
                 ],
                 [
                     "!has",
@@ -297,7 +321,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -346,7 +370,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -397,7 +421,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -450,7 +474,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -499,7 +523,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -552,7 +576,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -605,7 +629,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -654,7 +678,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -703,7 +727,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -752,7 +776,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -805,7 +829,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -858,7 +882,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "bauwerk",
                     "Tunnel, Unterführung"
                 ],
@@ -911,19 +935,20 @@
             "filter": [
                 "all",
                 [
-                    "in",
-                    "bauwerk",
-                    "Tunnel, Unterführung"
-                ],
-                [
-                    "in",
-                    "klasse",
-                    "Eisenbahn"
+                    "==",
+                    "Eisenbahn",
+                    [
+                        "get",
+                        "klasse"
+                    ]
                 ],
                 [
                     "==",
-                    "objektart",
-                    "Bahnstrecke"
+                    [
+                        "get",
+                        "bauwerk"
+                    ],
+                    "Tunnel, Unterführung"
                 ]
             ],
             "layout": {
@@ -961,17 +986,13 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "objektart",
-                    "Fahrwegachse"
-                ],
-                [
                     "!has",
                     "bauwerk"
                 ],
                 [
-                    "==",
+                    "in",
                     "klasse",
+                    "Wirtschaftsweg",
                     "Hauptwirtschaftsweg"
                 ]
             ],
@@ -1566,14 +1587,30 @@
             "filter": [
                 "all",
                 [
-                    "in",
-                    "klasse",
-                    "Eisenbahn"
+                    "any",
+                    [
+                        "==",
+                        "Eisenbahn",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ],
+                    [
+                        "==",
+                        "Güterverkehr",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ]
                 ],
                 [
-                    "==",
-                    "objektart",
-                    "Bahnstrecke"
+                    "!",
+                    [
+                        "has",
+                        "bauwerk"
+                    ]
                 ]
             ],
             "layout": {
@@ -1621,13 +1658,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -1677,13 +1716,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -1736,13 +1777,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -1797,13 +1840,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -1854,13 +1899,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -1915,13 +1962,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -1977,13 +2026,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -2033,13 +2084,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -2090,13 +2143,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -2147,13 +2202,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -2208,13 +2265,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -2269,13 +2328,15 @@
                     "bauwerk",
                     "Brücke",
                     "Drehbrücke",
-                    "Hebehrücke",
+                    "Hebebrücke",
                     "Bogenbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
-                    "Zugbrücke"
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -2321,27 +2382,146 @@
             "filter": [
                 "all",
                 [
-                    "in",
-                    "klasse",
-                    "Eisenbahn"
+                    "any",
+                    [
+                        "==",
+                        "Eisenbahn",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ],
+                    [
+                        "==",
+                        "Güterverkehr",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ],
+                    [
+                        "==",
+                        "S-Bahn",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ],
+                    [
+                        "==",
+                        "U-Bahn",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ],
+                    [
+                        "==",
+                        "Stadtbahn",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ],
+                    [
+                        "==",
+                        "Straßenbahn",
+                        [
+                            "get",
+                            "klasse"
+                        ]
+                    ]
                 ],
                 [
-                    "==",
-                    "objektart",
-                    "Bahnstrecke"
-                ],
-                [
-                    "in",
-                    "bauwerk",
-                    "Brücke",
-                    "Drehbrücke",
-                    "Hebehrücke",
-                    "Bogenbrücke",
-                    "Hochbahn, Hochstraße",
-                    "Hängebrücke",
-                    "Mehrstöckige Brücke",
-                    "Pontonbrücke",
-                    "Zugbrücke"
+                    "any",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Brücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Drehbrücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Hebebrücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Bogenbrücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Hochbahn, Hochstraße"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Hängebrücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Mehrstöckige Brücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Pontonbrücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Zugbrücke"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Staudamm"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "bauwerk"
+                        ],
+                        "Staumauer"
+                    ]
                 ]
             ],
             "layout": {
@@ -2402,6 +2582,10 @@
                     12,
                     16,
                     20
+                ],
+                "text-offset":[
+                    0.5,
+                    0.5
                 ],
                 "text-pitch-alignment": "map",
                 "text-rotation-alignment": "map",
@@ -2548,11 +2732,6 @@
                     "klasse",
                     "Attribut trifft nicht zu",
                     "Sonstiges"
-                ],
-                [
-                    "==",
-                    "objektart",
-                    "Strassenachse"
                 ]
             ],
             "layout": {
@@ -2596,11 +2775,6 @@
                     "in",
                     "klasse",
                     "Gemeindestraße"
-                ],
-                [
-                    "==",
-                    "objektart",
-                    "Strassenachse"
                 ]
             ],
             "layout": {
@@ -2656,11 +2830,6 @@
                     "in",
                     "klasse",
                     "Kreisstraße"
-                ],
-                [
-                    "==",
-                    "objektart",
-                    "Strassenachse"
                 ]
             ],
             "layout": {
@@ -2717,11 +2886,6 @@
                     "in",
                     "klasse",
                     "Landesstraße, Staatsstraße"
-                ],
-                [
-                    "==",
-                    "objektart",
-                    "Strassenachse"
                 ]
             ],
             "layout": {
