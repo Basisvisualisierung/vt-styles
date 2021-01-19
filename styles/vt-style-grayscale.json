@@ -3016,7 +3016,13 @@
                 [
                     "in",
                     "klasse",
-                    "Ortslage"
+                    "Ortsteil"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Stadtteil",
+                    "Gemeindeteil"
                 ],
                 [
                     "<",
@@ -3027,11 +3033,10 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
-                        "einwohnerzahl"
+                        "einwohnerzahl_berechnet"
                     ]
                 ],
                 "text-size": [
@@ -3076,7 +3081,13 @@
                 [
                     "in",
                     "klasse",
-                    "Ortslage"
+                    "Ort"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Gemeinde",
+                    "Gemeindefreies Gebiet"
                 ],
                 [
                     ">=",
@@ -3092,11 +3103,10 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
-                        "einwohnerzahl"
+                        "einwohnerzahl_berechnet"
                     ]
                 ],
                 "text-size": [
@@ -3141,7 +3151,15 @@
                 [
                     "in",
                     "klasse",
-                    "Ortslage"
+                    "Ort",
+                    "Ortsteil"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Gemeinde",
+                    "Stadtteil",
+                    "Gemeindeteil"
                 ],
                 [
                     ">=",
@@ -3152,11 +3170,10 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
-                        "einwohnerzahl"
+                        "einwohnerzahl_berechnet"
                     ]
                 ],
                 "text-size": [
@@ -3201,13 +3218,13 @@
                 [
                     "in",
                     "klasse",
-                    "Gemeinde"
+                    "Ortsteil"
                 ],
                 [
                     "in",
-                    "gemeindeart",
-                    "Gemeinde",
-                    "Gemeindefreies Gebiet"
+                    "art",
+                    "Stadtteil",
+                    "Gemeindeteil"
                 ],
                 [
                     "<",
@@ -3218,11 +3235,10 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
-                        "einwohnerzahl"
+                        "einwohnerzahl_berechnet"
                     ]
                 ],
                 "text-size": [
@@ -3284,11 +3300,10 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
-                        "get",
-                        "einwohnerzahl"
+                    "get",
+                    "einwohnerzahl_berechnet"
                     ]
                 ],
                 "text-size": [
@@ -3334,12 +3349,14 @@
                 [
                     "in",
                     "klasse",
-                    "Gemeinde"
+                    "Ort"
                 ],
                 [
                     "in",
-                    "gemeindeart",
-                    "Stadt"
+                    "art",
+                    "Stadt",
+                    "Hauptstadt",
+                    "Landeshauptstadt"
                 ],
                 [
                     ">=",
@@ -3355,8 +3372,7 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
                         "einwohnerzahl"
@@ -3405,12 +3421,14 @@
                 [
                     "in",
                     "klasse",
-                    "Gemeinde"
+                    "Ort"
                 ],
                 [
                     "in",
-                    "gemeindeart",
-                    "Stadt"
+                    "art",
+                    "Stadt",
+                    "Hauptstadt",
+                    "Landeshauptstadt"
                 ],
                 [
                     ">=",
@@ -3426,8 +3444,7 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
                         "einwohnerzahl"
@@ -3478,12 +3495,14 @@
                 [
                     "in",
                     "klasse",
-                    "Gemeinde"
+                    "Ort"
                 ],
                 [
                     "in",
-                    "gemeindeart",
-                    "Stadt"
+                    "art",
+                    "Stadt",
+                    "Hauptstadt",
+                    "Landeshauptstadt"
                 ],
                 [
                     ">=",
@@ -3499,8 +3518,7 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
                         "einwohnerzahl"
@@ -3549,12 +3567,14 @@
                 [
                     "in",
                     "klasse",
-                    "Gemeinde"
+                    "Ort"
                 ],
                 [
                     "in",
-                    "gemeindeart",
-                    "Stadt"
+                    "art",
+                    "Stadt",
+                    "Hauptstadt",
+                    "Landeshauptstadt"
                 ],
                 [
                     ">=",
@@ -3565,8 +3585,7 @@
             "layout": {
                 "text-field": "{name}",
                 "symbol-sort-key": [
-                    "-",
-                    0,
+                    "to-number",
                     [
                         "get",
                         "einwohnerzahl"
