@@ -403,7 +403,7 @@
                     18,
                     19.5
                 ],
-                "line-color":"#869498"
+                "line-color": "#869498"
             }
         },
         {
@@ -2579,7 +2579,7 @@
                     16,
                     20
                 ],
-                "text-offset":[
+                "text-offset": [
                     0.5,
                     0.5
                 ],
@@ -3036,6 +3036,130 @@
             }
         },
         {
+            "id": "Siedlungspunkt_Stadt",
+            "type": "circle",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 5,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ort"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Stadt",
+                    "Hauptstadt",
+                    "Landeshauptstadt"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#f0f0f0",
+                "circle-radius": {
+                    "stops": [
+                        [
+                            5,
+                            3
+                        ],
+                        [
+                            8,
+                            5
+                        ]
+                    ]
+                },
+                "circle-opacity": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            100000
+                        ],
+                        0,
+                        0
+                    ],
+                    5,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            500000
+                        ],
+                        1,
+                        0
+                    ],
+                    7,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            100000
+                        ],
+                        1,
+                        0
+                    ],
+                    8,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            20000
+                        ],
+                        1,
+                        0
+                    ],
+                    9,
+                    [
+                        "case",
+                        [
+                            ">",
+                            [
+                                "get",
+                                "einwohnerzahl"
+                            ],
+                            5000
+                        ],
+                        1,
+                        0
+                    ],
+                    10,
+                    1
+                ]
+            }
+        },
+        {
             "id": "Schrift Gemeinde < 5.000",
             "type": "symbol",
             "metadata": {
@@ -3144,8 +3268,8 @@
                 "symbol-sort-key": [
                     "to-number",
                     [
-                    "get",
-                    "einwohnerzahl_berechnet"
+                        "get",
+                        "einwohnerzahl_berechnet"
                     ]
                 ],
                 "text-size": [
@@ -3237,7 +3361,16 @@
                 ],
                 "text-font": [
                     "Liberation Sans Regular"
-                ]
+                ],
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "bottom-right",
+                    "top-left",
+                    "top-right",
+                    "bottom",
+                    "top"
+                ],
+                "text-radial-offset": 0.4
             },
             "paint": {
                 "text-color": "#ffffff",
@@ -3311,7 +3444,16 @@
                 ],
                 "text-font": [
                     "Liberation Sans Regular"
-                ]
+                ],
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "bottom-right",
+                    "top-left",
+                    "top-right",
+                    "bottom",
+                    "top"
+                ],
+                "text-radial-offset": 0.4
             },
             "paint": {
                 "text-color": "#ffffff",
@@ -3383,7 +3525,16 @@
                 ],
                 "text-font": [
                     "Liberation Sans Regular"
-                ]
+                ],
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "bottom-right",
+                    "top-left",
+                    "top-right",
+                    "bottom",
+                    "top"
+                ],
+                "text-radial-offset": 0.4
             },
             "paint": {
                 "text-color": "#ffffff",
@@ -3448,7 +3599,16 @@
                 ],
                 "text-font": [
                     "Liberation Sans Bold"
-                ]
+                ],
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "bottom-right",
+                    "top-left",
+                    "top-right",
+                    "bottom",
+                    "top"
+                ],
+                "text-radial-offset": 0.3
             },
             "paint": {
                 "text-color": "#ffffff",
