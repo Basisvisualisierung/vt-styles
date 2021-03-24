@@ -266,6 +266,74 @@
             }
         },
         {
+            "id": "Nicht Öffentliches Gebäude 2D",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Nicht Öffentliches Gebäude",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeudeflaeche",
+            "minzoom": 15,
+            "layout": {},
+            "paint": {
+                "fill-color": "#969696"
+            }
+        },
+        {
+            "id": "Öffentliches Gebäude 2D",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Öffentliches Gebäude",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeudeflaeche",
+            "minzoom": 15,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "gebaeudefunktion",
+                    "Kino",
+                    "Verwaltungsgebäude",
+                    "Parlament",
+                    "Rathaus",
+                    "Gericht",
+                    "Kreisverwaltung",
+                    "Bezirksregierung",
+                    "Allgemein bildende Schule",
+                    "Berufsbildende Schule",
+                    "Hochschulgebäude (Fachhochschule, Universität)",
+                    "Forschungsinstitut",
+                    "Schloss",
+                    "Theater, Oper",
+                    "Konzertgebäude",
+                    "Museum",
+                    "Rundfunk, Fernsehen",
+                    "Burg, Festung",
+                    "Kirche",
+                    "Synagoge",
+                    "Kapelle",
+                    "Gotteshaus",
+                    "Moschee",
+                    "Tempel",
+                    "Krankenhaus",
+                    "Polizei",
+                    "Feuerwehr",
+                    "Sport-, Turnhalle",
+                    "Hallenbad",
+                    "Sanatorium"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#7a7a7a"
+            }
+        },
+        {
             "id": "L0 Nebenstraße K",
             "type": "line",
             "metadata": {
