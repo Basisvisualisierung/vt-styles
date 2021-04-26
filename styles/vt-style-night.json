@@ -10,7 +10,7 @@
     },
     "glyphs": "https://basisvisualisierung.niedersachsen.dev/fonts/{fontstack}/{range}.pbf",
     "metadata": {
-        "vt-style-version": "1.0.3"
+        "vt-style-version": "1.1.0"
     },
     "layers": [
         {

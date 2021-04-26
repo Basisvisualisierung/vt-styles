@@ -1,3 +1,12 @@
+## v1.1.0 (2021-04-26)
+### Improvements and Changes
+* Updated tile cache to Smart Mapping v1
+* Changed _fill-color_ for layer "Industrie und Gewerbe" in vt-style-classic and for layer „Bahnverkehr” in vt-style-night
+* Changed city labels (filter and style)
+* Added layer "Industrie und Gewerbe" in vt-style-light
+* Added points to city names in all styles
+* Added 2D buildings to vt-style-grayscale and vt-style-light
+
 ## v1.0.3 (2020-12-04)
 ### Improvements and Changes
 * Changed interpolation properties from city labels in all styles
