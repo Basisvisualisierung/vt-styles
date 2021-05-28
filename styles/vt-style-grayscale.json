@@ -276,6 +276,7 @@
             "source": "smarttiles_de",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 15,
+            "maxzoom": 16,
             "layout": {},
             "paint": {
                 "fill-color": "#969696"
@@ -292,6 +293,7 @@
             "source": "smarttiles_de",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 15,
+            "maxzoom": 16,
             "filter": [
                 "all",
                 [
@@ -3065,6 +3067,107 @@
                 "text-halo-color": "#ffffff",
                 "text-halo-width": 1.25,
                 "text-halo-blur": 0
+            }
+        },
+        {
+            "id": "Nicht Öffentliches Gebäude 3D",
+            "type": "fill-extrusion",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Nicht Öffentliches Gebäude",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeudeflaeche",
+            "minzoom": 16,
+            "filter": [
+                "all"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-extrusion-color": "#969696",
+                "fill-extrusion-height": [
+                    "case",
+                    [
+                        "has",
+                        "hoehe"
+                    ],
+                    [
+                        "get",
+                        "hoehe"
+                    ],
+                    0
+                ],
+                "fill-extrusion-opacity": 0.6
+            }
+        },
+        {
+            "id": "Öffentliche Gebäude 3D",
+            "type": "fill-extrusion",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:layer": "Öffentliche Gebäude",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gebaeudeflaeche",
+            "minzoom": 16,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "gebaeudefunktion",
+                    "Kino",
+                    "Verwaltungsgebäude",
+                    "Parlament",
+                    "Rathaus",
+                    "Gericht",
+                    "Kreisverwaltung",
+                    "Bezirksregierung",
+                    "Allgemein bildende Schule",
+                    "Berufsbildende Schule",
+                    "Hochschulgebäude (Fachhochschule, Universität)",
+                    "Forschungsinstitut",
+                    "Schloss",
+                    "Theater, Oper",
+                    "Konzertgebäude",
+                    "Museum",
+                    "Rundfunk, Fernsehen",
+                    "Burg, Festung",
+                    "Kirche",
+                    "Synagoge",
+                    "Kapelle",
+                    "Gotteshaus",
+                    "Moschee",
+                    "Tempel",
+                    "Krankenhaus",
+                    "Polizei",
+                    "Feuerwehr",
+                    "Sport-, Turnhalle",
+                    "Hallenbad",
+                    "Sanatorium"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-extrusion-color": "#7a7a7a",
+                "fill-extrusion-height": [
+                    "case",
+                    [
+                        "has",
+                        "hoehe"
+                    ],
+                    [
+                        "get",
+                        "hoehe"
+                    ],
+                    0
+                ],
+                "fill-extrusion-opacity": 0.6
             }
         },
         {
