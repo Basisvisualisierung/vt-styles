@@ -2801,15 +2801,14 @@
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "smarttiles_de",
-            "source-layer": "Gewaesserflaeche",
+            "source-layer": "Gewaesserlinie",
             "minzoom": 12,
             "filter": [
                 "all",
                 [
                     "in",
                     "klasse",
-                    "Fliessgewässer",
-                    "Kanal"
+                    "Genäherte Mittellinie in Gewässern"
                 ]
             ],
             "layout": {
@@ -2829,11 +2828,9 @@
                     14,
                     12,
                     16,
-                    20
-                ],
-                "text-offset": [
-                    0.5,
-                    0.5
+                    20,
+                    17,
+                    22
                 ],
                 "text-pitch-alignment": "map",
                 "text-rotation-alignment": "map",
