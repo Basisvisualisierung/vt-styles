@@ -2844,7 +2844,71 @@
             }
         },
         {
-            "id": "Schrift See",
+            "id": "Schrift See <= 0.2 qkm",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "minzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "klasse"
+                    ],
+                    [
+                        "See"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    "<=",
+                    [
+                        "get",
+                        "flaeche"
+                    ],
+                    200000
+                ]  
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    15,
+                    10,
+                    15.5,
+                    12,
+                    16.5,
+                    15,
+                    17.5,
+                    17,
+                    18,
+                    19
+                ],
+                "text-font": [
+                    "Cantarell Oblique"
+                ],
+                "text-letter-spacing": 0.1
+            },
+            "paint": {
+                "text-color": "#1975a9"
+            }
+        },
+        {
+            "id": "Schrift See > 0.2 qkm",
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Gewässer",
@@ -2857,10 +2921,25 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "klasse",
-                    "See"
-                ]
+                    "match",
+                    [
+                        "get",
+                        "klasse"
+                    ],
+                    [
+                        "See"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    ">",
+                    [
+                        "get",
+                        "flaeche"
+                    ],
+                    200000
+                ]  
             ],
             "layout": {
                 "text-field": "{name}",
@@ -2872,15 +2951,19 @@
                     [
                         "zoom"
                     ],
-                    12,
-                    7,
-                    14,
+                    13,
                     10,
+                    14,
+                    12,
+                    15,
                     16,
-                    16
+                    17.5,
+                    20,
+                    18,
+                    22
                 ],
                 "text-font": [
-                    "Cantarell Regular"
+                    "Cantarell Oblique"
                 ],
                 "text-letter-spacing": 0.1
             },
