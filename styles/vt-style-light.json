@@ -2822,6 +2822,63 @@
             }
         },
         {
+            "id": "Schrift Meer",
+            "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Beschriftung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "klasse",
+                    "Meer"
+                ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "text-variable-anchor": [
+                    "bottom",
+                    "top",
+                    "bottom-left",
+                    "bottom-right",
+                    "top-left",
+                    "top-right"
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8.5,
+                    13,
+                    9,
+                    14,
+                    10,
+                    16,
+                    14,
+                    22
+                ],
+                "text-font": [
+                    "Cantarell Oblique"
+                ],
+                "text-letter-spacing": 0.1,
+                "text-padding": 70,
+                "text-allow-overlap": false
+            },
+            "paint": {
+                "text-color": "#637f8c"
+            }
+        },
+        {
             "id": "Schrift Wald",
             "type": "symbol",
             "metadata": {
