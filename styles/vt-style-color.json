@@ -429,7 +429,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 13,
             "filter": [
                 "all",
                 [
@@ -449,7 +449,27 @@
                 "line-join": "round"
             },
             "paint": {
-                "line-width": 0.75,
+                "line-dasharray": [
+                    8,
+                    4
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.4,
+                    13.7,
+                    0.6,
+                    14,
+                    0.8,
+                    16,
+                    1.8
+                ],
                 "line-color": "#969696"
             }
         },
@@ -1197,6 +1217,57 @@
             }
         },
         {
+            "id": "Wirtschaftsweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Wirtschaftsweg"
+                ]
+            ],
+            "layout": {
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0,
+                    13.3,
+                    0.4,
+                    13.7,
+                    0.8,
+                    14,
+                    1.2,
+                    16,
+                    3
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
             "id": "Hauptwirtschaftsweg",
             "type": "line",
             "metadata": {
@@ -1207,7 +1278,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 13,
             "filter": [
                 "all",
                 [
@@ -1217,7 +1288,6 @@
                 [
                     "in",
                     "klasse",
-                    "Wirtschaftsweg",
                     "Hauptwirtschaftsweg"
                 ]
             ],
@@ -1234,10 +1304,16 @@
                     [
                         "zoom"
                     ],
+                    13,
+                    0.5,
+                    13.3,
+                    0.7,
+                    13.7,
+                    1,
                     14,
-                    2,
+                    1.2,
                     16,
-                    6
+                    3
                 ],
                 "line-color": "#969696"
             }
