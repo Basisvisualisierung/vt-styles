@@ -1866,6 +1866,74 @@
             }
         },
         {
+            "id": "Brücke Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Brücke",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Attribut trifft nicht zu",
+                    "Sonstiges"
+                ],
+                [
+                    "!has",
+                    "fahrbahn"
+                ],
+                [
+                    "!has",
+                    "funktion"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+            ],
+            "layout": {
+                "visibility": "none",
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    14,
+                    5,
+                    16,
+                    15,
+                    18,
+                    17
+                ],
+                "line-color": "#8f8f8f"
+            }
+        },
+        {
             "id": "L2 Nebenstraße K",
             "type": "line",
             "metadata": {
@@ -1902,7 +1970,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1915,11 +1982,11 @@
                         "zoom"
                     ],
                     14,
-                    4,
+                    6,
                     16,
-                    14,
+                    16,
                     18,
-                    16
+                    18
                 ],
                 "line-color": "#969696"
             }
@@ -1978,13 +2045,13 @@
                     11.6,
                     1.5,
                     12,
-                    3.5,
-                    14,
                     5.5,
+                    15,
+                    7.5,
                     16,
-                    16,
+                    19,
                     18,
-                    20
+                    23
                 ],
                 "line-color": "#969696"
             }
@@ -2041,13 +2108,13 @@
                     11,
                     2,
                     12,
-                    4.5,
+                    6.5,
                     14,
-                    6.25,
+                    8.25,
                     16,
-                    14.25,
+                    16.25,
                     18,
-                    18.25
+                    20.25
                 ],
                 "line-color": "#969696"
             }
@@ -2100,13 +2167,15 @@
                         "zoom"
                     ],
                     12,
-                    5.25,
-                    14,
                     7.25,
+                    13,
+                    8,
+                    14,
+                    9.25,
                     16,
-                    28.25,
+                    31.25,
                     18,
-                    58.25
+                    61.25
                 ],
                 "line-color": "#b0b0b0"
             }
@@ -2163,13 +2232,13 @@
                     10,
                     3.25,
                     12,
-                    4.25,
+                    6.25,
                     14,
-                    7.25,
+                    10.25,
                     16,
-                    31.25,
+                    35.25,
                     18,
-                    61.25
+                    65.25
                 ],
                 "line-color": "#f9a825"
             }
@@ -2224,15 +2293,17 @@
                     6,
                     2,
                     10,
-                    3.25,
-                    12,
                     4.25,
+                    12,
+                    5.25,
+                    13,
+                    6.25,
                     14,
-                    7.25,
+                    9.25,
                     16,
-                    31.25,
+                    34.25,
                     18,
-                    61.25
+                    64.25
                 ],
                 "line-color": "#c25f00"
             }
@@ -2274,7 +2345,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
