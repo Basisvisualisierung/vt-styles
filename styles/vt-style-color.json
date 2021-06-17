@@ -401,7 +401,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Gewaesserlinie",
-            "minzoom": 14,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -414,8 +414,26 @@
                 "line-join": "round"
             },
             "paint": {
-                "line-color": "#b4ddf4",
-                "line-width": 1.5
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    0,
+                    12.5,
+                    0.7,
+                    13,
+                    1,
+                    14,
+                    1.2,
+                    16,
+                    2.2
+                ],
+                "line-color": "#b4ddf4"
             }
         },
         {
