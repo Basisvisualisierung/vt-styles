@@ -3621,7 +3621,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt_Stadt",
+            "id": "Siedlungspunkt Stadt >= 20.000 - < 100.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3631,7 +3631,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Name",
-            "minzoom": 5,
+            "minzoom": 8,
             "maxzoom": 10,
             "filter": [
                 "all",
@@ -3643,9 +3643,17 @@
                 [
                     "in",
                     "art",
-                    "Stadt",
-                    "Hauptstadt",
-                    "Landeshauptstadt"
+                    "Stadt"
+                ],
+                [
+                    ">=",
+                    "einwohnerzahl",
+                    20000
+                ],
+                [
+                    "<",
+                    "einwohnerzahl",
+                    100000
                 ]
             ],
             "layout": {
@@ -3653,95 +3661,136 @@
             },
             "paint": {
                 "circle-color": "#b99d79",
-                "circle-radius": {
-                    "stops": [
-                        [
-                            5,
-                            3
-                        ],
-                        [
-                            8,
-                            5
-                        ]
-                    ]
-                },
-                "circle-opacity": [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            100000
-                        ],
-                        0,
-                        0
-                    ],
-                    5,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            500000
-                        ],
-                        1,
-                        0
-                    ],
-                    7,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            100000
-                        ],
-                        1,
-                        0
-                    ],
-                    8,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            20000
-                        ],
-                        1,
-                        0
-                    ],
-                    9,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            5000
-                        ],
-                        1,
-                        0
-                    ],
-                    10,
-                    1
+                "circle-radius": 5,
+                "circle-opacity": 0.7
+            }
+        },
+        {
+            "id": "Siedlungspunkt Stadt >= 100.000 - < 500.000",
+            "type": "circle",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 7,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ort"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Stadt"
+                ],
+                [
+                    ">=",
+                    "einwohnerzahl",
+                    100000
+                ],
+                [
+                    "<",
+                    "einwohnerzahl",
+                    500000
                 ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#b99d79",
+                "circle-radius": 7,
+                "circle-opacity": 1
+            }
+        },
+        {
+            "id": "Siedlungspunkt Stadt >= 500.000",
+            "type": "circle",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ort"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Stadt"
+                ],
+                [
+                    ">=",
+                    "einwohnerzahl",
+                    500000
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#b99d79",
+                "circle-radius": 8,
+                "circle-opacity": 1
+            }
+        },
+        {
+            "id": "Siedlungspunkt Hauptstadt >= 500.000",
+            "type": "circle",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ort"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Hauptstadt",
+                    "Landeshauptstadt"
+                ],
+                [
+                    ">=",
+                    "einwohnerzahl",
+                    500000
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#b99d79",
+                "circle-stroke-width": 1,
+                "circle-stroke-color": "#ab895e",
+                "circle-radius": 6,
+                "circle-opacity": 0.8
             }
         },
         {
@@ -3895,7 +3944,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Name",
-            "minzoom": 9,
+            "minzoom": 10,
             "maxzoom": 15,
             "filter": [
                 "all",
@@ -3939,7 +3988,7 @@
                     [
                         "zoom"
                     ],
-                    9,
+                    10,
                     14,
                     11,
                     18,
