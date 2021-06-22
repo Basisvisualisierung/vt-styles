@@ -2638,6 +2638,81 @@
             }
         },
         {
+            "id": "Landesgrenze",
+            "type":"line",
+            "metadata":{
+                "map-editor:group":"Grenzen",
+                "map-editor:layer": "Landesgrenze",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source":"smarttiles_de",
+            "source-layer": "Grenze_Linie",
+            "minzoom": 4,
+            "maxzoom":7,
+            "filter":[
+                "all",
+                [
+                    "==",
+                    "klasse",
+                    "Grenze des Bundeslandes"
+                ]
+            ],
+            "layout":{},
+            "paint":{
+                "line-width":[
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    4,
+                    0.8,
+                    5,
+                    1.8
+                ],
+                "line-color": "#916969"
+            }
+        },
+        {
+            "id": "Bundesgrenze",
+            "type":"line",
+            "metadata":{
+                "map-editor:group":"Grenzen",
+                "map-editor:layer": "Bundesgrenze",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source":"smarttiles_de",
+            "source-layer": "Grenze_Linie",
+            "maxzoom":11,
+            "filter":[
+                "all",
+                [
+                    "==",
+                    "klasse",
+                    "Grenze der Bundesrepublik Deutschland"
+                ]
+            ],
+            "layout":{},
+            "paint":{
+                "line-width":[
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    1.5,
+                    6,
+                    2.3
+                ],
+                "line-color": "#7c5a5a"
+            }
+        },
+        {
             "id": "Schrift Fluss",
             "type": "symbol",
             "metadata": {
