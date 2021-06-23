@@ -242,7 +242,18 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#dadfd8"
+                "fill-color": {
+                    "stops": [
+                        [
+                            6,
+                            "#cad1c7"
+                        ],
+                        [
+                            8,
+                            "#dadfd8"
+                        ]
+                    ]
+                }
             }
         },
         {

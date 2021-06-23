@@ -337,20 +337,12 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#d1f0ce",
-                "fill-opacity": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    12,
-                    0.6,
-                    14,
-                    1
-                ]
+                "fill-color": {
+                    "stops": [
+                        [6, "#c4ecc1"],
+                        [8, "#d1f0ce"]
+                    ]
+                }
             }
         },
         {
