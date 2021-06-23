@@ -344,7 +344,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -372,6 +372,15 @@
                     [
                         "zoom"
                     ],
+                    12,
+                    0,
+                    12.4,
+                    0.9,
+                    12.6,
+                    1.5,
+                    13,
+                    2.7,
+
                     14,
                     4,
                     16,
@@ -726,7 +735,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -754,6 +763,13 @@
                     [
                         "zoom"
                     ],
+                    12.4,
+                    0,
+                    12.6,
+                    0.7,
+                    13,
+                    1.7,
+
                     14,
                     3.5,
                     16,
@@ -1133,7 +1149,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -1156,6 +1172,15 @@
                     [
                         "zoom"
                     ],
+                    12,
+                    0,
+                    12.4,
+                    0.9,
+                    12.6,
+                    1.5,
+                    13,
+                    2.7,
+
                     14,
                     4,
                     16,
@@ -1415,7 +1440,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -1438,6 +1463,13 @@
                     [
                         "zoom"
                     ],
+                    12.4,
+                    0,
+                    12.6,
+                    0.7,
+                    13,
+                    1.7,
+
                     14,
                     3.5,
                     16,
@@ -1757,7 +1789,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -1794,6 +1826,15 @@
                     [
                         "zoom"
                     ],
+                    12,
+                    0,
+                    12.4,
+                    0.9,
+                    12.6,
+                    1.5,
+                    13,
+                    2.7,
+
                     14,
                     6,
                     16,
@@ -2132,7 +2173,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 12,
             "filter": [
                 "all",
                 [
@@ -2170,6 +2211,13 @@
                     [
                         "zoom"
                     ],
+                    12.4,
+                    0,
+                    12.6,
+                    0.7,
+                    13,
+                    1.7,
+
                     14,
                     3.5,
                     16,
