@@ -416,7 +416,7 @@
             "maxzoom": 16,
             "layout": {},
             "paint": {
-                "fill-color": "#a5a2a2"
+                "fill-color": "#c9c9c9"
             }
         },
         {
@@ -469,7 +469,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#d78989"
+                "fill-color": "#ffcccc"
             }
         },
         {
@@ -3472,7 +3472,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-extrusion-color": "#d78989",
+                "fill-extrusion-color": "#c9c9c9",
                 "fill-extrusion-height": [
                     "case",
                     [
@@ -3539,7 +3539,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-extrusion-color": "#d78989",
+                "fill-extrusion-color": "#ffcccc",
                 "fill-extrusion-height": [
                     "case",
                     [
