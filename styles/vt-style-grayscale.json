@@ -3482,7 +3482,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt Stadt >= 20.000 - < 100.000",
+            "id": "Siedlungspunkt >= 20.000 - < 100.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3527,7 +3527,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt Stadt >= 100.000 - < 500.000",
+            "id": "Siedlungspunkt >= 100.000 - < 500.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3549,7 +3549,8 @@
                 [
                     "in",
                     "art",
-                    "Stadt"
+                    "Stadt",
+                    "Landeshauptstadt"
                 ],
                 [
                     ">=",
@@ -3572,7 +3573,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt Stadt >= 500.000",
+            "id": "Siedlungspunkt >= 500.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3612,7 +3613,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt Hauptstadt >= 500.000",
+            "id": "Siedlungspunkt Landeshauptstadt >= 500.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3634,7 +3635,6 @@
                 [
                     "in",
                     "art",
-                    "Hauptstadt",
                     "Landeshauptstadt"
                 ],
                 [
@@ -3647,9 +3647,9 @@
                 "visibility": "visible"
             },
             "paint": {
-                "circle-color": "#cccccc",
+                "circle-color": "#8c8c8c",
                 "circle-stroke-width": 1,
-                "circle-stroke-color": "#7d7d7d",
+                "circle-stroke-color": "#4f4f4f",
                 "circle-radius": [
                     "interpolate",
                     [
@@ -3659,10 +3659,50 @@
                         "zoom"
                     ],
                     6,
-                    5,
+                    4.7,
                     8,
-                    4
+                    3.7
                 ],
+                "circle-opacity": 1
+            }
+        },
+        {
+            "id": "Siedlungspunkt Bundeshauptstadt",
+            "type": "circle",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ort"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Hauptstadt"
+                ],
+                [
+                    ">=",
+                    "einwohnerzahl",
+                    500000
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#4f4f4f",
+                "circle-radius": 6,
                 "circle-opacity": 1
             }
         },
@@ -3815,7 +3855,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Name",
-            "minzoom": 9,
+            "minzoom": 10,
             "maxzoom": 15,
             "filter": [
                 "all",
@@ -3859,7 +3899,7 @@
                     [
                         "zoom"
                     ],
-                    9,
+                    10,
                     14,
                     11,
                     18,

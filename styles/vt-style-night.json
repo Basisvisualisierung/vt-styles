@@ -3518,131 +3518,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt_Stadt",
-            "type": "circle",
-            "metadata": {
-                "map-editor:group": "Landnutzung",
-                "map-editor:detail-level": 2,
-                "map-editor:layer": "Siedlung",
-                "map-editor:layer-element": "Punkt"
-            },
-            "source": "smarttiles_de",
-            "source-layer": "Name",
-            "minzoom": 5,
-            "maxzoom": 10,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Ort"
-                ],
-                [
-                    "in",
-                    "art",
-                    "Stadt",
-                    "Hauptstadt",
-                    "Landeshauptstadt"
-                ]
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "circle-color": "#f0f0f0",
-                "circle-radius": {
-                    "stops": [
-                        [
-                            5,
-                            3
-                        ],
-                        [
-                            8,
-                            5
-                        ]
-                    ]
-                },
-                "circle-opacity": [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            100000
-                        ],
-                        0,
-                        0
-                    ],
-                    5,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            500000
-                        ],
-                        1,
-                        0
-                    ],
-                    7,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            100000
-                        ],
-                        1,
-                        0
-                    ],
-                    8,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            20000
-                        ],
-                        1,
-                        0
-                    ],
-                    9,
-                    [
-                        "case",
-                        [
-                            ">",
-                            [
-                                "get",
-                                "einwohnerzahl"
-                            ],
-                            5000
-                        ],
-                        1,
-                        0
-                    ],
-                    10,
-                    1
-                ]
-            }
-        },
-        {
-            "id": "Siedlungspunkt Stadt >= 20.000 - < 100.000",
+            "id": "Siedlungspunkt >= 20.000 - < 100.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3687,7 +3563,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt Stadt >= 100.000 - < 500.000",
+            "id": "Siedlungspunkt >= 100.000 - < 500.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3709,7 +3585,8 @@
                 [
                     "in",
                     "art",
-                    "Stadt"
+                    "Stadt",
+                    "Landeshauptstadt"
                 ],
                 [
                     ">=",
@@ -3732,7 +3609,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt Stadt >= 500.000",
+            "id": "Siedlungspunkt >= 500.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3772,7 +3649,7 @@
             }
         },
         {
-            "id": "Siedlungspunkt Hauptstadt >= 500.000",
+            "id": "Siedlungspunkt Landeshauptstadt >= 500.000",
             "type": "circle",
             "metadata": {
                 "map-editor:group": "Landnutzung",
@@ -3794,7 +3671,6 @@
                 [
                     "in",
                     "art",
-                    "Hauptstadt",
                     "Landeshauptstadt"
                 ],
                 [
@@ -3823,6 +3699,41 @@
                     8,
                     5
                 ],
+                "circle-opacity": 1
+            }
+        },
+        {
+            "id": "Siedlungspunkt Bundeshauptstadt",
+            "type": "circle",
+            "metadata": {
+                "map-editor:group": "Landnutzung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Name",
+            "minzoom": 6,
+            "maxzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Ort"
+                ],
+                [
+                    "in",
+                    "art",
+                    "Hauptstadt"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "#7d7d7d",
+                "circle-radius": 6,
                 "circle-opacity": 1
             }
         },
@@ -3975,7 +3886,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Name",
-            "minzoom": 9,
+            "minzoom": 10,
             "maxzoom": 15,
             "filter": [
                 "all",
@@ -4019,7 +3930,7 @@
                     [
                         "zoom"
                     ],
-                    9,
+                    10,
                     14,
                     11,
                     18,
