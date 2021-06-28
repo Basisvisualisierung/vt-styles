@@ -373,7 +373,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#452c47"
+                "fill-color": "#2f2439"
             }
         },
         {
@@ -3501,7 +3501,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-extrusion-color": "#452c47",
+                "fill-extrusion-color": "#2f2439",
                 "fill-extrusion-height": [
                     "case",
                     [
