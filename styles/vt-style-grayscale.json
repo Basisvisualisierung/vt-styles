@@ -2947,6 +2947,7 @@
             ],
             "layout": {
                 "text-field": "{name}",
+                "text-anchor": "center",
                 "text-variable-anchor": [
                     "bottom",
                     "top",
@@ -2976,7 +2977,7 @@
                     "Cantarell Oblique"
                 ],
                 "text-letter-spacing": 0.1,
-                "text-padding": 70,
+                "text-padding": 20,
                 "text-allow-overlap": false
             },
             "paint": {
