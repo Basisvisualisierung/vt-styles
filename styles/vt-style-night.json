@@ -123,7 +123,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#97971c"
+                "fill-color": "#707070"
             }
         },
         {
@@ -641,7 +641,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#f1c798"
+                "line-color": "#3b3b3b"
             }
         },
         {
@@ -694,7 +694,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#dab28b"
+                "line-color": "#3b3b3b"
             }
         },
         {
@@ -909,7 +909,7 @@
                     18,
                     54.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -962,7 +962,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -1015,7 +1015,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -1359,7 +1359,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#f9a825"
+                "line-color": "#3b3b3b"
             }
         },
         {
@@ -1407,7 +1407,7 @@
                     18,
                     61.25
                 ],
-                "line-color": "#c25f00"
+                "line-color": "#3b3b3b"
             }
         },
         {
@@ -1603,7 +1603,7 @@
                     18,
                     54.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -1651,7 +1651,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -1699,7 +1699,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -2083,7 +2083,7 @@
                     18,
                     65.25
                 ],
-                "line-color": "#f1c798"
+                "line-color": "#3b3b3b"
             }
         },
         {
@@ -2148,7 +2148,7 @@
                     18,
                     64.25
                 ],
-                "line-color": "#dab28b"
+                "line-color": "#3b3b3b"
             }
         },
         {
@@ -2403,7 +2403,7 @@
                     18,
                     54.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -2466,7 +2466,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -2529,7 +2529,7 @@
                     18,
                     58.25
                 ],
-                "line-color": "#e4ca5e"
+                "line-color": "#969696"
             }
         },
         {
@@ -3296,7 +3296,7 @@
             },
             "paint": {
                 "text-color": "#000000",
-                "text-halo-color": "#e4ca5e",
+                "text-halo-color": "#969696",
                 "text-halo-width": 1,
                 "text-translate-anchor": "map"
             }
@@ -3353,8 +3353,8 @@
                 "symbol-spacing": 1
             },
             "paint": {
-                "text-color": "#561802",
-                "text-halo-color": "#e4ca5e",
+                "text-color": "#000000",
+                "text-halo-color": "#969696",
                 "text-halo-width": 1.2,
                 "text-halo-blur": 0.5,
                 "text-translate-anchor": "map"
@@ -3410,8 +3410,8 @@
                 "symbol-avoid-edges": true
             },
             "paint": {
-                "text-color": "#803f00",
-                "text-halo-color": "#e4ca5e",
+                "text-color": "#000000",
+                "text-halo-color": "#969696",
                 "text-halo-width": 1,
                 "text-halo-blur": 0
             }
