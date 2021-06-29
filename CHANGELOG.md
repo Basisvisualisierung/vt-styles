@@ -1,13 +1,12 @@
-## v2.0.0 (2021-06-29)
+## v1.2.0 (2021-06-29)
 ### Improvements and Changes
 * Added national boundary and federal states boundaries in all styles
-* Added layer "Siedlungspunkt Bundeshauptstadt with capital city of germany"
+* Added layer "Siedlungspunkt Bundeshauptstadt" with capital of germany
 * Added layer "Wirtschaftsweg" in vt-style-color and vt-style-classic
 * Updated _line-width_ for layer "Hauptwirtschaftsweg" in all styles
-* Updated interpolate zoom streets in all styles
-* Updated points properties from city names in all styles
-* Updated 
-* Updated _fill-color_ for layer "Autobahn", "Bundesstraße" and "Flughafen" in vt-style-night
+* Updated zoom interpolation for streets in all styles
+* Updated point properties for city names in all styles
+* Updated _fill-color_ for layers "Autobahn", "Bundesstraße" and "Flughafen" in vt-style-night
 * Updated _fill-color_ of buildings in vt-style-night and vt-style-light
 * Updated placement properties for layer "Schrift Meer"
 * Updated filter for layer "Schrift Fluss" in all styles
