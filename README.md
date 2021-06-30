@@ -31,4 +31,4 @@ docker run -p 80:80 -v ${PWD}/styles:/usr/share/nginx/html/styles vt-styles
 ## License
 MIT License. For more information see [LICENSE.txt](LICENSE.txt).
 
-Copyright 2020 Landesamt für Geoinformation und Landesvermessung Niedersachsen
+Copyright 2020-2021 Landesamt für Geoinformation und Landesvermessung Niedersachsen
