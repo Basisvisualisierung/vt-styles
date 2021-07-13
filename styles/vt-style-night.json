@@ -282,7 +282,7 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Verkehrslinie",
-            "minzoom": 14,
+            "minzoom": 13,
             "filter": [
                 "all",
                 [
