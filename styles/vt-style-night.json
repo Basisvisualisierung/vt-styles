@@ -302,7 +302,27 @@
                 "line-join": "round"
             },
             "paint": {
-                "line-width": 0.75,
+                "line-dasharray": [
+                    8,
+                    4
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.4,
+                    13.7,
+                    0.6,
+                    14,
+                    0.8,
+                    16,
+                    1.8
+                ],
                 "line-color": "#969696"
             }
         },
@@ -1070,48 +1090,104 @@
             }
         },
         {
-            "id": "Hauptwirtschaftsweg",
-            "type": "line",
-            "metadata": {
-                "map-editor:group": "Verkehr",
-                "map-editor:detail-level": 3,
-                "map-editor:layer": "Hauptwirtschaftsweg",
-                "map-editor:layer-element": "Kontur"
-            },
-            "source": "smarttiles_de",
-            "source-layer": "Verkehrslinie",
-            "minzoom": 14,
-            "filter": [
-                "all",
-                [
-                    "!has",
-                    "bauwerk"
-                ],
-                [
-                    "in",
-                    "klasse",
-                    "Wirtschaftsweg",
-                    "Hauptwirtschaftsweg"
-                ]
-            ],
-            "layout": {
-                "line-cap": "square",
-                "line-join": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    14,
-                    2,
-                    16,
-                    6
-                ],
+          "id": "Wirtschaftsweg",
+          "type": "line",
+          "metadata": {
+              "map-editor:group": "Verkehr",
+              "map-editor:detail-level": 3,
+              "map-editor:layer": "Hauptwirtschaftsweg",
+              "map-editor:layer-element": "Kontur"
+          },
+          "source": "smarttiles_de",
+          "source-layer": "Verkehrslinie",
+          "minzoom": 13,
+          "filter": [
+              "all",
+              [
+                  "!has",
+                  "bauwerk"
+              ],
+              [
+                  "in",
+                  "klasse",
+                  "Wirtschaftsweg"
+              ]
+          ],
+          "layout": {
+              "line-cap": "square",
+              "line-join": "round"
+          },
+          "paint": {
+              "line-width": [
+                  "interpolate",
+                  [
+                      "linear"
+                  ],
+                  [
+                      "zoom"
+                  ],
+                  13,
+                  0,
+                  13.3,
+                  0.4,
+                  13.7,
+                  0.8,
+                  14,
+                  1.2,
+                  16,
+                  3
+              ],
+              "line-color": "#969696"
+          }
+      },
+      {
+          "id": "Hauptwirtschaftsweg",
+          "type": "line",
+          "metadata": {
+              "map-editor:group": "Verkehr",
+              "map-editor:detail-level": 3,
+              "map-editor:layer": "Hauptwirtschaftsweg",
+              "map-editor:layer-element": "Kontur"
+          },
+          "source": "smarttiles_de",
+          "source-layer": "Verkehrslinie",
+          "minzoom": 13,
+          "filter": [
+              "all",
+              [
+                  "!has",
+                  "bauwerk"
+              ],
+              [
+                  "in",
+                  "klasse",
+                  "Hauptwirtschaftsweg"
+              ]
+          ],
+          "layout": {
+              "line-cap": "square",
+              "line-join": "round"
+          },
+          "paint": {
+              "line-width": [
+                  "interpolate",
+                  [
+                      "linear"
+                  ],
+                  [
+                      "zoom"
+                  ],
+                  13,
+                  0.5,
+                  13.3,
+                  0.7,
+                  13.7,
+                  1,
+                  14,
+                  1.2,
+                  16,
+                  3
+              ],
                 "line-color": "#969696"
             }
         },
@@ -1159,11 +1235,11 @@
                     2.7,
 
                     14,
-                    3.5,
+                    4,
                     16,
-                    13.4,
+                    14,
                     18,
-                    15.5
+                    16
                 ],
                 "line-color": "#869498"
             }
@@ -2868,7 +2944,7 @@
                         "flaeche"
                     ],
                     200000
-                ]  
+                ]
             ],
             "layout": {
                 "text-field": "{name}",
@@ -2932,7 +3008,7 @@
                         "flaeche"
                     ],
                     200000
-                ]    
+                ]
             ],
             "layout": {
                 "text-field": "{name}",
