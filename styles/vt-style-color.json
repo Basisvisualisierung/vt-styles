@@ -3659,7 +3659,7 @@
                 ]
             ],
             "layout": {
-                "text-field": "{name}",
+                "text-field": "B{nummer}",
                 "symbol-placement": "line",
                 "text-max-angle": 20,
                 "text-anchor": "center",
@@ -3718,7 +3718,7 @@
                 ]
             ],
             "layout": {
-                "text-field": "{nummer}",
+                "text-field": "A{nummer}",
                 "symbol-placement": "line",
                 "text-max-angle": 45,
                 "text-size": [

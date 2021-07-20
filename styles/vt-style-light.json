@@ -3441,7 +3441,7 @@
                 ]
             ],
             "layout": {
-                "text-field": "{name}",
+                "text-field": "B{nummer}",
                 "symbol-placement": "line",
                 "text-max-angle": 20,
                 "text-anchor": "center",
@@ -3457,10 +3457,12 @@
                     [
                         "zoom"
                     ],
-                    13,
+                    12,
                     12,
                     14,
-                    13
+                    13,
+                    16,
+                    15
                 ],
                 "text-font": [
                     "Cantarell Regular"
@@ -3498,7 +3500,7 @@
                 ]
             ],
             "layout": {
-                "text-field": "{nummer}",
+                "text-field": "A{nummer}",
                 "symbol-placement": "line",
                 "text-max-angle": 45,
                 "text-size": [
@@ -3510,11 +3512,13 @@
                         "zoom"
                     ],
                     10,
-                    9,
-                    15,
+                    10,
                     12,
+                    13,
+                    14,
+                    14,
                     16,
-                    16
+                    17
                 ],
                 "text-font": [
                     "Cantarell Regular"
