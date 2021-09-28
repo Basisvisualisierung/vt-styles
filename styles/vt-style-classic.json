@@ -346,7 +346,7 @@
             }
         },
         {
-            "id": "Gewässer",
+            "id": "Stehendes Gewässer",
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gewässer",
@@ -361,15 +361,78 @@
                     "in",
                     "klasse",
                     "See",
+                    "Hafenbecken"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#b9e0f4"
+            }
+        },
+        {
+            "id": "Fliessgewässer (Fläche)",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
                     "Fliessgewässer",
-                    "Hafenbecken",
                     "Kanal"
                 ]
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#b9e0f4",
-                "fill-opacity": [
+                "fill-color": "#c3cfd5"
+            }
+        },
+        {
+            "id": "Fliessgewässer >= 12m Breite",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserlinie",
+            "filter": [
+                "all",
+                [
+                    ">=",
+                    "breite",
+                    12
+                ],
+                [
+                    "!=",
+                    "klasse",
+                    "Sickerstrecke"
+                ],
+                [
+                    "!has",
+                    "merkmal"
+                ],
+                [
+                    "!in",
+                    "bauwerk",
+                    "Durchlass",
+                    "Rohrdurchlass",
+                    "Düker"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#b4ddf4",
+                "line-width": [
                     "interpolate",
                     [
                         "linear"
@@ -377,15 +440,21 @@
                     [
                         "zoom"
                     ],
-                    12,
-                    0.8,
+                    13,
+                    3,
+                    13.5,
+                    4.5,
                     14,
-                    1
+                    6,
+                    14.5,
+                    8,
+                    14.8,
+                    11
                 ]
             }
         },
         {
-            "id": "Bach, Graben",
+            "id": "Fließgewässer 6m Breite",
             "type": "line",
             "metadata": {
                 "map-editor:group": "Gewässer",
@@ -398,15 +467,29 @@
             "filter": [
                 "all",
                 [
+                    "==",
+                    "breite",
+                    6
+                ],
+                [
+                    "!=",
+                    "klasse",
+                    "Sickerstrecke"
+                ],
+                [
+                    "!has",
+                    "merkmal"
+                ],
+                [
                     "!in",
-                    "bauwerk",
-                    "Durchlass"
+                    "bauwerk"
                 ]
             ],
             "layout": {
                 "line-join": "round"
             },
             "paint": {
+                "line-color": "#b4ddf4",
                 "line-width": [
                     "interpolate",
                     [
@@ -415,18 +498,69 @@
                     [
                         "zoom"
                     ],
-                    12,
-                    0,
-                    12.5,
-                    0.7,
                     13,
-                    1,
+                    2,
                     14,
-                    1.2,
-                    16,
-                    2.2
+                    5,
+                    14.5,
+                    7,
+                    14.8,
+                    9
+                ]
+            }
+        },
+        {
+            "id": "Fließgewässer 3m Breite",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserlinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "breite",
+                    3
                 ],
-                "line-color": "#b4ddf4"
+                [
+                    "!=",
+                    "klasse",
+                    "Sickerstrecke"
+                ],
+                [
+                    "!has",
+                    "merkmal"
+                ],
+                [
+                    "!in",
+                    "bauwerk"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#b4ddf4",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    1.5,
+                    14,
+                    2.5,
+                    14.5,
+                    3
+                ]
             }
         },
         {

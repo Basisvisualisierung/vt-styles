@@ -178,7 +178,7 @@
             }
         },
         {
-            "id": "Gewässer",
+            "id": "Stehendes Gewässer",
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gewässer",
@@ -193,8 +193,30 @@
                     "in",
                     "klasse",
                     "See",
+                    "Hafenbecken"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": "#d1d1d1"
+            }
+        },
+        {
+            "id": "Fliessgewässer (Fläche)",
+            "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserflaeche",
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
                     "Fliessgewässer",
-                    "Hafenbecken",
                     "Kanal"
                 ]
             ],
@@ -204,7 +226,7 @@
             }
         },
         {
-            "id": "Bach, Graben",
+            "id": "Fliessgewässer >= 12m Breite",
             "type": "line",
             "metadata": {
                 "map-editor:group": "Gewässer",
@@ -213,13 +235,28 @@
             },
             "source": "smarttiles_de",
             "source-layer": "Gewaesserlinie",
-            "minzoom": 14,
             "filter": [
                 "all",
                 [
+                    ">=",
+                    "breite",
+                    12
+                ],
+                [
                     "!=",
+                    "klasse",
+                    "Sickerstrecke"
+                ],
+                [
+                    "!has",
+                    "merkmal"
+                ],
+                [
+                    "!in",
                     "bauwerk",
-                    "Durchlass"
+                    "Durchlass",
+                    "Rohrdurchlass",
+                    "Düker"
                 ]
             ],
             "layout": {
@@ -227,7 +264,135 @@
             },
             "paint": {
                 "line-color": "#d1d1d1",
-                "line-width": 1.5
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    3,
+                    13.5,
+                    4.5,
+                    14,
+                    6,
+                    14.5,
+                    8,
+                    14.8,
+                    11
+                ]
+            }
+        },
+        {
+            "id": "Fließgewässer 6m Breite",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserlinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "breite",
+                    6
+                ],
+                [
+                    "!=",
+                    "klasse",
+                    "Sickerstrecke"
+                ],
+                [
+                    "!has",
+                    "merkmal"
+                ],
+                [
+                    "!in",
+                    "bauwerk"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#d1d1d1",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    2,
+                    14,
+                    5,
+                    14.5,
+                    7,
+                    14.8,
+                    9
+                ]
+            }
+        },
+        {
+            "id": "Fließgewässer 3m Breite",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:layer": "Gewässer",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "smarttiles_de",
+            "source-layer": "Gewaesserlinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "breite",
+                    3
+                ],
+                [
+                    "!=",
+                    "klasse",
+                    "Sickerstrecke"
+                ],
+                [
+                    "!has",
+                    "merkmal"
+                ],
+                [
+                    "!in",
+                    "bauwerk"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "#d1d1d1",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    1.5,
+                    14,
+                    2.5,
+                    14.5,
+                    3
+                ]
             }
         },
         {
