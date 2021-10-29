@@ -16,6 +16,8 @@
         {
             "id": "Hintergrund",
             "type": "background",
+            "source": "smarttiles_de",
+            "source-layer": "Hintergrund",
             "paint": {
                 "background-color": "#191919"
             }
