@@ -19,7 +19,7 @@
             "source": "smarttiles_de",
             "source-layer": "Hintergrund",
             "paint": {
-                "background-color": "#fafaf3"
+                "fill-color": "#fafaf3"
             }
         },
         {
