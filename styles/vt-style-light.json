@@ -15,7 +15,7 @@
     "layers": [
         {
             "id": "Hintergrund",
-            "type": "background",
+            "type": "fill",
             "source": "smarttiles_de",
             "source-layer": "Hintergrund",
             "paint": {
