@@ -2,10 +2,10 @@
     "version": 8,
     "name": "vt-style-classic",
     "sources": {
-        "smarttiles_de": {
-            "url": "https://adv-smart.de/tiles/smarttiles_de_public_v1/smarttiles_de_public_v1.json",
+        "basiskarte": {
+            "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v1/tiles/basiskarte.json",
             "type": "vector",
-            "attribution": "Daten: <a href=\"https://adv-smart.de\">AdV Smart Mapping</a>, &copy; GeoBasis-DE"
+            "attribution": "&copy; LGLN | &copy; GeoBasis-DE / BKG"
         }
     },
     "glyphs": "https://basisvisualisierung.niedersachsen.de/services/fonts/{fontstack}/{range}.pbf",
@@ -16,7 +16,7 @@
         {
             "id": "Hintergrund",
             "type": "fill",
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Hintergrund",
             "paint": {
                 "fill-color": "#fafaf3"
@@ -30,7 +30,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "filter": [
                 "all",
@@ -42,20 +42,7 @@
             ],
             "layout": {},
             "paint": {
-                "fill-color": "#b9e0f4",
-                "fill-opacity": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    12,
-                    0.8,
-                    14,
-                    1
-                ]
+                "fill-color": "#b9e0f4"
             }
         },
         {
@@ -67,7 +54,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 10,
             "filter": [
@@ -92,7 +79,7 @@
                 "map-editor:layer": "Industrie und Gewerbe",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 10,
             "filter": [
@@ -120,7 +107,7 @@
                 "map-editor:layer": "Flughafen",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrsflaeche",
             "minzoom": 10,
             "filter": [
@@ -146,7 +133,7 @@
                 "map-editor:layer": "Flughafen",
                 "map-editor:layer-element": "Start- und Landebahn"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrsflaeche",
             "minzoom": 10,
             "filter": [
@@ -173,7 +160,7 @@
                 "map-editor:layer": "Bahnhof",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrsflaeche",
             "minzoom": 10,
             "filter": [
@@ -197,7 +184,7 @@
                 "map-editor:layer": "Grün- und Freizeitanlage",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 12,
             "filter": [
@@ -238,7 +225,7 @@
                 "map-editor:layer": "Friedhof",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 12,
             "filter": [
@@ -262,7 +249,7 @@
                 "map-editor:layer": "Wiese",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Vegetationsflaeche",
             "minzoom": 12,
             "layout": {},
@@ -286,7 +273,7 @@
                 "map-editor:layer": "Moor, Heide",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Vegetationsflaeche",
             "layout": {},
             "filter": [
@@ -324,7 +311,7 @@
                 "map-editor:layer": "Wald",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Vegetationsflaeche",
             "filter": [
                 "all",
@@ -355,7 +342,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "filter": [
                 "all",
@@ -379,7 +366,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "filter": [
                 "all",
@@ -403,7 +390,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "filter": [
                 "all",
@@ -463,7 +450,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "minzoom": 12,
             "filter": [
@@ -519,7 +506,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "minzoom": 12,
             "filter": [
@@ -566,6 +553,78 @@
             }
         },
         {
+            "id": "Personenfährverkehr",
+            "type": "line",
+            "source": "basiskarte",
+            "minzoom": 11,
+            "source-layer": "Verkehrslinie",
+            "filter": [
+                "in",
+                "klasse",
+                "Personenfährverkehr",
+                "Linienverkehr"
+            ],
+            "layout": {},
+            "paint": {
+                "line-color": "#186991",
+                "line-dasharray": [
+                    5,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.5,
+                    12,
+                    1,
+                    16,
+                    2
+                ]
+            }
+        },
+        {
+            "id": "Autofährverkehr",
+            "type": "line",
+            "source": "basiskarte",
+            "minzoom": 11,
+            "source-layer": "Verkehrslinie",
+            "filter": [
+                "in",
+                "klasse",
+                "Autofährverkehr",
+                "Eisenbahnfährverkehr"
+            ],
+            "layout": {},
+            "paint": {
+                "line-color": "#0b354c",
+                "line-dasharray": [
+                    5,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.5,
+                    12,
+                    1,
+                    16,
+                    2
+                ]
+            }
+        },
+        {
             "id": "Fuß- und Radweg",
             "type": "line",
             "metadata": {
@@ -574,7 +633,7 @@
                 "map-editor:layer": "Fuß- und Radweg",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 13,
             "filter": [
@@ -618,7 +677,63 @@
                     16,
                     1.8
                 ],
-                "line-color": "#8f8f8f"
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "L0 Fuß- und Radweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Fuß- und Radweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Weg, Pfad, Steig",
+                    "Fußweg",
+                    "Rad- und Fußweg",
+                    "Radweg"
+                ],
+                [
+                    "==",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-dasharray": [
+                    8,
+                    4
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.4,
+                    13.7,
+                    0.6,
+                    14,
+                    0.8,
+                    16,
+                    1.8
+                ],
+                "line-color": "#969696"
             }
         },
         {
@@ -629,7 +744,7 @@
                 "map-editor:layer": "Nicht Öffentliches Gebäude",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 15,
             "maxzoom": 16,
@@ -646,7 +761,7 @@
                 "map-editor:layer": "Öffentliches Gebäude",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 15,
             "maxzoom": 16,
@@ -700,7 +815,7 @@
                 "map-editor:layer": "Nebenstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -758,7 +873,7 @@
                 "map-editor:layer": "Gemeindestraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -813,7 +928,7 @@
                 "map-editor:layer": "Kreisstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
             "filter": [
@@ -845,6 +960,8 @@
                     1.25,
                     11,
                     2,
+                    11.5,
+                    2.5,
                     12,
                     4.5,
                     14,
@@ -866,7 +983,7 @@
                 "map-editor:layer": "Landesstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
@@ -919,7 +1036,7 @@
                 "map-editor:layer": "Bundesstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
@@ -972,7 +1089,7 @@
                 "map-editor:layer": "Autobahn",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
@@ -1025,7 +1142,7 @@
                 "map-editor:layer": "Nebenstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -1081,7 +1198,7 @@
                 "map-editor:layer": "Gemeindestraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -1134,7 +1251,7 @@
                 "map-editor:layer": "Kreisstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -1187,7 +1304,7 @@
                 "map-editor:layer": "Landesstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
@@ -1240,7 +1357,7 @@
                 "map-editor:layer": "Bundesstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
@@ -1293,7 +1410,7 @@
                 "map-editor:layer": "Autobahn",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
@@ -1346,7 +1463,7 @@
                 "map-editor:layer": "Bahnstrecke",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -1398,7 +1515,7 @@
                 "map-editor:layer": "Hauptwirtschaftsweg",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 13,
             "filter": [
@@ -1406,6 +1523,58 @@
                 [
                     "!has",
                     "bauwerk"
+                ],
+                [
+                    "in",
+                    "klasse",
+                    "Wirtschaftsweg"
+                ]
+            ],
+            "layout": {
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0,
+                    13.3,
+                    0.4,
+                    13.7,
+                    0.8,
+                    14,
+                    1.2,
+                    16,
+                    3
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "L0 Wirtschaftsweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
                 ],
                 [
                     "in",
@@ -1449,7 +1618,7 @@
                 "map-editor:layer": "Hauptwirtschaftsweg",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 13,
             "filter": [
@@ -1500,7 +1669,7 @@
                 "map-editor:layer": "Nebenstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -1553,7 +1722,7 @@
                 "map-editor:layer": "Gemeindestraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -1603,7 +1772,7 @@
                 "map-editor:layer": "Kreisstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
             "filter": [
@@ -1630,6 +1799,8 @@
                     1.25,
                     11,
                     2,
+                    11.5,
+                    2.5,
                     12,
                     4.25,
                     14,
@@ -1651,7 +1822,7 @@
                 "map-editor:layer": "Landesstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
@@ -1699,7 +1870,7 @@
                 "map-editor:layer": "Bundesstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
@@ -1747,7 +1918,7 @@
                 "map-editor:layer": "Autobahn",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
@@ -1795,7 +1966,7 @@
                 "map-editor:layer": "Nebenstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -1846,7 +2017,7 @@
                 "map-editor:layer": "Gemeindestraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -1894,7 +2065,7 @@
                 "map-editor:layer": "Kreisstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -1942,7 +2113,7 @@
                 "map-editor:layer": "Landesstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
@@ -1990,7 +2161,7 @@
                 "map-editor:layer": "Bundesstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
@@ -2038,7 +2209,7 @@
                 "map-editor:layer": "Autobahn",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
@@ -2086,7 +2257,7 @@
                 "map-editor:layer": "Bahnstrecke",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -2147,7 +2318,7 @@
                 "map-editor:layer": "Nebenstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -2214,7 +2385,7 @@
                 "map-editor:layer": "Gemeindestraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -2279,7 +2450,7 @@
                 "map-editor:layer": "Kreisstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
             "filter": [
@@ -2321,6 +2492,8 @@
                     1.25,
                     11,
                     2,
+                    11.5,
+                    2.5,
                     12,
                     6.5,
                     14,
@@ -2342,7 +2515,7 @@
                 "map-editor:layer": "Landesstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
@@ -2407,7 +2580,7 @@
                 "map-editor:layer": "Bundesstraße",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
@@ -2470,7 +2643,7 @@
                 "map-editor:layer": "Autobahn",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
@@ -2535,7 +2708,7 @@
                 "map-editor:layer": "Nebenstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -2601,7 +2774,7 @@
                 "map-editor:layer": "Gemeindestraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -2664,7 +2837,7 @@
                 "map-editor:layer": "Kreisstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -2727,7 +2900,7 @@
                 "map-editor:layer": "Landesstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
@@ -2790,7 +2963,7 @@
                 "map-editor:layer": "Bundesstraße",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
@@ -2853,7 +3026,7 @@
                 "map-editor:layer": "Autobahn",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
@@ -2908,6 +3081,277 @@
             }
         },
         {
+            "id": "L2 Fuß- und Radweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Fuß- und Radweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Weg, Pfad, Steig",
+                    "Fußweg",
+                    "Rad- und Fußweg",
+                    "Radweg"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    1,
+                    13.7,
+                    1.5,
+                    14,
+                    2,
+                    16,
+                    4.5
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "Brücke Wirtschaftsweg K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Wirtschaftsweg",
+                    "Hauptwirtschaftsweg"
+                ],
+                [
+                    "!has",
+                    "fahrbahn"
+                ],
+                [
+                    "!has",
+                    "funktion"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+               
+            ],
+            "layout": {
+                "line-cap": "butt",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.4,
+                    13.3,
+                    1,
+                    13.7,
+                    2,
+                    14,
+                    3,
+                    16,
+                    7.5
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "Brücke Wirtschaftsweg F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Wirtschaftsweg",
+                    "Hauptwirtschaftsweg"
+                ],
+                [
+                    "!has",
+                    "fahrbahn"
+                ],
+                [
+                    "!has",
+                    "funktion"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+               
+            ],
+            "layout": {
+                "line-cap": "butt",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.2,
+                    13.3,
+                    0.6,
+                    13.7,
+                    1.2,
+                    14,
+                    1.8,
+                    16,
+                    4.5
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L2 Wirtschaftsweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Wirtschaftsweg",
+                    "Hauptwirtschaftsweg"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+               
+            ],
+            "layout": {
+                "visibility": "none",
+                "line-cap": "square",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0,
+                    13.3,
+                    0.4,
+                    13.7,
+                    0.8,
+                    14,
+                    1.2,
+                    16,
+                    3
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
             "id": "L2 Bahnstrecke",
             "type": "line",
             "metadata": {
@@ -2916,7 +3360,7 @@
                 "map-editor:layer": "Bahnstrecke",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
@@ -3093,7 +3537,7 @@
                 "map-editor:layer": "Leitung",
                 "map-editor:layer-element": "Kontur"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Versorgungslinie",
             "minzoom": 14,
             "filter": [
@@ -3123,10 +3567,8 @@
                 "map-editor:layer": "Landesgrenze",
                 "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
+            "source":"basiskarte",
             "source-layer": "Grenze_Linie",
-            "minzoom": 4,
-            "maxzoom":7,
             "filter":[
                 "all",
                 [
@@ -3161,7 +3603,7 @@
                 "map-editor:layer": "Bundesgrenze",
                 "map-editor:layer-element": "Kontur"
             },
-            "source":"smarttiles_de",
+            "source":"basiskarte",
             "source-layer": "Grenze_Linie",
             "maxzoom":11,
             "filter":[
@@ -3182,12 +3624,12 @@
                     [
                         "zoom"
                     ],
-                    3,
-                    1.5,
-                    6,
-                    2.3
+                    4,
+                    0.8,
+                    5,
+                    1.8
                 ],
-                "line-color": "#c9b0b2"
+                "line-color": "#dccbd4"
             }
         },
         {
@@ -3198,7 +3640,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "minzoom": 12,
             "filter": [
@@ -3250,7 +3692,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "minzoom": 14,
             "filter": [
@@ -3314,7 +3756,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "minzoom": 13,
             "filter": [
@@ -3378,7 +3820,7 @@
                 "map-editor:layer": "Gewässer",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "minzoom": 8,
             "filter": [
@@ -3436,7 +3878,7 @@
                 "map-editor:layer": "Wald",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 12,
             "filter": [
@@ -3506,7 +3948,7 @@
                 "map-editor:layer": "Nebenstraße",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 16,
             "filter": [
@@ -3550,7 +3992,7 @@
                 "map-editor:layer": "Gemeindestraße",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 14,
             "filter": [
@@ -3605,7 +4047,7 @@
                 "map-editor:layer": "Kreisstraße",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -3661,7 +4103,7 @@
                 "map-editor:layer": "Landesstraße",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -3719,7 +4161,7 @@
                 "map-editor:layer": "Bundesstraße",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
@@ -3778,7 +4220,7 @@
                 "map-editor:layer": "Autobahn",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
             "filter": [
@@ -3833,7 +4275,7 @@
                 "map-editor:layer": "Nicht öffentliches Gebäude",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 16,
             "filter": [
@@ -3865,7 +4307,7 @@
                 "map-editor:layer": "Öffentliches Gebäude",
                 "map-editor:layer-element": "Füllung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 16,
             "filter": [
@@ -3931,7 +4373,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 8,
             "maxzoom": 10,
@@ -3976,7 +4418,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 7,
             "maxzoom": 10,
@@ -4022,7 +4464,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 6,
             "maxzoom": 10,
@@ -4062,7 +4504,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 6,
             "maxzoom": 10,
@@ -4116,7 +4558,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 6,
             "maxzoom": 10,
@@ -4151,7 +4593,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 11,
             "filter": [
@@ -4220,7 +4662,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 10,
             "filter": [
@@ -4291,7 +4733,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 10,
             "maxzoom": 15,
@@ -4372,7 +4814,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 8,
             "maxzoom": 15,
@@ -4455,7 +4897,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 7,
             "maxzoom": 15,
@@ -4536,7 +4978,7 @@
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
             },
-            "source": "smarttiles_de",
+            "source": "basiskarte",
             "source-layer": "Name",
             "minzoom": 6,
             "maxzoom": 15,
