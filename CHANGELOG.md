@@ -1,3 +1,13 @@
+## v1.3.0 (2022-03-15)
+### Improvements and Changes
+* Added vector tiles for federal state of Bremen in all styles
+* Added layer "Brücke Wirtschaftsweg" and "L2 Fuß- und Radweg" in all styles
+* Added layer "Hintergrund" in all styles
+* Added layer "Personenfährverkehr" and "Autofährverkehr" in all styles
+* Updated _line-width_ for layer "Kreisstraße K" in all styles
+* Updated zoom levels and _line-color_ for national boundary and federal states boundaries in all styles
+* Deleted _fill-opacity_ for layer "Meer" in vt-style-color and vt-style-classic
+
 ## v1.2.0 (2021-06-29)
 ### Improvements and Changes
 * Added national boundary and federal states boundaries in all styles
