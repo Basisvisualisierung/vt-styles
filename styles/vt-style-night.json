@@ -10,7 +10,8 @@
     },
     "glyphs": "https://basisvisualisierung.niedersachsen.de/services/fonts/{fontstack}/{range}.pbf",
     "metadata": {
-        "vt-style-version": "1.3.0"
+        "vt-style-version": "1.3.0",
+        "description": "ATKIS-Tiles für NI + HB im angepassten Nacht-Stil, Wegfall von Wiese, Moor Heide, Leitung. Friedhof, Industrie und Gewerbe in Siedlung umgewandelt."
     },
     "layers": [
         {

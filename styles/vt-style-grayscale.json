@@ -10,7 +10,8 @@
     },
     "glyphs": "https://basisvisualisierung.niedersachsen.de/services/fonts/{fontstack}/{range}.pbf",
     "metadata": {
-        "vt-style-version": "1.3.0"
+        "vt-style-version": "1.3.0",
+        "description" : "ATKIS-Tiles für NI + HB, reduziert in Graustufen, Wegfall von Wiese, Moor Heide, Leitung. Friedhof, Industrie und Gewerbe. Öffentliche Grün-und Freizeitanlage in Siedlung umgewandelt. "
     },
     "layers": [
         {
