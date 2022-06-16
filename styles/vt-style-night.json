@@ -17,6 +17,11 @@
         {
             "id": "Hintergrund",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Hintergrund",
+                "map-editor:layer": "Hintergrund",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Hintergrund",
             "paint": {
@@ -28,7 +33,7 @@
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Meer",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -50,7 +55,7 @@
             "id": "Siedlung",
             "type": "fill",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 1,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Füllung"
@@ -108,8 +113,8 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 1,
-                "map-editor:layer": "Flughafen",
-                "map-editor:layer-element": "Start- und Landebahn"
+                "map-editor:layer": "Start- und Landebahn",
+                "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
             "source-layer": "Verkehrsflaeche",
@@ -133,7 +138,7 @@
             "id": "Bahnverkehr",
             "type": "fill",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Bahnhof",
                 "map-editor:layer-element": "Füllung"
@@ -158,7 +163,7 @@
             "id": "Öffentliche Grün- und Freizeitanlage",
             "type": "fill",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:layer": "Grün- und Freizeitanlage",
                 "map-editor:layer-element": "Füllung"
             },
@@ -226,7 +231,7 @@
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Stehendes Gewässer",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -250,7 +255,7 @@
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Fließgewässer",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -274,7 +279,7 @@
             "type": "line",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Fließgewässer",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -334,7 +339,7 @@
             "type": "line",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Fließgewässer",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -390,7 +395,7 @@
             "type": "line",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Fließgewässer",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -442,6 +447,11 @@
         {
             "id": "Personenfährverkehr",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:layer": "Personenfährverkehr",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "minzoom": 11,
             "source-layer": "Verkehrslinie",
@@ -478,6 +488,11 @@
         {
             "id": "Autofährverkehr",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:layer": "Autofährverkehr",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "minzoom": 11,
             "source-layer": "Verkehrslinie",
@@ -623,11 +638,11 @@
             }
         },
         {
-            "id": "Nicht Öffentliches Gebäude 2D",
+            "id": "Nicht öffentliches Gebäude 2D",
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gebäude",
-                "map-editor:layer": "Nicht Öffentliches Gebäude",
+                "map-editor:layer": "Nicht öffentliches Gebäude 2D",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -644,7 +659,7 @@
             "type": "fill",
             "metadata": {
                 "map-editor:group": "Gebäude",
-                "map-editor:layer": "Öffentliches Gebäude",
+                "map-editor:layer": "Öffentliches Gebäude 2D",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -698,7 +713,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -756,7 +771,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -811,7 +826,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
-                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -1019,7 +1034,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -1075,7 +1090,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -1128,7 +1143,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
-                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -1391,7 +1406,7 @@
           "metadata": {
               "map-editor:group": "Verkehr",
               "map-editor:detail-level": 3,
-              "map-editor:layer": "Hauptwirtschaftsweg",
+              "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
               "map-editor:layer-element": "Kontur"
           },
           "source": "basiskarte",
@@ -1442,7 +1457,7 @@
         "metadata": {
             "map-editor:group": "Verkehr",
             "map-editor:detail-level": 3,
-            "map-editor:layer": "Hauptwirtschaftsweg",
+            "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
             "map-editor:layer-element": "Kontur"
         },
         "source": "basiskarte",
@@ -1494,7 +1509,7 @@
           "metadata": {
               "map-editor:group": "Verkehr",
               "map-editor:detail-level": 3,
-              "map-editor:layer": "Hauptwirtschaftsweg",
+              "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
               "map-editor:layer-element": "Kontur"
           },
           "source": "basiskarte",
@@ -1545,7 +1560,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -1598,7 +1613,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -1648,7 +1663,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
-                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -1842,7 +1857,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -1893,7 +1908,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -1942,7 +1957,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
-                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -2195,7 +2210,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -2262,7 +2277,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -2327,7 +2342,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
-                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -2585,7 +2600,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -2651,7 +2666,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -2714,7 +2729,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
-                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -3028,7 +3043,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -3100,7 +3115,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -3172,7 +3187,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Hauptwirtschaftsweg",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Kontur"
             },
             "source": "basiskarte",
@@ -3485,7 +3500,7 @@
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Fließgewässer",
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "basiskarte",
@@ -3537,7 +3552,7 @@
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Stehendes Gewässer",
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "basiskarte",
@@ -3601,7 +3616,7 @@
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Stehendes Gewässer",
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "basiskarte",
@@ -3665,7 +3680,7 @@
             "type": "symbol",
             "metadata": {
                 "map-editor:group": "Gewässer",
-                "map-editor:layer": "Gewässer",
+                "map-editor:layer": "Meer",
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "basiskarte",
@@ -3793,7 +3808,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Nebenstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "basiskarte",
@@ -3836,7 +3851,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 3,
-                "map-editor:layer": "Gemeindestraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "basiskarte",
@@ -3890,7 +3905,7 @@
             "metadata": {
                 "map-editor:group": "Verkehr",
                 "map-editor:detail-level": 2,
-                "map-editor:layer": "Kreisstraße",
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
                 "map-editor:layer-element": "Beschriftung"
             },
             "source": "basiskarte",
@@ -4114,11 +4129,11 @@
             }
         },
         {
-            "id": "Nicht Öffentliches Gebäude 3D",
+            "id": "Nicht öffentliches Gebäude 3D",
             "type": "fill-extrusion",
             "metadata": {
                 "map-editor:group": "Gebäude",
-                "map-editor:layer": "Nicht Öffentliches Gebäude",
+                "map-editor:layer": "Nicht öffentliches Gebäude 3D",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -4148,11 +4163,11 @@
             }
         },
         {
-            "id": "Öffentliche Gebäude 3D",
+            "id": "Öffentliches Gebäude 3D",
             "type": "fill-extrusion",
             "metadata": {
                 "map-editor:group": "Gebäude",
-                "map-editor:layer": "Öffentliche Gebäude",
+                "map-editor:layer": "Öffentliches Gebäude 3D",
                 "map-editor:layer-element": "Füllung"
             },
             "source": "basiskarte",
@@ -4218,7 +4233,7 @@
             "id": "Siedlungspunkt >= 20.000 - < 100.000",
             "type": "circle",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
@@ -4263,7 +4278,7 @@
             "id": "Siedlungspunkt >= 100.000 - < 500.000",
             "type": "circle",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
@@ -4309,7 +4324,7 @@
             "id": "Siedlungspunkt >= 500.000",
             "type": "circle",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
@@ -4349,7 +4364,7 @@
             "id": "Siedlungspunkt Landeshauptstadt >= 500.000",
             "type": "circle",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
@@ -4403,7 +4418,7 @@
             "id": "Siedlungspunkt Bundeshauptstadt",
             "type": "circle",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Punkt"
@@ -4438,7 +4453,7 @@
             "id": "Schrift Gemeinde < 5.000",
             "type": "symbol",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
@@ -4507,7 +4522,7 @@
             "id": "Schrift Gemeinde >= 5.000",
             "type": "symbol",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
@@ -4576,7 +4591,7 @@
             "id": "Schrift Stadt 5.000 - < 20.000",
             "type": "symbol",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
@@ -4657,7 +4672,7 @@
             "id": "Schrift Stadt 20.000 - < 100.000",
             "type": "symbol",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 2,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
@@ -4740,7 +4755,7 @@
             "id": "Schrift Stadt 100.000 - < 500.000",
             "type": "symbol",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 1,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
@@ -4821,7 +4836,7 @@
             "id": "Schrift Stadt >= 500.000",
             "type": "symbol",
             "metadata": {
-                "map-editor:group": "Landnutzung",
+                "map-editor:group": "Siedlungsfläche",
                 "map-editor:detail-level": 1,
                 "map-editor:layer": "Siedlung",
                 "map-editor:layer-element": "Beschriftung"
