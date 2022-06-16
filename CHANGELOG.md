@@ -1,5 +1,12 @@
 ## Newest Changes
 
+## (2022-06-16)
+### Improvements and Changes
+* Removed metadata from every layer in the styles
+* changed metadata groups and subgroups for e.g. transportation 
+* added overall metadata for each style-file
+
+
 ## v1.3.0 (2022-03-15)
 ### Improvements and Changes
 * Added vector tiles for federal state of Bremen in all styles
