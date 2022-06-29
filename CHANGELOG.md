@@ -1,5 +1,10 @@
 ## Newest Changes
 
+## (2022-06-29)
+### Improvements and Changes
+* changed metadata subgroups for osm Landesgrenze
+
+
 ## (2022-06-16)
 ### Improvements and Changes
 * Removed metadata from every layer in the styles
