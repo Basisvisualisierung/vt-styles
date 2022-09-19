@@ -533,7 +533,7 @@
                 "all",
                 [
                     "in",
-                    "gebaeudefunktion",
+                    "klasse",
                     "Kino",
                     "Verwaltungsgebäude",
                     "Parlament",
@@ -3290,7 +3290,7 @@
             "id": "Schrift Wald",
             "type": "symbol",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 12,
             "filter": [
                 "all",
@@ -3681,7 +3681,7 @@
                 "all",
                 [
                     "in",
-                    "gebaeudefunktion",
+                    "klasse",
                     "Kino",
                     "Verwaltungsgebäude",
                     "Parlament",
@@ -3737,7 +3737,7 @@
             "id": "Siedlungspunkt >= 20.000 - < 100.000",
             "type": "circle",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 8,
             "maxzoom": 10,
             "filter": [
@@ -3776,7 +3776,7 @@
             "id": "Siedlungspunkt >= 100.000 - < 500.000",
             "type": "circle",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 7,
             "maxzoom": 10,
             "filter": [
@@ -3816,7 +3816,7 @@
             "id": "Siedlungspunkt >= 500.000",
             "type": "circle",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 6,
             "maxzoom": 10,
             "filter": [
@@ -3850,7 +3850,7 @@
             "id": "Siedlungspunkt Landeshauptstadt >= 500.000",
             "type": "circle",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 6,
             "maxzoom": 10,
             "filter": [
@@ -3898,7 +3898,7 @@
             "id": "Siedlungspunkt Bundeshauptstadt",
             "type": "circle",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 6,
             "maxzoom": 10,
             "filter": [
@@ -3932,7 +3932,7 @@
             "id": "Schrift Gemeinde < 5.000",
             "type": "symbol",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 11,
             "filter": [
                 "all",
@@ -3995,7 +3995,7 @@
             "id": "Schrift Gemeinde >= 5.000",
             "type": "symbol",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 10,
             "filter": [
                 "all",
@@ -4058,7 +4058,7 @@
             "id": "Schrift Stadt 5.000 - < 20.000",
             "type": "symbol",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 10,
             "maxzoom": 15,
             "filter": [
@@ -4133,7 +4133,7 @@
             "id": "Schrift Stadt 20.000 - < 100.000",
             "type": "symbol",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 8,
             "maxzoom": 15,
             "filter": [
@@ -4210,7 +4210,7 @@
             "id": "Schrift Stadt 100.000 - < 500.000",
             "type": "symbol",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 7,
             "maxzoom": 15,
             "filter": [
@@ -4285,7 +4285,7 @@
             "id": "Schrift Stadt >= 500.000",
             "type": "symbol",
             "source": "basiskarte",
-            "source-layer": "Name",
+            "source-layer": "Name_Punkt",
             "minzoom": 6,
             "maxzoom": 15,
             "filter": [
