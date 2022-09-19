@@ -1,5 +1,11 @@
 ## Newest Changes
 
+## (2022-09-16)
+### Improvements and Changes
+* changed source-layer "Name" to "Name_Punkt"
+* changed "gebaeudefunktion" to "klasse"
+
+
 ## (2022-06-29)
 ### Improvements and Changes
 * changed metadata subgroups for osm Landesgrenze
