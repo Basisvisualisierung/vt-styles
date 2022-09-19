@@ -5,13 +5,6 @@ on:
     tags: 
       - 'v*.*.*'
 
-env:
-  IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
-  IBM_CLOUD_REGION: eu-de
-  IKS_CLUSTER: bpb6t7ff0u016hl0n65g
-  IKS_NAMESPACE: bavi-staging
-  DEPLOYMENT_NAME: vt-styles-deployment
-
 jobs:
   build:
     name: Build and push Docker image to Docker Hub
@@ -41,51 +34,3 @@ jobs:
         with:
           push: true
           tags: ${{ steps.prep.outputs.tags }}
-  scan:
-    name: Scan for vulnerabilities
-    needs: build    
-    runs-on: ubuntu-latest
-    steps:
-      - name: Prepare
-        id: prep
-        run: |
-          TAGS=basisvisualisierung/vt-styles:${GITHUB_REF#refs/tags/}
-          echo ::set-output name=tags::${TAGS}
-
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: ${{ steps.prep.outputs.tags }}
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'                  
-  deploy:
-    name: Deploy Docker image to IKS cluster
-    needs: scan
-    runs-on: ubuntu-latest
-    steps:
-      - name: Prepare
-        id: prep
-        run: |
-          TAGS=basisvisualisierung/vt-styles:${GITHUB_REF#refs/tags/}
-          echo ::set-output name=tags::${TAGS}
-
-      - name: Install IBM Cloud CLI
-        run: |
-          curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-          ibmcloud --version
-          ibmcloud config --check-version=false
-          ibmcloud plugin install -f kubernetes-service
-
-      - name: Authenticate with IBM Cloud CLI
-        run: |
-          ibmcloud login --apikey "${IBM_CLOUD_API_KEY}" -r "${IBM_CLOUD_REGION}" -g LGLN_power
-
-      - name: Deploy to IKS
-        run: |
-          ibmcloud ks cluster config --cluster $IKS_CLUSTER
-          kubectl config set-context --current --namespace=${IKS_NAMESPACE}
-          kubectl set image deployment/$DEPLOYMENT_NAME vt-styles=${{ steps.prep.outputs.tags }}
-          kubectl rollout status deployment/$DEPLOYMENT_NAME

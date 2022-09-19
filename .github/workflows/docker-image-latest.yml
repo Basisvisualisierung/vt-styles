@@ -8,7 +8,6 @@ env:
   IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
   IBM_CLOUD_REGION: eu-de
   IKS_CLUSTER: bpb6t7ff0u016hl0n65g
-  IKS_NAMESPACE: bavi-dev
   DEPLOYMENT_NAME: vt-styles-deployment
 
 jobs:
@@ -76,9 +75,16 @@ jobs:
         run: |
           ibmcloud login --apikey "${IBM_CLOUD_API_KEY}" -r "${IBM_CLOUD_REGION}" -g LGLN_power
 
-      - name: Deploy to IKS
+      - name: Deploy to IKS dev
         run: |
           ibmcloud ks cluster config --cluster $IKS_CLUSTER
-          kubectl config set-context --current --namespace=${IKS_NAMESPACE}
+          kubectl config set-context --current --namespace=bavi-dev
           kubectl set image deployment/$DEPLOYMENT_NAME vt-styles=basisvisualisierung/vt-styles:${{ steps.prep.outputs.sha_short }}
-          kubectl rollout status deployment/$DEPLOYMENT_NAME          
+          kubectl rollout status deployment/$DEPLOYMENT_NAME    
+
+      - name: Deploy to IKS staging
+        run: |
+          ibmcloud ks cluster config --cluster $IKS_CLUSTER
+          kubectl config set-context --current --namespace=bavi-staging
+          kubectl set image deployment/$DEPLOYMENT_NAME vt-styles=basisvisualisierung/vt-styles:${{ steps.prep.outputs.sha_short }}
+          kubectl rollout status deployment/$DEPLOYMENT_NAME   
