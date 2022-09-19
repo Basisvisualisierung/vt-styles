@@ -3,6 +3,10 @@ name: Publish and deploy Docker image LATEST
 on:
   push:
     branches: master
+  schedule:
+    - cron: '0 0 * * 1'
+
+
 
 env:
   IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
