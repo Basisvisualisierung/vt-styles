@@ -1985,27 +1985,22 @@
                     "any",
                     [
                         "==",
-                        "Eisenbahn",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Eisenbahn"
                     ],
                     [
                         "==",
-                        "Güterverkehr",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Güterverkehr"
                     ]
                 ],
                 [
-                    "!",
-                    [
-                        "has",
-                        "bauwerk"
-                    ]
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "!has",
+                    "zustand"
                 ]
             ],
             "layout": {
