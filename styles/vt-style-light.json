@@ -3,14 +3,14 @@
     "name": "vt-style-light",
     "sources": {
         "basiskarte": {
-            "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v1/tiles/basiskarte.json",
+            "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v2/tiles/basiskarte.json",
             "type": "vector",
             "attribution": "&copy; LGLN | &copy; GeoBasis-DE / BKG"
         }
     },
     "glyphs": "https://basisvisualisierung.niedersachsen.de/services/fonts/{fontstack}/{range}.pbf",
     "metadata": {
-        "vt-style-version": "1.3.0",
+        "vt-style-version": "2.0.0",
         "description": "ATKIS-Tiles für NI + HB, reduziert in helleren Farben, Wegfall von Wiese, Moor Heide, Leitung. Friedhof in Siedlung umgewandelt."
     },
     "layers": [
@@ -1221,19 +1221,16 @@
             "filter": [
                 "all",
                 [
-                    "==",
-                    "Eisenbahn",
+                    "any",
                     [
-                        "get",
-                        "klasse"
+                        "==",
+                        "klasse",
+                        "Eisenbahn"
                     ]
                 ],
                 [
                     "==",
-                    [
-                        "get",
-                        "bauwerk"
-                    ],
+                    "bauwerk",
                     "Tunnel, Unterführung"
                 ]
             ],
@@ -1920,27 +1917,18 @@
                     "any",
                     [
                         "==",
-                        "Eisenbahn",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Eisenbahn"
                     ],
                     [
                         "==",
-                        "Güterverkehr",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Güterverkehr"
                     ]
                 ],
                 [
-                    "!",
-                    [
-                        "has",
-                        "bauwerk"
-                    ]
+                    "!has",
+                    "bauwerk"
                 ]
             ],
             "layout": {
@@ -2916,141 +2904,90 @@
                     "any",
                     [
                         "==",
-                        "Eisenbahn",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Eisenbahn"
                     ],
                     [
                         "==",
-                        "Güterverkehr",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Güterverkehr"
                     ],
                     [
                         "==",
-                        "S-Bahn",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "S-Bahn"
                     ],
                     [
                         "==",
-                        "U-Bahn",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "U-Bahn"
                     ],
                     [
                         "==",
-                        "Stadtbahn",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Stadtbahn"
                     ],
                     [
                         "==",
-                        "Straßenbahn",
-                        [
-                            "get",
-                            "klasse"
-                        ]
+                        "klasse",
+                        "Straßenbahn"
                     ]
                 ],
                 [
                     "any",
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Brücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Drehbrücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Hebebrücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Bogenbrücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Hochbahn, Hochstraße"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Hängebrücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Mehrstöckige Brücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Pontonbrücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Zugbrücke"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Staudamm"
                     ],
                     [
                         "==",
-                        [
-                            "get",
-                            "bauwerk"
-                        ],
+                        "bauwerk",
                         "Staumauer"
                     ]
                 ]
