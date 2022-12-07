@@ -1,5 +1,20 @@
 ## Newest Changes
 
+## v2.0.0 (2022-10-11)
+### Improvements and Changes
+* Switch to vector tile schema v2
+* changed filter for layer Bahnverkehr for QGIS-Use
+* changed source-layer "Name" to "Name_Punkt"
+* changed "gebaeudefunktion" to "klasse"
+* changed metadata subgroups for osm Landesgrenze
+* Removed metadata from every layer in the styles
+* changed metadata groups and subgroups for e.g. transportation 
+* added overall metadata for each style-file
+
+## (2022-09-21)
+### Improvements and Changes
+* changed filter for layer Bahnverkehr for QGIS-Use
+
 ## (2022-09-16)
 ### Improvements and Changes
 * changed source-layer "Name" to "Name_Punkt"
