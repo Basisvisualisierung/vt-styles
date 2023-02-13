@@ -91,6 +91,6 @@ jobs:
         run: |
           ibmcloud ks cluster config --cluster $IKS_CLUSTER
           kubectl config set-context --current --namespace=${IKS_NAMESPACE}
-          kubectl set image deployment/$DEPLOYMENT_NAME vt-applications=$REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:${{ steps.prep.outputs.sha_short }}
+          kubectl set image deployment/$DEPLOYMENT_NAME vt-styles=$REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:${{ steps.prep.outputs.sha_short }}
           kubectl rollout status deployment/$DEPLOYMENT_NAME    
 
