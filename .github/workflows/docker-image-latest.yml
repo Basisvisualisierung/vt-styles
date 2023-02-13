@@ -69,7 +69,7 @@ jobs:
 
   deploy:
     name: Deploy Docker image to IKS cluster
-    needs: scan
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Prepare
