@@ -90,7 +90,7 @@ jobs:
       - name: Deploy to IKS dev
         run: |
           ibmcloud ks cluster config --cluster $IKS_CLUSTER
-          kubectl config set-context --current --namespace=bavi-dev
-          kubectl set image deployment/$DEPLOYMENT_NAME vt-styles=basisvisualisierung/vt-styles:${{ steps.prep.outputs.sha_short }}
+          kubectl config set-context --current --namespace=${IKS_NAMESPACE}
+          kubectl set image deployment/$DEPLOYMENT_NAME vt-applications=$REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:${{ steps.prep.outputs.sha_short }}
           kubectl rollout status deployment/$DEPLOYMENT_NAME    
 
