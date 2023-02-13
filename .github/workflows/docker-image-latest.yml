@@ -65,7 +65,7 @@ jobs:
       - name: Push the image to ICR
         run: |
           docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:${{ steps.prep.outputs.sha_short }} 
-          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:nightly   
+          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:latest   
 
   deploy:
     name: Deploy Docker image to IKS cluster
