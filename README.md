@@ -32,3 +32,16 @@ docker run -p 80:80 -v ${PWD}/styles:/usr/share/nginx/html/styles vt-styles
 MIT License. For more information see [LICENSE.txt](LICENSE.txt).
 
 Copyright 2020-2021 Landesamt für Geoinformation und Landesvermessung Niedersachsen 
+
+## Code Engine
+
+Anmelden an der Konsole:
+```
+ibmcloud login -sso
+ibmcloud target -g LGLN_bavimobil
+ibmcloud ce project select -n bavi-service-broker --kubecfg
+```
+Service deployen:
+```
+kubectl apply -f vt-styles-service.yaml
+```
