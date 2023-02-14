@@ -47,19 +47,9 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'  
-      # Download and Install IBM Cloud CLI
-      - name: Install IBM Cloud CLI
-        run: |
-          curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-          ibmcloud --version
-          ibmcloud config --check-version=false
-          ibmcloud plugin install container-registry
-      # Authenticate with IBM Cloud CLI
-      - name: Authenticate with IBM Cloud CLI
-        run: |
-          ibmcloud login --apikey "${IBM_CLOUD_API_KEY}" -r "${IBM_CLOUD_REGION}" -g LGLN_bavimobil
-          ibmcloud cr region-set "${IBM_CLOUD_REGION}"
-          ibmcloud cr login
+      # Login to IBM Cloud
+      - name: Login to IBM Cloud
+        run: docker login "$REGISTRY_HOSTNAME" -u iamapikey -p "$IBM_CLOUD_API_KEY"
 
       # Push the image to IBM Container Registry
       - name: Push the image to ICR
