@@ -5,32 +5,53 @@ on:
     tags: 
       - 'v*.*.*'
 
+env:
+  IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
+  IBM_CLOUD_REGION: eu-de
+  ICR_NAMESPACE: lgln-bavi
+  REGISTRY_HOSTNAME: de.icr.io
+  IMAGE_NAME: vt-styles
+  GITHUB_SHA: ${{ github.sha }}
+  IKS_CLUSTER: bpb6t7ff0u016hl0n65g
+  IKS_NAMESPACE: bavi-dev
+  DEPLOYMENT_NAME: vt-styles-deployment
+
 jobs:
   build:
-    name: Build and push Docker image to Docker Hub
+    name: Build and push Docker image to IBM Container Registry
     runs-on: ubuntu-latest
     steps:
       - name: Prepare
         id: prep
         run: |
           TAGS=basisvisualisierung/vt-styles:${GITHUB_REF#refs/tags/}
-          echo ::set-output name=tags::${TAGS}         
+          echo ::set-output name=tags::${TAGS}   
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v1 
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Build the Docker image
+      - name: Build with Docker
+        run: |
+          docker build -t "$REGISTRY_HOSTNAME"/"$ICR_NAMESPACE"/"$IMAGE_NAME":$${{ steps.prep.outputs.tags }}  \
+            --build-arg GITHUB_REF="$GITHUB_REF" .
+          docker build -t "$REGISTRY_HOSTNAME"/"$ICR_NAMESPACE"/"$IMAGE_NAME":latest  \
+            --build-arg GITHUB_REF="$GITHUB_REF" .
+            # Scan with trivy     
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          image-ref: 'de.icr.io/lgln-bavi/vt-styles:$${{ steps.prep.outputs.tags }}'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'  
+      # Login to IBM Cloud
+      - name: Login to IBM Cloud
+        run: docker login "$REGISTRY_HOSTNAME" -u iamapikey -p "$IBM_CLOUD_API_KEY"
 
-      - name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: ${{ steps.prep.outputs.tags }}
+      # Push the image to IBM Container Registry
+      - name: Push the image to ICR
+        run: |
+          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:$${{ steps.prep.outputs.tags }}
+          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:latest   
