@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Prepare
         id: prep
-        run: echo ::set-output name=sha_short::`echo ${GITHUB_SHA} | cut -c1-7`
+        run: echo "sha_short=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_OUTPUT
 
       - name: Checkout
         uses: actions/checkout@v3
@@ -64,7 +64,7 @@ jobs:
     steps:
       - name: Prepare
         id: prep
-        run: echo ::set-output name=sha_short::`echo ${GITHUB_SHA} | cut -c1-7`
+        run: echo "sha_short=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_OUTPUT
 
       - name: Install IBM Cloud CLI
         run: |
