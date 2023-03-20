@@ -1,5 +1,7 @@
 FROM nginx:alpine
 
+RUN apk update && apk upgrade
+
 COPY ./styles /usr/share/nginx/html/styles
 COPY ./fonts /usr/share/nginx/html/fonts
 
