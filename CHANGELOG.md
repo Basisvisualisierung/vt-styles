@@ -1,5 +1,11 @@
 ## Newest Changes
 
+## (2023-10-09)
+### Improvements and Changes
+* Switch to vector tile schema v3
+* no changes in the datamodell
+* change from tiling with t-rex tileserver to tiling with GDAL and ogr2ogr
+
 ## v2.0.0 (2022-10-11)
 ### Improvements and Changes
 * Switch to vector tile schema v2
