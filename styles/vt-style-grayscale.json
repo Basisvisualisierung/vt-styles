@@ -3,7 +3,7 @@
     "name": "vt-style-grayscale",
     "sources": {
         "basiskarte": {
-            "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v2/tiles/basiskarte.json",
+            "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v3/tiles/basiskarte.json",
             "type": "vector",
             "attribution": "&copy; LGLN | &copy; GeoBasis-DE / BKG"
         }
@@ -591,7 +591,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -881,7 +880,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1205,7 +1203,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1251,7 +1248,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1296,7 +1292,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1338,7 +1333,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -1598,7 +1592,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -2266,7 +2259,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
@@ -2674,7 +2666,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "butt",
                 "line-join": "round"
             },
             "paint": {
@@ -2739,7 +2730,6 @@
                 ]
             ],
             "layout": {
-                "line-cap": "butt",
                 "line-join": "round"
             },
             "paint": {
@@ -2797,7 +2787,6 @@
             ],
             "layout": {
                 "visibility": "none",
-                "line-cap": "square",
                 "line-join": "round"
             },
             "paint": {
