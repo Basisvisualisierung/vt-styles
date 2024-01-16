@@ -1,5 +1,9 @@
 ## Newest Changes
 
+## (2024-01-15)
+### Improvements and Changes
+* Changed attribution for basiskarte to CC BY 4.0
+
 ## (2023-10-09)
 ### Improvements and Changes
 * Switch to vector tile schema v3

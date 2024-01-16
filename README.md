@@ -8,7 +8,7 @@ If you want to use other fonts in the styles, you have to convert them to glyphs
 
 ## Docker
 
-Run a container with an image from Docker Hub:
+Run a container with an image from Docker Hub (DEPRECATED):
 ```
 docker run -p 80:80 --name vt-styles basisvisualisierung/vt-styles
 ```
@@ -32,16 +32,3 @@ docker run -p 80:80 -v ${PWD}/styles:/usr/share/nginx/html/styles vt-styles
 MIT License. For more information see [LICENSE.txt](LICENSE.txt).
 
 Copyright 2020-2021 Landesamt für Geoinformation und Landesvermessung Niedersachsen 
-
-## Code Engine
-
-Anmelden an der Konsole:
-```
-ibmcloud login -sso
-ibmcloud target -g LGLN_bavimobil
-ibmcloud ce project select -n bavi-service-broker --kubecfg
-```
-Service deployen:
-```
-kubectl apply -f vt-styles-service.yaml
-```

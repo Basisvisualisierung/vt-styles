@@ -5,7 +5,7 @@
         "basiskarte": {
             "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v3/tiles/basiskarte.json",
             "type": "vector",
-            "attribution": "&copy; LGLN | &copy; GeoBasis-DE / BKG"
+            "attribution": "&copy; GeoBasis-DE / BKG <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' >CC BY 4.0</a>"
         }
     },
     "glyphs": "https://basisvisualisierung.niedersachsen.de/services/fonts/{fontstack}/{range}.pbf",
