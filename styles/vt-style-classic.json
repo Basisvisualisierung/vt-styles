@@ -3,20 +3,25 @@
     "name": "vt-style-classic",
     "sources": {
         "basiskarte": {
-            "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v3/tiles/basiskarte.json",
+            "url": "https://basisvisualisierung.niedersachsen.de/services/basiskarte/v4/tiles/basiskarte.json",
             "type": "vector",
             "attribution": "&copy; GeoBasis-DE / BKG <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' >CC BY 4.0</a>"
         }
     },
     "glyphs": "https://basisvisualisierung.niedersachsen.de/services/fonts/{fontstack}/{range}.pbf",
     "metadata": {
-        "vt-style-version": "2.0.0",
+        "vt-style-version": "4.0.0",
         "description": "ATKIS-Tiles für NI + HB im Classic-Style, angelehnt an die DTKs"
     },
     "layers": [
         {
             "id": "Hintergrund",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Hintergrund",
+                "map-editor:layer": "Hintergrund",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Hintergrund",
             "paint": {
@@ -26,15 +31,18 @@
         {
             "id": "Meer",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Meer",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Meer"
-                ]
+                "==",
+                "klasse",
+                "Meer"
             ],
             "layout": {},
             "paint": {
@@ -44,16 +52,34 @@
         {
             "id": "Siedlung",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 10,
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Siedlung"
-                ]
+                "in",
+                "klasse",
+                "Bildung und Wissenschaft",
+                "Wohnbaufläche",
+                "Fläche besonderer funktionaler Prägung",
+                "Gesundheit, Kur",
+                "Kultur",
+                "Medien und Kommunikation",
+                "Regierung und Verwaltung",
+                "Religiöse Einrichtung",
+                "Sicherheit und Ordnung",
+                "Soziales",
+                "Öffentliche Zwecke",
+                "Fläche gemischter Nutzung",
+                "Gebäude- und Freifläche Land- und Forstwirtschaft",
+                "Wohnen",
+                "Wohnen und Betrieb",
+                "Siedlungsfläche"
             ],
             "layout": {},
             "paint": {
@@ -63,19 +89,68 @@
         {
             "id": "Industrie und Gewerbe",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Industrie und Gewerbe",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 10,
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Industrie- und Gewerbefläche",
-                    "Bergbau",
-                    "TagebauGrubeSteinbruch",
-                    "Halde"
-                ]
+                "in",
+                "klasse",
+                "Abfallbehandlungsanlage",
+                "Ausstellung, Messe",
+                "Beherbergung",
+                "Deponie (oberirdisch)",
+                "Deponie (untertägig)",
+                "Entsorgung",
+                "Förderanlage",
+                "Gärtnerei",
+                "Handel",
+                "Handel und Dienstleistung",
+                "Heizwerk",
+                "Industrie und Gewerbe",
+                "Kläranlage, Klärwerk",
+                "Kraftwerk",
+                "Raffinerie",
+                "Umspannstation",
+                "Versorgungsanlage",
+                "Wasserwerk",
+                "Werft",
+                "Forschung und Entwicklung",
+                "Funk- und Fernmeldeanlage",
+                "Gaswerk",
+                "Lagerfläche",
+                "Logistik und Transport",
+                "Maschinenbau",
+                "Tankstelle",
+                "Technik, Elektrik, Elektronik",
+                "Vergnügung",
+                "Freie Berufe und weitere Dienstleistungen",
+                "Bank, Kredit",
+                "Versicherung",
+                "Restauration",
+                "Handwerk",
+                "Produktion",
+                "Betriebliche Sozialeinrichtung",
+                "Grundstoff",
+                "Nahrungs-, Futter-, Genussmittel",
+                "Textil, Bekleidung, Lederwaren",
+                "Holz-, Naturfaser-, Verpackungsprodukte",
+                "Print-, Audio-, Videoprodukte",
+                "Mineralölverarbeitung, Kokerei",
+                "Chemie-, Pharma-, Kunststoffprodukte",
+                "Mineralische Bau- und Werkstoffe",
+                "Metallerzeugung und -verarbeitung",
+                "Fahrzeugbau",
+                "Möbel und sonstige Konsumgüter",
+                "Landwirtschaftliche Betriebsfläche",
+                "Landwirtschaftliche Betriebsfläche für Tierhaltung",
+                "Landwirtschaftliche Betriebsfläche für pflanzliche Produktion",
+                "Landwirtschaftliche Betriebsfläche für Tierhaltung und pflanzliche Produktion"
             ],
             "layout": {},
             "paint": {
@@ -85,17 +160,27 @@
         {
             "id": "Flughafen",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 4,
+                "map-editor:layer": "Flughafen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrsflaeche",
             "minzoom": 10,
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Flugverkehr",
-                    "Flughafen"
-                ]
+                "in",
+                "klasse",
+                "Flugverkehr",
+                "Hubschrauberlandeplatz",
+                "Internationaler Flughafen",
+                "Regionalflughafen",
+                "Sonderflughafen",
+                "Sonderlandeplatz",
+                "Segelfluggelände",
+                "Verkehrslandeplatz",
+                "Wasserlandeplatz"
             ],
             "layout": {},
             "paint": {
@@ -105,18 +190,21 @@
         {
             "id": "Start- und Landebahn",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 4,
+                "map-editor:layer": "Start- und Landebahn",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrsflaeche",
             "minzoom": 10,
             "filter": [
-                "any",
-                [
-                    "in",
-                    "klasse",
-                    "Startbahn, Landebahn",
-                    "Vorfeld",
-                    "Zurollbahn, Taxiway"
-                ]
+                "in",
+                "klasse",
+                "Startbahn, Landebahn",
+                "Vorfeld",
+                "Zurollbahn, Taxiway"
             ],
             "layout": {},
             "paint": {
@@ -126,16 +214,19 @@
         {
             "id": "Bahnverkehr",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Bahnhof",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrsflaeche",
             "minzoom": 10,
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Bahnverkehr"
-                ]
+                "in",
+                "klasse",
+                "Bahnverkehr"
             ],
             "layout": {},
             "paint": {
@@ -145,33 +236,48 @@
         {
             "id": "Öffentliche Grün- und Freizeitanlage",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Grün- und Freizeitanlage",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 12,
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Autokino, Freilichtkino",
-                    "Botanischer Garten",
-                    "Campingplatz",
-                    "Freilichtmuseum",
-                    "Freilichttheater",
-                    "Freizeitanlage",
-                    "Freizeitpark",
-                    "Golfplatz",
-                    "Grünanlage",
-                    "Kleingarten",
-                    "Modellflugplatz",
-                    "Park",
-                    "Safaripark, Wildpark",
-                    "Schwimmbad, Freibad",
-                    "Sportanlage",
-                    "Sport- Freizeit- und Erholungsfläche",
-                    "Wochenend- und Ferienhausfläche",
-                    "Zoo"
-                ]
+                "in",
+                "klasse",
+                "Autokino, Freilichtkino",
+                "Botanischer Garten",
+                "Campingplatz",
+                "Erholungsfläche",
+                "Freilichtmuseum",
+                "Freilichtbühne",
+                "Freizeitanlage",
+                "Freizeitpark",
+                "Garten",
+                "Gelände für Luftsportgeräte",
+                "Go-Kart-Bahn",
+                "Golf",
+                "Grünanlage",
+                "Hundeübungsplatz",
+                "Kletteranlage",
+                "Reitsport",
+                "Kleingarten",
+                "Modellfluggelände",
+                "Park",
+                "Safaripark, Wildpark",
+                "Schwimmen",
+                "Sportanlage",
+                "Sport- Freizeit- und Erholungsfläche",
+                "Wochenend- und Ferienhausfläche",
+                "Zoo",
+                "Siedlungsgrünfläche",
+                "Spielplatz, Bolzplatz",
+                "Tennis",
+                "Verkehrsübungsplatz, Testgelände, Fahrsicherheit",
+                "Wochenendplatz"
             ],
             "layout": {},
             "paint": {
@@ -181,16 +287,20 @@
         {
             "id": "Friedhof",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Besondere Siedlungsflächen",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Friedhof",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Siedlungsflaeche",
             "minzoom": 12,
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Friedhof"
-                ]
+                "in",
+                "klasse",
+                "Friedhof",
+                "Parkfriedhof"
             ],
             "layout": {},
             "paint": {
@@ -200,17 +310,23 @@
         {
             "id": "Wiese",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Grünland",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Vegetationsflaeche",
             "minzoom": 12,
             "layout": {},
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Grünland"
-                ]
+                "in",
+                "klasse",
+                "Grünland",
+                "Streuobstwiese",
+                "Streuobst",
+                "Gras"
             ],
             "paint": {
                 "fill-color": "#ebf5e5"
@@ -219,18 +335,21 @@
         {
             "id": "Moor, Heide",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Moor, Heide",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Vegetationsflaeche",
             "layout": {},
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Moor",
-                    "Sumpf",
-                    "Heide"
-                ]
+                "in",
+                "klasse",
+                "Moor",
+                "Heide",
+                "Sumpf"
             ],
             "paint": {
                 "fill-color": "#f2f2cc",
@@ -252,18 +371,24 @@
         {
             "id": "Wald",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Wald",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Vegetationsflaeche",
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Laubholz",
-                    "Laub- und Nadelholz",
-                    "Nadelholz",
-                    "Wald"
-                ]
+                "in",
+                "klasse",
+                "Laubholz",
+                "Laub- und Nadelholz",
+                "Nadelholz",
+                "Wald",
+                "Baumbestand, Laub- und Nadelholz",
+                "Baumbestand, Laubholz",
+                "Baumbestand, Nadelholz"
             ],
             "layout": {},
             "paint": {
@@ -284,16 +409,22 @@
         {
             "id": "Stehendes Gewässer",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Stehendes Gewässer",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "See",
-                    "Hafenbecken"
-                ]
+                "in",
+                "klasse",
+                "See",
+                "Hafenbecken",
+                "Baggersee",
+                "Stausee",
+                "Speicherbecken"
             ],
             "layout": {},
             "paint": {
@@ -303,16 +434,20 @@
         {
             "id": "Fliessgewässer (Fläche)",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Fließgewässer",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Fliessgewässer",
-                    "Kanal"
-                ]
+                "in",
+                "klasse",
+                "Fliessgewässer",
+                "Kanal",
+                "Flussmündungstrichter"
             ],
             "layout": {},
             "paint": {
@@ -322,6 +457,12 @@
         {
             "id": "Fliessgewässer >= 12m Breite",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Fließgewässer",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "filter": [
@@ -377,6 +518,12 @@
         {
             "id": "Fließgewässer 6m Breite",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Fließgewässer",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "minzoom": 12,
@@ -428,6 +575,12 @@
         {
             "id": "Fließgewässer 3m Breite",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Fließgewässer",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "minzoom": 12,
@@ -477,6 +630,12 @@
         {
             "id": "Personenfährverkehr",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 5,
+                "map-editor:layer": "Personenfährverkehr",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "minzoom": 11,
             "source-layer": "Verkehrslinie",
@@ -513,6 +672,12 @@
         {
             "id": "Autofährverkehr",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 5,
+                "map-editor:layer": "Autofährverkehr",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "minzoom": 11,
             "source-layer": "Verkehrslinie",
@@ -520,7 +685,8 @@
                 "in",
                 "klasse",
                 "Autofährverkehr",
-                "Eisenbahnfährverkehr"
+                "Eisenbahnfährverkehr",
+                "Fährlinie"
             ],
             "layout": {},
             "paint": {
@@ -547,111 +713,54 @@
             }
         },
         {
-            "id": "Fuß- und Radweg",
-            "type": "line",
-            "source": "basiskarte",
-            "source-layer": "Verkehrslinie",
-            "minzoom": 13,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Weg, Pfad, Steig",
-                    "Fußweg",
-                    "Rad- und Fußweg",
-                    "Radweg"
-                ],
-                [
-                    "!has",
-                    "bauwerk"
-                ]
-            ],
-            "layout": {
-                "line-join": "round"
-            },
-            "paint": {
-                "line-dasharray": [
-                    8,
-                    4
-                ],
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    13,
-                    0.4,
-                    13.7,
-                    0.6,
-                    14,
-                    0.8,
-                    16,
-                    1.8
-                ],
-                "line-color": "#969696"
-            }
-        },
-        {
-            "id": "L0 Fuß- und Radweg",
-            "type": "line",
-            "source": "basiskarte",
-            "source-layer": "Verkehrslinie",
-            "minzoom": 13,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Weg, Pfad, Steig",
-                    "Fußweg",
-                    "Rad- und Fußweg",
-                    "Radweg"
-                ],
-                [
-                    "==",
-                    "bauwerk",
-                    "Tunnel, Unterführung"
-                ]
-            ],
-            "layout": {
-                "line-join": "round"
-            },
-            "paint": {
-                "line-dasharray": [
-                    8,
-                    4
-                ],
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    13,
-                    0.4,
-                    13.7,
-                    0.6,
-                    14,
-                    0.8,
-                    16,
-                    1.8
-                ],
-                "line-color": "#969696"
-            }
-        },
-        {
             "id": "Nicht öffentliches Gebäude 2D",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Nicht öffentliches Gebäude 2D",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 15,
             "maxzoom": 16,
+            "filter": [
+                "all",
+                [
+                    "!in",
+                    "klasse",
+                    "Kino",
+                    "Verwaltungsgebäude",
+                    "Parlament",
+                    "Rathaus",
+                    "Gericht",
+                    "Kreisverwaltung",
+                    "Bezirksregierung",
+                    "Allgemein bildende Schule",
+                    "Berufsbildende Schule",
+                    "Hochschulgebäude (Fachhochschule, Universität)",
+                    "Forschungsinstitut",
+                    "Schloss",
+                    "Theater, Oper",
+                    "Konzertgebäude",
+                    "Museum",
+                    "Rundfunk, Fernsehen",
+                    "Burg, Festung",
+                    "Kirche",
+                    "Synagoge",
+                    "Kapelle",
+                    "Gotteshaus",
+                    "Moschee",
+                    "Tempel",
+                    "Krankenhaus",
+                    "Polizei",
+                    "Feuerwehr",
+                    "Sport-, Turnhalle",
+                    "Hallenbad",
+                    "Sanatorium"
+                ]
+            ],
             "layout": {},
             "paint": {
                 "fill-color": "#918d8d"
@@ -660,6 +769,12 @@
         {
             "id": "Öffentliches Gebäude 2D",
             "type": "fill",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Öffentliches Gebäude 2D",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 15,
@@ -706,8 +821,176 @@
             }
         },
         {
+            "id": "L0 Fuß- und Radweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Fuß- und Radweg",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Weg, Pfad, Steig",
+                    "Fußweg",
+                    "(Kletter-)Steig im Gebirge",
+                    "Rad- und Fußweg",
+                    "Radweg",
+                    "Reitweg",
+                    "Skaterstrecke",
+                    "Karren- und Ziehweg"
+                ],
+                [
+                    "==",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-dasharray": [
+                    8,
+                    4
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.4,
+                    13.7,
+                    0.6,
+                    14,
+                    0.8,
+                    16,
+                    1.8
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "L0 Wirtschaftsweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "==",
+                    "klasse",
+                    "Wirtschaftsweg"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0,
+                    13.3,
+                    0.4,
+                    13.7,
+                    0.8,
+                    14,
+                    1.2,
+                    16,
+                    3
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "L0 Hauptwirtschaftsweg",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "bauwerk",
+                    "Tunnel, Unterführung"
+                ],
+                [
+                    "==",
+                    "klasse",
+                    "Hauptwirtschaftsweg"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.5,
+                    13.3,
+                    0.7,
+                    13.7,
+                    1,
+                    14,
+                    1.2,
+                    16,
+                    3
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
             "id": "L0 Nebenstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
@@ -721,8 +1004,8 @@
                 [
                     "in",
                     "klasse",
-                    "Attribut trifft nicht zu",
-                    "Sonstiges"
+                    "Nicht öffentliche Straße",
+                    "Sonstige öffentliche Straße"
                 ]
             ],
             "layout": {
@@ -758,6 +1041,12 @@
         {
             "id": "L0 Gemeindestraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
@@ -769,7 +1058,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Gemeindestraße"
                 ]
@@ -807,6 +1096,12 @@
         {
             "id": "L0 Kreisstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
@@ -818,7 +1113,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Kreisstraße"
                 ]
@@ -856,6 +1151,12 @@
         {
             "id": "L0 Landesstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
@@ -867,7 +1168,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Landesstraße, Staatsstraße"
                 ]
@@ -903,6 +1204,12 @@
         {
             "id": "L0 Bundesstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
@@ -914,7 +1221,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesstraße"
                 ]
@@ -950,6 +1257,12 @@
         {
             "id": "L0 Autobahn K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
@@ -961,7 +1274,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesautobahn"
                 ]
@@ -997,6 +1310,12 @@
         {
             "id": "L0 Nebenstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
@@ -1010,8 +1329,8 @@
                 [
                     "in",
                     "klasse",
-                    "Attribut trifft nicht zu",
-                    "Sonstiges"
+                    "Nicht öffentliche Straße",
+                    "Sonstige öffentliche Straße"
                 ]
             ],
             "layout": {
@@ -1045,6 +1364,12 @@
         {
             "id": "L0 Gemeindestraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
@@ -1056,7 +1381,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Gemeindestraße"
                 ]
@@ -1092,6 +1417,12 @@
         {
             "id": "L0 Kreisstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
@@ -1103,7 +1434,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Kreisstraße"
                 ]
@@ -1139,6 +1470,12 @@
         {
             "id": "L0 Landesstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
@@ -1150,7 +1487,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Landesstraße, Staatsstraße"
                 ]
@@ -1186,6 +1523,12 @@
         {
             "id": "L0 Bundesstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
@@ -1197,7 +1540,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesstraße"
                 ]
@@ -1233,6 +1576,12 @@
         {
             "id": "L0 Autobahn F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
@@ -1244,7 +1593,7 @@
                     "Tunnel, Unterführung"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesautobahn"
                 ]
@@ -1280,18 +1629,24 @@
         {
             "id": "L0 Bahnstrecke",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bahnstrecke",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "any",
-                    [
-                        "==",
-                        "klasse",
-                        "Eisenbahn"
-                    ]
+                    "in",
+                    "klasse",
+                    "Eisenbahn",
+                    "Güterverkehr",
+                    "Personenverkehr",
+                    "S-Bahn"
                 ],
                 [
                     "==",
@@ -1320,27 +1675,44 @@
             }
         },
         {
-            "id": "Wirtschaftsweg",
+            "id": "L1 Fuß- und Radweg",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Fuß- und Radweg",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 13,
             "filter": [
                 "all",
                 [
-                    "!has",
-                    "bauwerk"
-                ],
-                [
                     "in",
                     "klasse",
-                    "Wirtschaftsweg"
+                    "Weg, Pfad, Steig",
+                    "Fußweg",
+                    "(Kletter-)Steig im Gebirge",
+                    "Rad- und Fußweg",
+                    "Radweg",
+                    "Reitweg",
+                    "Skaterstrecke",
+                    "Karren- und Ziehweg"
+                ],
+                [
+                    "!has",
+                    "bauwerk"
                 ]
             ],
             "layout": {
                 "line-join": "round"
             },
             "paint": {
+                "line-dasharray": [
+                    8,
+                    4
+                ],
                 "line-width": [
                     "interpolate",
                     [
@@ -1350,34 +1722,37 @@
                         "zoom"
                     ],
                     13,
-                    0,
-                    13.3,
                     0.4,
                     13.7,
-                    0.8,
+                    0.6,
                     14,
-                    1.2,
+                    0.8,
                     16,
-                    3
+                    1.8
                 ],
                 "line-color": "#969696"
             }
         },
         {
-            "id": "L0 Wirtschaftsweg",
+            "id": "L1 Wirtschaftsweg",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 13,
             "filter": [
                 "all",
+                [
+                    "!has",
+                    "bauwerk"
+                ],
                 [
                     "==",
-                    "bauwerk",
-                    "Tunnel, Unterführung"
-                ],
-                [
-                    "in",
                     "klasse",
                     "Wirtschaftsweg"
                 ]
@@ -1409,8 +1784,14 @@
             }
         },
         {
-            "id": "Hauptwirtschaftsweg",
+            "id": "L1 Hauptwirtschaftsweg",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 13,
@@ -1421,7 +1802,7 @@
                     "bauwerk"
                 ],
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Hauptwirtschaftsweg"
                 ]
@@ -1455,16 +1836,26 @@
         {
             "id": "L1 Nebenstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
                 "all",
                 [
+                    "!has",
+                    "bauwerk"
+                ],
+                [
                     "in",
                     "klasse",
-                    "Attribut trifft nicht zu",
-                    "Sonstiges"
+                    "Nicht öffentliche Straße",
+                    "Sonstige öffentliche Straße"
                 ]
             ],
             "layout": {
@@ -1500,13 +1891,23 @@
         {
             "id": "L1 Gemeindestraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Gemeindestraße"
                 ]
@@ -1544,13 +1945,23 @@
         {
             "id": "L1 Kreisstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Kreisstraße"
                 ]
@@ -1588,13 +1999,23 @@
         {
             "id": "L1 Landesstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Landesstraße, Staatsstraße"
                 ]
@@ -1630,13 +2051,23 @@
         {
             "id": "L1 Bundesstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Bundesstraße"
                 ]
@@ -1672,13 +2103,23 @@
         {
             "id": "L1 Autobahn K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Bundesautobahn"
                 ]
@@ -1714,16 +2155,26 @@
         {
             "id": "L1 Nebenstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
                 "all",
                 [
+                    "!has",
+                    "bauwerk"
+                ],
+                [
                     "in",
                     "klasse",
-                    "Attribut trifft nicht zu",
-                    "Sonstiges"
+                    "Nicht öffentliche Straße",
+                    "Sonstige öffentliche Straße"
                 ]
             ],
             "layout": {
@@ -1757,13 +2208,23 @@
         {
             "id": "L1 Gemeindestraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Gemeindestraße"
                 ]
@@ -1799,13 +2260,23 @@
         {
             "id": "L1 Kreisstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Kreisstraße"
                 ]
@@ -1841,13 +2312,23 @@
         {
             "id": "L1 Landesstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Landesstraße, Staatsstraße"
                 ]
@@ -1883,13 +2364,23 @@
         {
             "id": "L1 Bundesstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Bundesstraße"
                 ]
@@ -1925,13 +2416,23 @@
         {
             "id": "L1 Autobahn F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "!has",
+                    "bauwerk"
+                ],
+                [
+                    "==",
                     "klasse",
                     "Bundesautobahn"
                 ]
@@ -1967,23 +2468,24 @@
         {
             "id": "L1 Bahnstrecke",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Bahnstrecke",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "any",
-                    [
-                        "==",
-                        "klasse",
-                        "Eisenbahn"
-                    ],
-                    [
-                        "==",
-                        "klasse",
-                        "Güterverkehr"
-                    ]
+                    "in",
+                    "klasse",
+                    "Eisenbahn",
+                    "Güterverkehr",
+                    "Personenverkehr",
+                    "S-Bahn"
                 ],
                 [
                     "!has",
@@ -2011,18 +2513,30 @@
             }
         },
         {
-            "id": "L2 Nebenstraße K",
+            "id": "L2 Fuß- und Radweg",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Fuß- und Radweg",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 13,
             "filter": [
                 "all",
                 [
                     "in",
                     "klasse",
-                    "Attribut trifft nicht zu",
-                    "Sonstiges"
+                    "Weg, Pfad, Steig",
+                    "Fußweg",
+                    "(Kletter-)Steig im Gebirge",
+                    "Rad- und Fußweg",
+                    "Radweg",
+                    "Reitweg",
+                    "Skaterstrecke",
+                    "Karren- und Ziehweg"
                 ],
                 [
                     "in",
@@ -2031,11 +2545,139 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    1,
+                    13.7,
+                    1.5,
+                    14,
+                    2,
+                    16,
+                    4.5
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "L2 Wirtschaftsweg K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Wirtschaftsweg",
+                    "Hauptwirtschaftsweg"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Fachwerkbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Steg",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.4,
+                    13.3,
+                    1,
+                    13.7,
+                    2,
+                    14,
+                    3,
+                    16,
+                    7.5
+                ],
+                "line-color": "#969696"
+            }
+        },
+        {
+            "id": "L2 Nebenstraße K",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Nicht öffentliche Straße",
+                    "Sonstige öffentliche Straße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Fachwerkbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2073,13 +2715,19 @@
         {
             "id": "L2 Gemeindestraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Gemeindestraße"
                 ],
@@ -2090,11 +2738,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2132,13 +2782,19 @@
         {
             "id": "L2 Kreisstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Kreisstraße"
                 ],
@@ -2149,11 +2805,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2191,13 +2849,19 @@
         {
             "id": "L2 Landesstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Landesstraße, Staatsstraße"
                 ],
@@ -2208,11 +2872,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2250,13 +2916,19 @@
         {
             "id": "L2 Bundesstraße K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesstraße"
                 ],
@@ -2267,11 +2939,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2307,13 +2981,19 @@
         {
             "id": "L2 Autobahn K",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesautobahn"
                 ],
@@ -2324,11 +3004,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2364,18 +3046,24 @@
             }
         },
         {
-            "id": "L2 Nebenstraße F",
+            "id": "L2 Wirtschaftsweg F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
-            "minzoom": 12,
+            "minzoom": 13,
             "filter": [
                 "all",
                 [
                     "in",
                     "klasse",
-                    "Attribut trifft nicht zu",
-                    "Sonstiges"
+                    "Wirtschaftsweg",
+                    "Hauptwirtschaftsweg"
                 ],
                 [
                     "in",
@@ -2384,11 +3072,77 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
+                    "Staudamm",
+                    "Staumauer"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0.2,
+                    13.3,
+                    0.6,
+                    13.7,
+                    1.2,
+                    14,
+                    1.8,
+                    16,
+                    4.5
+                ],
+                "line-color": "#ffffff"
+            }
+        },
+        {
+            "id": "L2 Nebenstraße F",
+            "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
+            "source": "basiskarte",
+            "source-layer": "Verkehrslinie",
+            "minzoom": 12,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "klasse",
+                    "Nicht öffentliche Straße",
+                    "Sonstige öffentliche Straße"
+                ],
+                [
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Fachwerkbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2424,13 +3178,19 @@
         {
             "id": "L2 Gemeindestraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Gemeindestraße"
                 ],
@@ -2441,11 +3201,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2481,13 +3243,19 @@
         {
             "id": "L2 Kreisstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Kreisstraße"
                 ],
@@ -2498,11 +3266,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2538,13 +3308,19 @@
         {
             "id": "L2 Landesstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 9,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Landesstraße, Staatsstraße"
                 ],
@@ -2555,11 +3331,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2595,13 +3373,19 @@
         {
             "id": "L2 Bundesstraße F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 8,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesstraße"
                 ],
@@ -2612,11 +3396,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2652,13 +3438,19 @@
         {
             "id": "L2 Autobahn F",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 6,
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Bundesautobahn"
                 ],
@@ -2669,11 +3461,13 @@
                     "Drehbrücke",
                     "Hebebrücke",
                     "Bogenbrücke",
+                    "Fachwerkbrücke",
                     "Hochbahn, Hochstraße",
                     "Hängebrücke",
                     "Mehrstöckige Brücke",
                     "Pontonbrücke",
                     "Zugbrücke",
+                    "Steg",
                     "Staudamm",
                     "Staumauer"
                 ]
@@ -2707,344 +3501,43 @@
             }
         },
         {
-            "id": "L2 Fuß- und Radweg",
-            "type": "line",
-            "source": "basiskarte",
-            "source-layer": "Verkehrslinie",
-            "minzoom": 13,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Weg, Pfad, Steig",
-                    "Fußweg",
-                    "Rad- und Fußweg",
-                    "Radweg"
-                ],
-                [
-                    "in",
-                    "bauwerk",
-                    "Brücke",
-                    "Drehbrücke",
-                    "Hebebrücke",
-                    "Bogenbrücke",
-                    "Hochbahn, Hochstraße",
-                    "Hängebrücke",
-                    "Mehrstöckige Brücke",
-                    "Pontonbrücke",
-                    "Zugbrücke",
-                    "Staudamm",
-                    "Staumauer"
-                ]
-            ],
-            "layout": {
-                "line-join": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    13,
-                    1,
-                    13.7,
-                    1.5,
-                    14,
-                    2,
-                    16,
-                    4.5
-                ],
-                "line-color": "#969696"
-            }
-        },
-        {
-            "id": "Brücke Wirtschaftsweg K",
-            "type": "line",
-            "source": "basiskarte",
-            "source-layer": "Verkehrslinie",
-            "minzoom": 13,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Wirtschaftsweg",
-                    "Hauptwirtschaftsweg"
-                ],
-                [
-                    "!has",
-                    "fahrbahn"
-                ],
-                [
-                    "!has",
-                    "funktion"
-                ],
-                [
-                    "in",
-                    "bauwerk",
-                    "Brücke",
-                    "Drehbrücke",
-                    "Hebebrücke",
-                    "Bogenbrücke",
-                    "Hochbahn, Hochstraße",
-                    "Hängebrücke",
-                    "Mehrstöckige Brücke",
-                    "Pontonbrücke",
-                    "Zugbrücke",
-                    "Staudamm",
-                    "Staumauer"
-                ]
-            ],
-            "layout": {
-                "line-join": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    13,
-                    0.4,
-                    13.3,
-                    1,
-                    13.7,
-                    2,
-                    14,
-                    3,
-                    16,
-                    7.5
-                ],
-                "line-color": "#969696"
-            }
-        },
-        {
-            "id": "Brücke Wirtschaftsweg F",
-            "type": "line",
-            "source": "basiskarte",
-            "source-layer": "Verkehrslinie",
-            "minzoom": 13,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Wirtschaftsweg",
-                    "Hauptwirtschaftsweg"
-                ],
-                [
-                    "!has",
-                    "fahrbahn"
-                ],
-                [
-                    "!has",
-                    "funktion"
-                ],
-                [
-                    "in",
-                    "bauwerk",
-                    "Brücke",
-                    "Drehbrücke",
-                    "Hebebrücke",
-                    "Bogenbrücke",
-                    "Hochbahn, Hochstraße",
-                    "Hängebrücke",
-                    "Mehrstöckige Brücke",
-                    "Pontonbrücke",
-                    "Zugbrücke",
-                    "Staudamm",
-                    "Staumauer"
-                ]
-            ],
-            "layout": {
-                "line-join": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    13,
-                    0.2,
-                    13.3,
-                    0.6,
-                    13.7,
-                    1.2,
-                    14,
-                    1.8,
-                    16,
-                    4.5
-                ],
-                "line-color": "#ffffff"
-            }
-        },
-        {
-            "id": "L2 Wirtschaftsweg",
-            "type": "line",
-            "source": "basiskarte",
-            "source-layer": "Verkehrslinie",
-            "minzoom": 13,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Wirtschaftsweg",
-                    "Hauptwirtschaftsweg"
-                ],
-                [
-                    "in",
-                    "bauwerk",
-                    "Brücke",
-                    "Drehbrücke",
-                    "Hebebrücke",
-                    "Bogenbrücke",
-                    "Hochbahn, Hochstraße",
-                    "Hängebrücke",
-                    "Mehrstöckige Brücke",
-                    "Pontonbrücke",
-                    "Zugbrücke",
-                    "Staudamm",
-                    "Staumauer"
-                ]
-            ],
-            "layout": {
-                "visibility": "none",
-                "line-join": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    13,
-                    0,
-                    13.3,
-                    0.4,
-                    13.7,
-                    0.8,
-                    14,
-                    1.2,
-                    16,
-                    3
-                ],
-                "line-color": "#969696"
-            }
-        },
-        {
             "id": "L2 Bahnstrecke",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Bahnstrecke",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 11,
             "filter": [
                 "all",
                 [
-                    "any",
-                    [
-                        "==",
-                        "klasse",
-                        "Eisenbahn"
-                    ],
-                    [
-                        "==",
-                        "klasse",
-                        "Güterverkehr"
-                    ],
-                    [
-                        "==",
-                        "klasse",
-                        "S-Bahn"
-                    ],
-                    [
-                        "==",
-                        "klasse",
-                        "U-Bahn"
-                    ],
-                    [
-                        "==",
-                        "klasse",
-                        "Stadtbahn"
-                    ],
-                    [
-                        "==",
-                        "klasse",
-                        "Straßenbahn"
-                    ]
+                    "in",
+                    "klasse",
+                    "Eisenbahn",
+                    "Güterverkehr",
+                    "Personenverkehr",
+                    "S-Bahn"
                 ],
                 [
-                    "any",
-                    [
-                        "==",
-                        "bauwerk",
-                        "Brücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Drehbrücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Hebebrücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Bogenbrücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Hochbahn, Hochstraße"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Hängebrücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Mehrstöckige Brücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Pontonbrücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Zugbrücke"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Staudamm"
-                    ],
-                    [
-                        "==",
-                        "bauwerk",
-                        "Staumauer"
-                    ]
+                    "in",
+                    "bauwerk",
+                    "Brücke",
+                    "Drehbrücke",
+                    "Hebebrücke",
+                    "Bogenbrücke",
+                    "Fachwerkbrücke",
+                    "Hochbahn, Hochstraße",
+                    "Hängebrücke",
+                    "Mehrstöckige Brücke",
+                    "Pontonbrücke",
+                    "Zugbrücke",
+                    "Steg",
+                    "Staudamm",
+                    "Staumauer"
                 ]
             ],
             "layout": {
@@ -3070,16 +3563,19 @@
         {
             "id": "Leitung",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Energie und Versorgung",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Leitung",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Versorgungslinie",
             "minzoom": 14,
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Freileitung"
-                ]
+                "==",
+                "klasse",
+                "Freileitung"
             ],
             "layout": {
                 "line-join": "round"
@@ -3095,15 +3591,18 @@
         {
             "id": "Landesgrenze",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Grenzen",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesgrenze",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Grenze_Linie",
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Grenze des Bundeslandes"
-                ]
+                "==",
+                "klasse",
+                "Grenze des Bundeslandes"
             ],
             "layout": {},
             "paint": {
@@ -3126,16 +3625,19 @@
         {
             "id": "Bundesgrenze",
             "type": "line",
+            "metadata": {
+                "map-editor:group": "Grenzen",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesgrenze",
+                "map-editor:layer-element": "Kontur"
+            },
             "source": "basiskarte",
             "source-layer": "Grenze_Linie",
             "maxzoom": 11,
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Grenze der Bundesrepublik Deutschland"
-                ]
+                "==",
+                "klasse",
+                "Grenze der Bundesrepublik Deutschland"
             ],
             "layout": {},
             "paint": {
@@ -3158,16 +3660,19 @@
         {
             "id": "Schrift Fluss",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Fließgewässer",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserlinie",
             "minzoom": 12,
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Genäherte Mittellinie in Gewässern"
-                ]
+                "==",
+                "klasse",
+                "Genäherte Mittellinie in Gewässern"
             ],
             "layout": {
                 "text-field": "{name}",
@@ -3205,29 +3710,25 @@
         {
             "id": "Schrift See <= 0.2 qkm",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Stehendes Gewässer",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "minzoom": 14,
             "filter": [
                 "all",
                 [
-                    "match",
-                    [
-                        "get",
-                        "klasse"
-                    ],
-                    [
-                        "See"
-                    ],
-                    true,
-                    false
+                    "==",
+                    "klasse",
+                    "See"
                 ],
                 [
                     "<=",
-                    [
-                        "get",
-                        "flaeche"
-                    ],
+                    "flaeche",
                     200000
                 ]
             ],
@@ -3264,29 +3765,25 @@
         {
             "id": "Schrift See > 0.2 qkm",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Stehendes Gewässer",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "minzoom": 13,
             "filter": [
                 "all",
                 [
-                    "match",
-                    [
-                        "get",
-                        "klasse"
-                    ],
-                    [
-                        "See"
-                    ],
-                    true,
-                    false
+                    "==",
+                    "klasse",
+                    "See"
                 ],
                 [
                     ">",
-                    [
-                        "get",
-                        "flaeche"
-                    ],
+                    "flaeche",
                     200000
                 ]
             ],
@@ -3323,16 +3820,19 @@
         {
             "id": "Schrift Meer",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Gewässer",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Meer",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Gewaesserflaeche",
             "minzoom": 8,
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Meer"
-                ]
+                "==",
+                "klasse",
+                "Meer"
             ],
             "layout": {
                 "text-field": "{name}",
@@ -3376,16 +3876,19 @@
         {
             "id": "Schrift Wald",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Vegetation",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Wald",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 12,
             "filter": [
-                "all",
-                [
-                    "==",
-                    "klasse",
-                    "Wald"
-                ]
+                "==",
+                "klasse",
+                "Wald"
             ],
             "layout": {
                 "text-field": "{name}",
@@ -3440,17 +3943,20 @@
         {
             "id": "Schrift Nebenstraße",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 16,
             "filter": [
-                "any",
-                [
-                    "in",
-                    "klasse",
-                    "Attribut trifft nicht zu",
-                    "Sonstiges"
-                ]
+                "in",
+                "klasse",
+                "Nicht öffentliche Straße",
+                "Sonstige öffentliche Straße"
             ],
             "layout": {
                 "text-field": "{name}",
@@ -3478,16 +3984,19 @@
         {
             "id": "Schrift Gemeindestraße",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 14,
             "filter": [
-                "any",
-                [
-                    "in",
-                    "klasse",
-                    "Gemeindestraße"
-                ]
+                "==",
+                "klasse",
+                "Gemeindestraße"
             ],
             "layout": {
                 "text-field": "{name}",
@@ -3527,16 +4036,19 @@
         {
             "id": "Schrift Kreisstraße",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Kreisstraße und niedrigere Straßenklassen",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
-                "any",
-                [
-                    "in",
-                    "klasse",
-                    "Kreisstraße"
-                ]
+                "==",
+                "klasse",
+                "Kreisstraße"
             ],
             "layout": {
                 "text-field": "{name}",
@@ -3577,16 +4089,19 @@
         {
             "id": "Schrift Landesstraße",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Landesstraße",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
-                "any",
-                [
-                    "in",
-                    "klasse",
-                    "Landesstraße, Staatsstraße"
-                ]
+                "==",
+                "klasse",
+                "Landesstraße, Staatsstraße"
             ],
             "layout": {
                 "text-field": "{name}",
@@ -3629,16 +4144,19 @@
         {
             "id": "Schrift Bundesstraße",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Bundesstraße",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 12,
             "filter": [
-                "any",
-                [
-                    "in",
-                    "klasse",
-                    "Bundesstraße"
-                ]
+                "==",
+                "klasse",
+                "Bundesstraße"
             ],
             "layout": {
                 "text-field": "B{nummer}",
@@ -3682,16 +4200,19 @@
         {
             "id": "Schrift Autobahn",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Verkehr",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Autobahn",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Verkehrslinie",
             "minzoom": 10,
             "filter": [
-                "any",
-                [
-                    "in",
-                    "klasse",
-                    "Bundesautobahn"
-                ]
+                "==",
+                "klasse",
+                "Bundesautobahn"
             ],
             "layout": {
                 "text-field": "A{nummer}",
@@ -3732,11 +4253,47 @@
         {
             "id": "Nicht öffentliches Gebäude 3D",
             "type": "fill-extrusion",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Nicht öffentliches Gebäude 3D",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 16,
             "filter": [
-                "all"
+                "!in",
+                "klasse",
+                "Kino",
+                "Verwaltungsgebäude",
+                "Parlament",
+                "Rathaus",
+                "Gericht",
+                "Kreisverwaltung",
+                "Bezirksregierung",
+                "Allgemein bildende Schule",
+                "Berufsbildende Schule",
+                "Hochschulgebäude (Fachhochschule, Universität)",
+                "Forschungsinstitut",
+                "Schloss",
+                "Theater, Oper",
+                "Konzertgebäude",
+                "Museum",
+                "Rundfunk, Fernsehen",
+                "Burg, Festung",
+                "Kirche",
+                "Synagoge",
+                "Kapelle",
+                "Gotteshaus",
+                "Moschee",
+                "Tempel",
+                "Krankenhaus",
+                "Polizei",
+                "Feuerwehr",
+                "Sport-, Turnhalle",
+                "Hallenbad",
+                "Sanatorium"
             ],
             "layout": {},
             "paint": {
@@ -3759,44 +4316,47 @@
         {
             "id": "Öffentliches Gebäude 3D",
             "type": "fill-extrusion",
+            "metadata": {
+                "map-editor:group": "Gebäude",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Öffentliches Gebäude 3D",
+                "map-editor:layer-element": "Füllung"
+            },
             "source": "basiskarte",
             "source-layer": "Gebaeudeflaeche",
             "minzoom": 16,
             "filter": [
-                "all",
-                [
-                    "in",
-                    "klasse",
-                    "Kino",
-                    "Verwaltungsgebäude",
-                    "Parlament",
-                    "Rathaus",
-                    "Gericht",
-                    "Kreisverwaltung",
-                    "Bezirksregierung",
-                    "Allgemein bildende Schule",
-                    "Berufsbildende Schule",
-                    "Hochschulgebäude (Fachhochschule, Universität)",
-                    "Forschungsinstitut",
-                    "Schloss",
-                    "Theater, Oper",
-                    "Konzertgebäude",
-                    "Museum",
-                    "Rundfunk, Fernsehen",
-                    "Burg, Festung",
-                    "Kirche",
-                    "Synagoge",
-                    "Kapelle",
-                    "Gotteshaus",
-                    "Moschee",
-                    "Tempel",
-                    "Krankenhaus",
-                    "Polizei",
-                    "Feuerwehr",
-                    "Sport-, Turnhalle",
-                    "Hallenbad",
-                    "Sanatorium"
-                ]
+                "in",
+                "klasse",
+                "Kino",
+                "Verwaltungsgebäude",
+                "Parlament",
+                "Rathaus",
+                "Gericht",
+                "Kreisverwaltung",
+                "Bezirksregierung",
+                "Allgemein bildende Schule",
+                "Berufsbildende Schule",
+                "Hochschulgebäude (Fachhochschule, Universität)",
+                "Forschungsinstitut",
+                "Schloss",
+                "Theater, Oper",
+                "Konzertgebäude",
+                "Museum",
+                "Rundfunk, Fernsehen",
+                "Burg, Festung",
+                "Kirche",
+                "Synagoge",
+                "Kapelle",
+                "Gotteshaus",
+                "Moschee",
+                "Tempel",
+                "Krankenhaus",
+                "Polizei",
+                "Feuerwehr",
+                "Sport-, Turnhalle",
+                "Hallenbad",
+                "Sanatorium"
             ],
             "layout": {},
             "paint": {
@@ -3819,6 +4379,12 @@
         {
             "id": "Siedlungspunkt >= 20.000 - < 100.000",
             "type": "circle",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 8,
@@ -3826,12 +4392,12 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
                 [
-                    "in",
+                    "==",
                     "art",
                     "Stadt"
                 ],
@@ -3858,6 +4424,12 @@
         {
             "id": "Siedlungspunkt >= 100.000 - < 500.000",
             "type": "circle",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 7,
@@ -3865,7 +4437,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
@@ -3898,6 +4470,12 @@
         {
             "id": "Siedlungspunkt >= 500.000",
             "type": "circle",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 6,
@@ -3905,12 +4483,12 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
                 [
-                    "in",
+                    "==",
                     "art",
                     "Stadt"
                 ],
@@ -3932,6 +4510,12 @@
         {
             "id": "Siedlungspunkt Landeshauptstadt >= 500.000",
             "type": "circle",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 6,
@@ -3939,12 +4523,12 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
                 [
-                    "in",
+                    "==",
                     "art",
                     "Landeshauptstadt"
                 ],
@@ -3980,6 +4564,12 @@
         {
             "id": "Siedlungspunkt Bundeshauptstadt",
             "type": "circle",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Punkt"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 6,
@@ -3987,12 +4577,12 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
                 [
-                    "in",
+                    "==",
                     "art",
                     "Hauptstadt"
                 ]
@@ -4009,6 +4599,12 @@
         {
             "id": "Schrift Gemeinde < 5.000",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 11,
@@ -4072,6 +4668,12 @@
         {
             "id": "Schrift Gemeinde >= 5.000",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 3,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 10,
@@ -4137,6 +4739,12 @@
         {
             "id": "Schrift Stadt 5.000 - < 20.000",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 10,
@@ -4144,7 +4752,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
@@ -4212,6 +4820,12 @@
         {
             "id": "Schrift Stadt 20.000 - < 100.000",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 2,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 8,
@@ -4219,7 +4833,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
@@ -4289,6 +4903,12 @@
         {
             "id": "Schrift Stadt 100.000 - < 500.000",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 7,
@@ -4296,7 +4916,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
@@ -4364,6 +4984,12 @@
         {
             "id": "Schrift Stadt >= 500.000",
             "type": "symbol",
+            "metadata": {
+                "map-editor:group": "Siedlungsfläche",
+                "map-editor:detail-level": 1,
+                "map-editor:layer": "Siedlung",
+                "map-editor:layer-element": "Beschriftung"
+            },
             "source": "basiskarte",
             "source-layer": "Name_Punkt",
             "minzoom": 6,
@@ -4371,7 +4997,7 @@
             "filter": [
                 "all",
                 [
-                    "in",
+                    "==",
                     "klasse",
                     "Ort"
                 ],
