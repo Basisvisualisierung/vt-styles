@@ -1,5 +1,12 @@
 ## Newest Changes
 
+## v4.0.0 (2025-03-05)
+### Improvements and Changes
+* Switch to vector tile schema v4
+* Changed filters of multiple layers
+* Removed unnecessary expressions from all filters
+* Rearranged road layers
+
 ## (2024-01-15)
 ### Improvements and Changes
 * Changed attribution for basiskarte to CC BY 4.0
